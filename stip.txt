@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+"""Utility to strip embedded base64 images from Markdown files.
+
+Contains: regex cleaners for Markdown image embeds and HTML <img> data-URIs,
+plus a small CLI (dry-run / inplace / backup).
+
+Purpose: shrink OCR/export Markdown before indexing by removing bulky
+inline `data:image/...;base64,...` payloads.
+
+Examples:
+  python scripts/strip_base64_images.py documents/
+  python scripts/strip_base64_images.py file1.md file2.md --dry-run
+  python scripts/strip_base64_images.py docs/ --inplace
+  python scripts/strip_base64_images.py docs/ --backup
+"""
+
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+from pathlib import Path
+
+# Markdown: ![alt](data:image/png;base64,AAAA...)
+MD_DATA_URI = re.compile(
+    r"!\[[^\]]*\]\(\s*data:image\/[a-z0-9.+-]+;base64,[A-Za-z0-9+/=\s]+\)",
+    re.IGNORECASE,
+)
+
+# HTML: <img ... src="data:image/...;base64,..." ...> (self-closing or not)
+HTML_IMG_DATA_URI = re.compile(
+    r"<img\b[^>]*?\bsrc\s*=\s*[\"']\s*data:image\/[a-z0-9.+-]+;base64,[A-Za-z0-9+/=\s]+[\"'][^>]*?/?>",
+    re.IGNORECASE,
+)
+
+# Fallback: any remaining bare data:image/...;base64,... blob (quoted or not)
+BARE_DATA_URI = re.compile(
+    r"data:image\/[a-z0-9.+-]+;base64,[A-Za-z0-9+/=\s]+",
+    re.IGNORECASE,
+)
+
+# Collapse runs of blank lines left behind after removals
+EXTRA_BLANK_LINES = re.compile(r"\n{3,}")
+
+
+def strip_base64_images(text: str, *, bare: bool = True) -> tuple[str, dict[str, int]]:
+    """Strip base64 image embeds from text.
+
+    Inputs: markdown/html text; whether to also strip bare data URIs.
+    Output: cleaned text and per-pattern removal counts.
+    """
+    counts = {"markdown": 0, "html_img": 0, "bare": 0}
+    text, counts["markdown"] = MD_DATA_URI.subn("", text)
+    text, counts["html_img"] = HTML_IMG_DATA_URI.subn("", text)
+    if bare:
+        text, counts["bare"] = BARE_DATA_URI.subn("", text)
+    text = EXTRA_BLANK_LINES.sub("\n\n", text)
+    return text, counts
+
+
+def iter_markdown_files(paths: list[Path], recursive: bool) -> list[Path]:
+    """Expand CLI paths into a sorted unique list of .md files."""
+    files: list[Path] = []
+    for path in paths:
+        path = path.expanduser().resolve()
+        if path.is_file():
+            if path.suffix.lower() == ".md":
+                files.append(path)
+            else:
+                print(f"skip (not .md): {path}", file=sys.stderr)
+        elif path.is_dir():
+            pattern = "**/*.md" if recursive else "*.md"
+            files.extend(sorted(path.glob(pattern)))
+        else:
+            print(f"skip (missing): {path}", file=sys.stderr)
+    # Preserve order, drop duplicates
+    seen: set[Path] = set()
+    unique: list[Path] = []
+    for file in files:
+        if file not in seen:
+            seen.add(file)
+            unique.append(file)
+    return unique
+
+
+def process_file(
+    path: Path,
+    *,
+    dry_run: bool,
+    backup: bool,
+    bare: bool,
+) -> tuple[int, int, dict[str, int]]:
+    """Clean one file. Output: (bytes_before, bytes_after, counts)."""
+    original = path.read_text(encoding="utf-8", errors="replace")
+    cleaned, counts = strip_base64_images(original, bare=bare)
+    before, after = len(original.encode("utf-8")), len(cleaned.encode("utf-8"))
+    if original == cleaned:
+        return before, after, counts
+    if dry_run:
+        return before, after, counts
+    if backup:
+        backup_path = path.with_suffix(path.suffix + ".bak")
+        backup_path.write_text(original, encoding="utf-8")
+    path.write_text(cleaned, encoding="utf-8")
+    return before, after, counts
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Remove base64-embedded images from Markdown files.",
+    )
+    parser.add_argument(
+        "paths",
+        nargs="+",
+        type=Path,
+        help="Markdown files and/or directories to process",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Report what would change without writing files",
+    )
+    parser.add_argument(
+        "--backup",
+        action="store_true",
+        help="Write a .md.bak copy before overwriting",
+    )
+    parser.add_argument(
+        "--no-recursive",
+        action="store_true",
+        help="When given a directory, only process top-level *.md (default: recursive)",
+    )
+    parser.add_argument(
+        "--keep-bare",
+        action="store_true",
+        help="Do not strip leftover bare data:image/...;base64,... URIs",
+    )
+    args = parser.parse_args(argv)
+
+    files = iter_markdown_files(args.paths, recursive=not args.no_recursive)
+    if not files:
+        print("No .md files found.", file=sys.stderr)
+        return 1
+
+    total_removed = 0
+    changed = 0
+    for path in files:
+        before, after, counts = process_file(
+            path,
+            dry_run=args.dry_run,
+            backup=args.backup,
+            bare=not args.keep_bare,
+        )
+        removed = before - after
+        hits = counts["markdown"] + counts["html_img"] + counts["bare"]
+        if hits or removed:
+            changed += 1
+            total_removed += removed
+            action = "would save" if args.dry_run else "saved"
+            print(
+                f"{path.name}: removed md={counts['markdown']} "
+                f"html={counts['html_img']} bare={counts['bare']} "
+                f"(-{removed:,} bytes) [{action}]"
+            )
+        else:
+            print(f"{path.name}: clean")
+
+    mode = "dry-run" if args.dry_run else "written"
+    print(
+        f"\nDone ({mode}): {changed}/{len(files)} file(s) changed, "
+        f"{total_removed:,} bytes removed."
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

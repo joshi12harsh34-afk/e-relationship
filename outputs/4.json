@@ -1,0 +1,3553 @@
+{
+  "source": "inputs/commercial.md",
+  "source_original": "inputs/commercial.md",
+  "raw_entity_count": 35,
+  "entity_count": 35,
+  "relation_count": 13,
+  "triplet_count": 16,
+  "raw_entities": [
+    {
+      "text": "Panipat Refinery",
+      "label": "Facility",
+      "confidence": 0.975,
+      "start_char": 2,
+      "end_char": 18,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Facility",
+        "identifiers": [
+          {
+            "value": "Panipat Refinery",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Panipat Refinery",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "PANIPAT REFINERY EXPANSION PROJECT",
+      "label": "Project",
+      "confidence": 0.975,
+      "start_char": 2,
+      "end_char": 36,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Project",
+        "identifiers": [
+          {
+            "value": "PANIPAT REFINERY EXPANSION PROJECT",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "PANIPAT REFINERY EXPANSION PROJECT",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2,
+          "end_char": 36
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "P-25 (EPCM 3)",
+      "label": "Project",
+      "confidence": 0.975,
+      "start_char": 42,
+      "end_char": 55,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Project",
+        "identifiers": [
+          {
+            "value": "P-25 (EPCM 3)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "P-25 (EPCM 3)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 42,
+          "end_char": 55
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "IndianOil",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 60,
+      "end_char": 69,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "IndianOil",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "IndianOil",
+          "source_file": "inputs/commercial.md",
+          "start_char": 60,
+          "end_char": 69
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "INDIAN OIL CORPORATION LTD.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 73,
+      "end_char": 100,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "INDIAN OIL CORPORATION LTD.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "INDIAN OIL CORPORATION LTD.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 73,
+          "end_char": 100
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Pneumatic Conveying Package",
+      "label": "System",
+      "confidence": 0.975,
+      "start_char": 127,
+      "end_char": 154,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "Pneumatic Conveying Package",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Pneumatic Conveying Package",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "label": "System",
+      "confidence": 0.975,
+      "start_char": 127,
+      "end_char": 230,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 127,
+          "end_char": 230
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "BIDDING DOCUMENT NO.: 6746-PPM-022-CA-0052",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 237,
+      "end_char": 279,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PPM-022-CA-0052",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BIDDING DOCUMENT NO.: 6746-PPM-022-CA-0052",
+          "source_file": "inputs/commercial.md",
+          "start_char": 237,
+          "end_char": 279
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "thyssenkrupp",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 298,
+      "end_char": 310,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "thyssenkrupp",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "thyssenkrupp",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "thyssenkrupp Industrial Solutions (India) Private Limited",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 298,
+      "end_char": 355,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "thyssenkrupp Industrial Solutions (India) Private Limited",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "thyssenkrupp Industrial Solutions (India) Private Limited",
+          "source_file": "inputs/commercial.md",
+          "start_char": 298,
+          "end_char": 355
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "MASTER INDEX",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 377,
+      "end_char": 389,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "MASTER INDEX",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "MASTER INDEX",
+          "source_file": "inputs/commercial.md",
+          "start_char": 377,
+          "end_char": 389
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "NOTICE INVITING TENDER (NIT)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 479,
+      "end_char": 507,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "NOTICE INVITING TENDER (NIT)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "NOTICE INVITING TENDER (NIT)",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "REQUEST FOR QUOTATION (RFQ)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 516,
+      "end_char": 543,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "REQUEST FOR QUOTATION (RFQ)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "REQUEST FOR QUOTATION (RFQ)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 516,
+          "end_char": 543
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "INSTRUCTION TO BIDDERS (ITB)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 552,
+      "end_char": 580,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "INSTRUCTION TO BIDDERS (ITB)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "INSTRUCTION TO BIDDERS (ITB)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 552,
+          "end_char": 580
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "BID DOCUMENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 589,
+      "end_char": 602,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "BID DOCUMENTS",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BID DOCUMENTS",
+          "source_file": "inputs/commercial.md",
+          "start_char": 589,
+          "end_char": 602
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "SPECIAL PURCHASE CONDITIONS (SPC)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 611,
+      "end_char": 644,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "SPECIAL PURCHASE CONDITIONS (SPC)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "SPECIAL PURCHASE CONDITIONS (SPC)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 611,
+          "end_char": 644
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "GENERAL PURCHASE CONDITIONS (GPC)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 653,
+      "end_char": 686,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "GENERAL PURCHASE CONDITIONS (GPC)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "GENERAL PURCHASE CONDITIONS (GPC)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 653,
+          "end_char": 686
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "BID DATA SHEET (BDS)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 695,
+      "end_char": 715,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "BID DATA SHEET (BDS)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BID DATA SHEET (BDS)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 695,
+          "end_char": 715
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 758,
+      "end_char": 803,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PIP-022-EC-0001",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001",
+          "source_file": "inputs/commercial.md",
+          "start_char": 758,
+          "end_char": 803
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 812,
+      "end_char": 858,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+          "source_file": "inputs/commercial.md",
+          "start_char": 812,
+          "end_char": 858
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "BOQ",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 901,
+      "end_char": 904,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "BOQ",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BOQ",
+          "source_file": "inputs/commercial.md",
+          "start_char": 901,
+          "end_char": 904
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "ClientIOCL, PANIPATREFINERY",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 950,
+      "end_char": 977,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "ClientIOCL, PANIPATREFINERY",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "ClientIOCL, PANIPATREFINERY",
+          "source_file": "inputs/commercial.md",
+          "start_char": 950,
+          "end_char": 977
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Contract CodeRHQ, EPCM-3 (P-25)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 986,
+      "end_char": 1017,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "Contract CodeRHQ, EPCM-3 (P-25)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Contract CodeRHQ, EPCM-3 (P-25)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 986,
+          "end_char": 1017
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Contract No.66-6746",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 1047,
+      "end_char": 1066,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "66-6746",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Contract No.66-6746",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1047,
+          "end_char": 1066
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "NOTICE INVITING TENDER (NIT)(Bidding Document No. 6746-PPM-022-CA-0052 for Pneumatic Conveying Package)",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 1150,
+      "end_char": 1253,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PPM-022-CA-0052",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "NOTICE INVITING TENDER (NIT)(Bidding Document No. 6746-PPM-022-CA-0052 for Pneumatic Conveying Package)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1150,
+          "end_char": 1253
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Tender Ref: 6746-PIP-022-EC-0001",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 1380,
+      "end_char": 1412,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PIP-022-EC-0001",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Tender Ref: 6746-PIP-022-EC-0001",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1380,
+          "end_char": 1412
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Date: 12-07-2022",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 1414,
+      "end_char": 1430,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "12-07-2022",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Date: 12-07-2022",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1414,
+          "end_char": 1430
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "EPCM3 (P25)",
+      "label": "Project",
+      "confidence": 0.975,
+      "start_char": 1569,
+      "end_char": 1580,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Project",
+        "identifiers": [
+          {
+            "value": "EPCM3 (P25)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "EPCM3 (P25)",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "M/s. Indian Oil Corporation Limited (IOCL)",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 1604,
+      "end_char": 1646,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "M/s. Indian Oil Corporation Limited (IOCL)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "M/s. Indian Oil Corporation Limited (IOCL)",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 1894,
+      "end_char": 1943,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1894,
+          "end_char": 1943
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Pneumatic Conveying package (22-PK-3801, 22-PK-3804, 22-PK-3901) with Blenders Blowing system (22-PK-3904)",
+      "label": "System",
+      "confidence": 0.975,
+      "start_char": 2260,
+      "end_char": 2366,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "Pneumatic Conveying package (22-PK-3801, 22-PK-3804, 22-PK-3901) with Blenders Blowing system (22-PK-3904)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Pneumatic Conveying package (22-PK-3801, 22-PK-3804, 22-PK-3901) with Blenders Blowing system (22-PK-3904)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2260,
+          "end_char": 2366
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Panipat Naptha Cracker complex (PNC Complex)",
+      "label": "Facility",
+      "confidence": 0.975,
+      "start_char": 2613,
+      "end_char": 2657,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Facility",
+        "identifiers": [
+          {
+            "value": "Panipat Naptha Cracker complex (PNC Complex)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Panipat Naptha Cracker complex (PNC Complex)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2613,
+          "end_char": 2657
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-PK-3801: Polymer Pneumatic",
+      "label": "System",
+      "confidence": 0.975,
+      "start_char": 2800,
+      "end_char": 2829,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "22-PK-3801: Polymer Pneumatic",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3801: Polymer Pneumatic",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2800,
+          "end_char": 2829
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-PK-3804: PP pellets pneumatic",
+      "label": "System",
+      "confidence": 0.975,
+      "start_char": 3053,
+      "end_char": 3085,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "22-PK-3804: PP pellets pneumatic",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3804: PP pellets pneumatic",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3053,
+          "end_char": 3085
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-PK-3901: Homogenization of PP",
+      "label": "System",
+      "confidence": 0.975,
+      "start_char": 3292,
+      "end_char": 3324,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "22-PK-3901: Homogenization of PP",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3901: Homogenization of PP",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3292,
+          "end_char": 3324
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    }
+  ],
+  "entities": [
+    {
+      "id": "e0",
+      "text": "Panipat Refinery",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Facility",
+        "identifiers": [
+          {
+            "value": "Panipat Refinery",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Panipat Refinery",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e0"
+      }
+    },
+    {
+      "id": "e1",
+      "text": "PANIPAT REFINERY EXPANSION PROJECT",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Project",
+        "identifiers": [
+          {
+            "value": "PANIPAT REFINERY EXPANSION PROJECT",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "PANIPAT REFINERY EXPANSION PROJECT",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2,
+          "end_char": 36
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e1"
+      }
+    },
+    {
+      "id": "e2",
+      "text": "P-25 (EPCM 3)",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Project",
+        "identifiers": [
+          {
+            "value": "P-25 (EPCM 3)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "P-25 (EPCM 3)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 42,
+          "end_char": 55
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e2"
+      }
+    },
+    {
+      "id": "e3",
+      "text": "IndianOil",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "IndianOil",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "IndianOil",
+          "source_file": "inputs/commercial.md",
+          "start_char": 60,
+          "end_char": 69
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e3"
+      }
+    },
+    {
+      "id": "e4",
+      "text": "INDIAN OIL CORPORATION LTD.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "INDIAN OIL CORPORATION LTD.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "INDIAN OIL CORPORATION LTD.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 73,
+          "end_char": 100
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e4"
+      }
+    },
+    {
+      "id": "e5",
+      "text": "Pneumatic Conveying Package",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "Pneumatic Conveying Package",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Pneumatic Conveying Package",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e5"
+      }
+    },
+    {
+      "id": "e6",
+      "text": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 127,
+          "end_char": 230
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e6"
+      }
+    },
+    {
+      "id": "e7",
+      "text": "BIDDING DOCUMENT NO.: 6746-PPM-022-CA-0052",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PPM-022-CA-0052",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BIDDING DOCUMENT NO.: 6746-PPM-022-CA-0052",
+          "source_file": "inputs/commercial.md",
+          "start_char": 237,
+          "end_char": 279
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e7"
+      }
+    },
+    {
+      "id": "e8",
+      "text": "thyssenkrupp",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "thyssenkrupp",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "thyssenkrupp",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e8"
+      }
+    },
+    {
+      "id": "e9",
+      "text": "thyssenkrupp Industrial Solutions (India) Private Limited",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "thyssenkrupp Industrial Solutions (India) Private Limited",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "thyssenkrupp Industrial Solutions (India) Private Limited",
+          "source_file": "inputs/commercial.md",
+          "start_char": 298,
+          "end_char": 355
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e9"
+      }
+    },
+    {
+      "id": "e10",
+      "text": "MASTER INDEX",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "MASTER INDEX",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "MASTER INDEX",
+          "source_file": "inputs/commercial.md",
+          "start_char": 377,
+          "end_char": 389
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e10"
+      }
+    },
+    {
+      "id": "e11",
+      "text": "NOTICE INVITING TENDER (NIT)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "NOTICE INVITING TENDER (NIT)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "NOTICE INVITING TENDER (NIT)",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e11"
+      }
+    },
+    {
+      "id": "e12",
+      "text": "REQUEST FOR QUOTATION (RFQ)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "REQUEST FOR QUOTATION (RFQ)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "REQUEST FOR QUOTATION (RFQ)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 516,
+          "end_char": 543
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e12"
+      }
+    },
+    {
+      "id": "e13",
+      "text": "INSTRUCTION TO BIDDERS (ITB)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "INSTRUCTION TO BIDDERS (ITB)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "INSTRUCTION TO BIDDERS (ITB)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 552,
+          "end_char": 580
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e13"
+      }
+    },
+    {
+      "id": "e14",
+      "text": "BID DOCUMENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "BID DOCUMENTS",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BID DOCUMENTS",
+          "source_file": "inputs/commercial.md",
+          "start_char": 589,
+          "end_char": 602
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e14"
+      }
+    },
+    {
+      "id": "e15",
+      "text": "SPECIAL PURCHASE CONDITIONS (SPC)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "SPECIAL PURCHASE CONDITIONS (SPC)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "SPECIAL PURCHASE CONDITIONS (SPC)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 611,
+          "end_char": 644
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e15"
+      }
+    },
+    {
+      "id": "e16",
+      "text": "GENERAL PURCHASE CONDITIONS (GPC)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "GENERAL PURCHASE CONDITIONS (GPC)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "GENERAL PURCHASE CONDITIONS (GPC)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 653,
+          "end_char": 686
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e16"
+      }
+    },
+    {
+      "id": "e17",
+      "text": "BID DATA SHEET (BDS)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "BID DATA SHEET (BDS)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BID DATA SHEET (BDS)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 695,
+          "end_char": 715
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e17"
+      }
+    },
+    {
+      "id": "e18",
+      "text": "MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PIP-022-EC-0001",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001",
+          "source_file": "inputs/commercial.md",
+          "start_char": 758,
+          "end_char": 803
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e18"
+      }
+    },
+    {
+      "id": "e19",
+      "text": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+          "source_file": "inputs/commercial.md",
+          "start_char": 812,
+          "end_char": 858
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e19"
+      }
+    },
+    {
+      "id": "e20",
+      "text": "BOQ",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "BOQ",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "BOQ",
+          "source_file": "inputs/commercial.md",
+          "start_char": 901,
+          "end_char": 904
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e20"
+      }
+    },
+    {
+      "id": "e21",
+      "text": "ClientIOCL, PANIPATREFINERY",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "ClientIOCL, PANIPATREFINERY",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "ClientIOCL, PANIPATREFINERY",
+          "source_file": "inputs/commercial.md",
+          "start_char": 950,
+          "end_char": 977
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e21"
+      }
+    },
+    {
+      "id": "e22",
+      "text": "Contract CodeRHQ, EPCM-3 (P-25)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "Contract CodeRHQ, EPCM-3 (P-25)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Contract CodeRHQ, EPCM-3 (P-25)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 986,
+          "end_char": 1017
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e22"
+      }
+    },
+    {
+      "id": "e23",
+      "text": "Contract No.66-6746",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "66-6746",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Contract No.66-6746",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1047,
+          "end_char": 1066
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e23"
+      }
+    },
+    {
+      "id": "e24",
+      "text": "NOTICE INVITING TENDER (NIT)(Bidding Document No. 6746-PPM-022-CA-0052 for Pneumatic Conveying Package)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PPM-022-CA-0052",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "NOTICE INVITING TENDER (NIT)(Bidding Document No. 6746-PPM-022-CA-0052 for Pneumatic Conveying Package)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1150,
+          "end_char": 1253
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e24"
+      }
+    },
+    {
+      "id": "e25",
+      "text": "Tender Ref: 6746-PIP-022-EC-0001",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "6746-PIP-022-EC-0001",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Tender Ref: 6746-PIP-022-EC-0001",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1380,
+          "end_char": 1412
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e25"
+      }
+    },
+    {
+      "id": "e26",
+      "text": "Date: 12-07-2022",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "12-07-2022",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Date: 12-07-2022",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1414,
+          "end_char": 1430
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e26"
+      }
+    },
+    {
+      "id": "e27",
+      "text": "EPCM3 (P25)",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Project",
+        "identifiers": [
+          {
+            "value": "EPCM3 (P25)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "EPCM3 (P25)",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e27"
+      }
+    },
+    {
+      "id": "e28",
+      "text": "M/s. Indian Oil Corporation Limited (IOCL)",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "M/s. Indian Oil Corporation Limited (IOCL)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "M/s. Indian Oil Corporation Limited (IOCL)",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e28"
+      }
+    },
+    {
+      "id": "e29",
+      "text": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1894,
+          "end_char": 1943
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e29"
+      }
+    },
+    {
+      "id": "e30",
+      "text": "Pneumatic Conveying package (22-PK-3801, 22-PK-3804, 22-PK-3901) with Blenders Blowing system (22-PK-3904)",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "Pneumatic Conveying package (22-PK-3801, 22-PK-3804, 22-PK-3901) with Blenders Blowing system (22-PK-3904)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Pneumatic Conveying package (22-PK-3801, 22-PK-3804, 22-PK-3901) with Blenders Blowing system (22-PK-3904)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2260,
+          "end_char": 2366
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e30"
+      }
+    },
+    {
+      "id": "e31",
+      "text": "Panipat Naptha Cracker complex (PNC Complex)",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Facility",
+        "identifiers": [
+          {
+            "value": "Panipat Naptha Cracker complex (PNC Complex)",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Panipat Naptha Cracker complex (PNC Complex)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2613,
+          "end_char": 2657
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e31"
+      }
+    },
+    {
+      "id": "e32",
+      "text": "22-PK-3801: Polymer Pneumatic",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "22-PK-3801: Polymer Pneumatic",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3801: Polymer Pneumatic",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2800,
+          "end_char": 2829
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e32"
+      }
+    },
+    {
+      "id": "e33",
+      "text": "22-PK-3804: PP pellets pneumatic",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "22-PK-3804: PP pellets pneumatic",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3804: PP pellets pneumatic",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3053,
+          "end_char": 3085
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e33"
+      }
+    },
+    {
+      "id": "e34",
+      "text": "22-PK-3901: Homogenization of PP",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "System",
+        "identifiers": [
+          {
+            "value": "22-PK-3901: Homogenization of PP",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3901: Homogenization of PP",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3292,
+          "end_char": 3324
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e34"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "PANIPAT REFINERY EXPANSION PROJECT",
+      "predicate": "has system",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e1",
+      "object_id": "e6",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "P-25 (EPCM 3)",
+      "predicate": "has system",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e2",
+      "object_id": "e6",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "IndianOil",
+      "predicate": "has system",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e3",
+      "object_id": "e6",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "INDIAN OIL CORPORATION LTD.",
+      "predicate": "has system",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e4",
+      "object_id": "e6",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp Industrial Solutions (India) Private Limited",
+      "predicate": "prepared by",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.8598279118537903,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "PREPARED BY thyssenkrupp Industrial Solutions (India) Private Limited",
+          "source_file": "inputs/commercial.md",
+          "start_char": 286,
+          "end_char": 355,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e9",
+      "object_id": "e6",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "has system",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e6",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "appointed by",
+      "object": "M/s. Indian Oil Corporation Limited (IOCL)",
+      "confidence": 0.8731387615203857,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1869,
+          "end_char": 1969,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e28",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "for project",
+      "object": "EPCM3 (P25)",
+      "confidence": 0.8690288126468658,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1869,
+          "end_char": 1969,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e27",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "for project",
+      "object": "PANIPAT REFINERY EXPANSION PROJECT",
+      "confidence": 0.8690288126468658,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1869,
+          "end_char": 1969,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e1",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "for project",
+      "object": "P-25 (EPCM 3)",
+      "confidence": 0.8690288126468658,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1869,
+          "end_char": 1969,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e2",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "for project",
+      "object": "IndianOil",
+      "confidence": 0.8690288126468658,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1869,
+          "end_char": 1969,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e3",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "for project",
+      "object": "INDIAN OIL CORPORATION LTD.",
+      "confidence": 0.8690288126468658,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1869,
+          "end_char": 1969,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e4",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "thyssenkrupp",
+      "predicate": "for project",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.8690288126468658,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 1869,
+          "end_char": 1969,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e8",
+      "object_id": "e6",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    }
+  ],
+  "triplets": [
+    {
+      "subject": "22-PK-3801: Polymer Pneumatic",
+      "predicate": "Type of System",
+      "object": "Dilute phase conveying (Closed loop)",
+      "confidence": 0.8953248858451843,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Dilute phase conveying (Closed loop)"
+        ],
+        "evidence": {
+          "source_text": "22-PK-3801: Polymer Pneumatic | Type of System - Dilute phase conveying (Closed loop)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2800,
+          "end_char": 2885,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e32",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801: Polymer Pneumatic",
+      "predicate": "Conveying media",
+      "object": "Nitrogen",
+      "confidence": 0.9060684442520142,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Nitrogen"
+        ],
+        "evidence": {
+          "source_text": "Conveying media - Nitrogen",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2945,
+          "end_char": 2971,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e32",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801: Polymer Pneumatic",
+      "predicate": "Design Capacity",
+      "object": "71.5 TPH",
+      "confidence": 0.923570454120636,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Design Capacity - 71.5 TPH",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2972,
+          "end_char": 2998,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e32",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801: Polymer Pneumatic",
+      "predicate": "Conveyed Material",
+      "object": "Polypropylene Beads or Flakes",
+      "confidence": 0.901521235704422,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Polypropylene Beads or Flakes"
+        ],
+        "evidence": {
+          "source_text": "Conveyed Material - Polypropylene Beads or Flakes",
+          "source_file": "inputs/commercial.md",
+          "start_char": 2999,
+          "end_char": 3048,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e32",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3804: PP pellets pneumatic",
+      "predicate": "Type of System",
+      "object": "Dilute phase conveying (Open loop)",
+      "confidence": 0.8953248858451843,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Dilute phase conveying (Open loop)"
+        ],
+        "evidence": {
+          "source_text": "22-PK-3804: PP pellets pneumatic | Type of System - Dilute phase conveying (Open loop)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3053,
+          "end_char": 3139,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e33",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3804: PP pellets pneumatic",
+      "predicate": "Conveying media",
+      "object": "Air",
+      "confidence": 0.9060684442520142,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Conveying media - Air",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e33",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3804: PP pellets pneumatic",
+      "predicate": "Design Capacity",
+      "object": "86 TPH",
+      "confidence": 0.923570454120636,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "86 TPH"
+        ],
+        "evidence": {
+          "source_text": "Design Capacity - 86 TPH",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3221,
+          "end_char": 3245,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e33",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3804: PP pellets pneumatic",
+      "predicate": "Conveyed Material",
+      "object": "Polypropylene Pellets",
+      "confidence": 0.901521235704422,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Polypropylene Pellets"
+        ],
+        "evidence": {
+          "source_text": "Conveyed Material - Polypropylene Pellets",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e33",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3901: Homogenization of PP",
+      "predicate": "Type of System",
+      "object": "Dilute phase conveying (Open loop)",
+      "confidence": 0.8953248858451843,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Dilute phase conveying (Open loop)"
+        ],
+        "evidence": {
+          "source_text": "22-PK-3901: Homogenization of PP | Type of System - Dilute phase conveying (Open loop)",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3292,
+          "end_char": 3378,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e34",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3901: Homogenization of PP",
+      "predicate": "Conveying media",
+      "object": "Air",
+      "confidence": 0.9060684442520142,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Conveying media - Air",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e34",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3901: Homogenization of PP",
+      "predicate": "Design Capacity",
+      "object": "93 TPH",
+      "confidence": 0.923570454120636,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Design Capacity - 93 TPH",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3492,
+          "end_char": 3516,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e34",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3901: Homogenization of PP",
+      "predicate": "Conveyed Material",
+      "object": "Polypropylene Pellets",
+      "confidence": 0.901521235704422,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Polypropylene Pellets"
+        ],
+        "evidence": {
+          "source_text": "Conveyed Material - Polypropylene Pellets",
+          "source_file": "inputs/commercial.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e34",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3904: Blenders Blowing system",
+      "predicate": "Medium",
+      "object": "Air",
+      "confidence": 0.9030989706516266,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-PK-3904: Blenders Blowing system"
+        ],
+        "evidence": {
+          "source_text": "Medium - Air",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3618,
+          "end_char": 3630,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3904: Blenders Blowing system",
+      "predicate": "Silo Capacity",
+      "object": "1000 m3",
+      "confidence": 0.8937481045722961,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-PK-3904: Blenders Blowing system",
+          "1000 m3"
+        ],
+        "evidence": {
+          "source_text": "Silo Capacity - 1000 m3",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3632,
+          "end_char": 3655,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3904: Blenders Blowing system",
+      "predicate": "No of Silos",
+      "object": "8 nos",
+      "confidence": 0.8899610042572021,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-PK-3904: Blenders Blowing system",
+          "8 nos"
+        ],
+        "evidence": {
+          "source_text": "No of Silos - 8 nos",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3669,
+          "end_char": 3688,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3904: Blenders Blowing system",
+      "predicate": "No of silos in operation for blenders blowing system",
+      "object": "5 nos.",
+      "confidence": 0.8943004906177521,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-PK-3904: Blenders Blowing system"
+        ],
+        "evidence": {
+          "source_text": "No of silos in operation for blenders blowing system - 5 nos.",
+          "source_file": "inputs/commercial.md",
+          "start_char": 3689,
+          "end_char": 3750,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    }
+  ],
+  "events": [
+    {
+      "text": "BOUGHT",
+      "event_type": "acquisition",
+      "start_char": 837,
+      "end_char": 843,
+      "participants": [
+        "VENDOR",
+        "LIST",
+        "FOR"
+      ],
+      "location": null,
+      "time": null,
+      "confidence": 0.7,
+      "metadata": {
+        "context": "-PIP-022-EC-0001 |\n| 9 | VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS |\n| III | PART-III - PRICED PART |"
+      }
+    },
+    {
+      "text": "bought",
+      "event_type": "acquisition",
+      "start_char": 2046,
+      "end_char": 2052,
+      "participants": [],
+      "location": null,
+      "time": null,
+      "confidence": 0.7,
+      "metadata": {
+        "context": "sign, engineering, procurement of raw materials & bought out components, fabrication, manufacturing, assem"
+      }
+    }
+  ],
+  "identity_map": {
+    "e0": "e0",
+    "e1": "e1",
+    "e2": "e2",
+    "e3": "e3",
+    "e4": "e4",
+    "e5": "e5",
+    "e6": "e6",
+    "e7": "e7",
+    "e8": "e8",
+    "e9": "e9",
+    "e10": "e10",
+    "e11": "e11",
+    "e12": "e12",
+    "e13": "e13",
+    "e14": "e14",
+    "e15": "e15",
+    "e16": "e16",
+    "e17": "e17",
+    "e18": "e18",
+    "e19": "e19",
+    "e20": "e20",
+    "e21": "e21",
+    "e22": "e22",
+    "e23": "e23",
+    "e24": "e24",
+    "e25": "e25",
+    "e26": "e26",
+    "e27": "e27",
+    "e28": "e28",
+    "e29": "e29",
+    "e30": "e30",
+    "e31": "e31",
+    "e32": "e32",
+    "e33": "e33",
+    "e34": "e34"
+  },
+  "warnings": [
+    "unverified/ineligible relation kept for review: 'PANIPAT REFINERY EXPANSION PROJECT' -[has system]-> 'PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)' (status=missing)",
+    "unverified/ineligible relation kept for review: 'P-25 (EPCM 3)' -[has system]-> 'PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)' (status=missing)",
+    "unverified/ineligible relation kept for review: 'IndianOil' -[has system]-> 'PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)' (status=missing)",
+    "unverified/ineligible relation kept for review: 'INDIAN OIL CORPORATION LTD.' -[has system]-> 'PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)' (status=missing)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp Industrial Solutions (India) Private Limited' -[prepared by]-> 'PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)' (status=unverified)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[has system]-> 'PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)' (status=missing)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[appointed by]-> 'M/s. Indian Oil Corporation Limited (IOCL)' (status=unverified)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[for project]-> 'EPCM3 (P25)' (status=unverified)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[for project]-> 'PANIPAT REFINERY EXPANSION PROJECT' (status=unverified)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[for project]-> 'P-25 (EPCM 3)' (status=unverified)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[for project]-> 'IndianOil' (status=unverified)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[for project]-> 'INDIAN OIL CORPORATION LTD.' (status=unverified)",
+    "unverified/ineligible relation kept for review: 'thyssenkrupp' -[for project]-> 'PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)' (status=unverified)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801: Polymer Pneumatic' -[Conveying media]-> 'Nitrogen' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801: Polymer Pneumatic' -[Design Capacity]-> '71.5 TPH' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801: Polymer Pneumatic' -[Conveyed Material]-> 'Polypropylene Beads or Flakes' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3804: PP pellets pneumatic' -[Conveying media]-> 'Air' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3804: PP pellets pneumatic' -[Design Capacity]-> '86 TPH' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3901: Homogenization of PP' -[Conveying media]-> 'Air' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3901: Homogenization of PP' -[Design Capacity]-> '93 TPH' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3901: Homogenization of PP' -[Conveyed Material]-> 'Polypropylene Pellets' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3904: Blenders Blowing system' -[Medium]-> 'Air' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3904: Blenders Blowing system' -[Silo Capacity]-> '1000 m3' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3904: Blenders Blowing system' -[No of Silos]-> '8 nos' (status=unverified, predicate_quality=specific)",
+    "invalid parent-child types for 'has system': project->system",
+    "hierarchy subtype gate for 'has system': parent subtype 'Project' not in allowed ['engineeringpackage']",
+    "invalid parent-child types for 'has system': project->system",
+    "hierarchy subtype gate for 'has system': parent subtype 'Project' not in allowed ['engineeringpackage']",
+    "invalid parent-child types for 'has system': organization->system",
+    "hierarchy subtype gate for 'has system': parent subtype 'Company' not in allowed ['engineeringpackage']",
+    "invalid parent-child types for 'has system': organization->system",
+    "hierarchy subtype gate for 'has system': parent subtype 'Company' not in allowed ['engineeringpackage']",
+    "invalid parent-child types for 'has system': organization->system",
+    "hierarchy subtype gate for 'has system': parent subtype 'Company' not in allowed ['engineeringpackage']",
+    "missing entity node for triplet object: 'Dilute phase conveying (Closed loop)'",
+    "missing entity node for triplet object: 'Nitrogen'",
+    "missing entity node for triplet object: '71.5 TPH'",
+    "missing entity node for triplet object: 'Polypropylene Beads or Flakes'",
+    "missing entity node for triplet object: 'Dilute phase conveying (Open loop)'",
+    "missing entity node for triplet object: 'Air'",
+    "missing entity node for triplet object: '86 TPH'",
+    "missing entity node for triplet object: 'Polypropylene Pellets'",
+    "missing entity node for triplet object: 'Dilute phase conveying (Open loop)'",
+    "missing entity node for triplet object: 'Air'",
+    "missing entity node for triplet object: '93 TPH'",
+    "missing entity node for triplet object: 'Polypropylene Pellets'",
+    "missing entity node for triplet subject: '22-PK-3904: Blenders Blowing system'",
+    "missing entity node for triplet object: 'Air'",
+    "missing entity node for triplet subject: '22-PK-3904: Blenders Blowing system'",
+    "missing entity node for triplet object: '1000 m3'",
+    "missing entity node for triplet subject: '22-PK-3904: Blenders Blowing system'",
+    "missing entity node for triplet object: '8 nos'",
+    "missing entity node for triplet subject: '22-PK-3904: Blenders Blowing system'",
+    "missing entity node for triplet object: '5 nos.'"
+  ],
+  "diagnostics": [
+    {
+      "event": "extract_start",
+      "source_file": "inputs/commercial.md",
+      "doc_chars": 4080,
+      "will_chunk_entities": false,
+      "section_chunks": 1,
+      "boilerplate_omit": 0
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "EntitiesResponse",
+      "chunk_chars": 4080,
+      "prompt_chars": 10981,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "EntitiesResponse",
+      "chunk_rows": 38,
+      "store_rows": 38
+    },
+    {
+      "event": "ner_typed_vs_converted",
+      "typed_entities": 38,
+      "converted_entities": 38,
+      "dropped_count": 0
+    },
+    {
+      "event": "ground_entities",
+      "input": 38,
+      "kept": 35,
+      "dropped_count": 3,
+      "dropped": [
+        "ungrounded:PlantPPU & CDW",
+        "ungrounded:Technical Requisition No. 6746-PIP-022-EC-0001",
+        "ungrounded:22-PK-3904: Blenders Blowing system"
+      ]
+    },
+    {
+      "event": "after_metadata_merge",
+      "entities": 35,
+      "section_chunks": 1,
+      "chunk_methods": [
+        "passthrough"
+      ]
+    },
+    {
+      "event": "after_coreference",
+      "input": 35,
+      "kept": 35,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "after_deduplication",
+      "input": 35,
+      "kept": 35,
+      "identity_map_size": 35
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "RelationsResponse",
+      "chunk_chars": 4080,
+      "prompt_chars": 35064,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "RelationsResponse",
+      "chunk_rows": 13,
+      "store_rows": 13
+    },
+    {
+      "event": "after_relations_llm",
+      "relations": 13,
+      "known_entities": 35,
+      "section_chunks": 1
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "TripletsResponse",
+      "chunk_chars": 4080,
+      "prompt_chars": 35351,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "TripletsResponse",
+      "chunk_rows": 16,
+      "store_rows": 16
+    },
+    {
+      "event": "after_triplets_llm",
+      "triplets": 16,
+      "section_chunks": 1
+    },
+    {
+      "event": "after_entity_serialize",
+      "input": 35,
+      "kept": 35,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "after_relation_serialize",
+      "input": 13,
+      "kept": 13,
+      "evidence_verified": 0,
+      "evidence_unverified": 8,
+      "evidence_missing": 5
+    },
+    {
+      "event": "after_triplet_serialize",
+      "input": 16,
+      "kept": 16,
+      "evidence_verified": 5,
+      "evidence_unverified": 11,
+      "evidence_missing": 0
+    },
+    {
+      "event": "extract_complete",
+      "raw_entities": 35,
+      "entities": 35,
+      "relations": 13,
+      "triplets": 16,
+      "warnings": 54
+    }
+  ]
+}

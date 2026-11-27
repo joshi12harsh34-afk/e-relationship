@@ -1,0 +1,184 @@
+{
+  "commercial": {
+    "before": {
+      "confirmed_edges": 1,
+      "confirmed_nodes": 30,
+      "quarantine_relations": 6,
+      "quarantine_triplets": 19,
+      "evidence_verified": 3,
+      "evidence_unverified": 23,
+      "evidence_missing": 1,
+      "evidence_failure_reasons": 40,
+      "reason_counts": {
+        "evidence_missing": 6,
+        "not_graph_eligible": 24,
+        "hierarchy_invalid": 4,
+        "evidence_unverified": 18,
+        "claim_not_source_backed": 16,
+        "unresolved_object": 1,
+        "review": 1,
+        "unresolved_subject": 4
+      }
+    },
+    "after": {
+      "confirmed_edges": 3,
+      "confirmed_nodes": 30,
+      "quarantine_relations": 5,
+      "quarantine_triplets": 19,
+      "evidence_verified": 5,
+      "evidence_unverified": 22,
+      "evidence_missing": 1,
+      "evidence_failure_reasons": 43,
+      "reason_counts": {
+        "evidence_unverified": 22,
+        "not_graph_eligible": 23,
+        "claim_not_source_backed": 20,
+        "hierarchy_invalid": 4,
+        "unresolved_object": 1,
+        "evidence_missing": 1,
+        "review": 1,
+        "unresolved_subject": 4
+      }
+    },
+    "recovery_stats": {
+      "repaired": 0,
+      "oriented": 2,
+      "candidates_added": 1,
+      "skipped": 0
+    },
+    "delta": {
+      "confirmed_edges": 2,
+      "confirmed_nodes": 0,
+      "quarantine_relations": -1,
+      "quarantine_triplets": 0,
+      "evidence_verified": 2,
+      "evidence_unverified": -1,
+      "evidence_missing": 0,
+      "evidence_failure_reasons": 3
+    },
+    "confirmed_edge_samples": [
+      {
+        "subject": "Pneumatic Conveying Package",
+        "predicate": "prepared by",
+        "object": "thyssenkrupp Industrial Solutions (India) Private Limited",
+        "category": "semantic"
+      },
+      {
+        "subject": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+        "predicate": "appointed as",
+        "object": "EPCM Consultant",
+        "category": "semantic"
+      },
+      {
+        "subject": "6746-PIP-022-EC-0001",
+        "predicate": "for project",
+        "object": "EPCM3 (P25)",
+        "category": "technical"
+      }
+    ]
+  },
+  "6746": {
+    "before": {
+      "confirmed_edges": 15,
+      "confirmed_nodes": 33,
+      "quarantine_relations": 47,
+      "quarantine_triplets": 78,
+      "evidence_verified": 72,
+      "evidence_unverified": 39,
+      "evidence_missing": 37,
+      "evidence_failure_reasons": 76,
+      "reason_counts": {
+        "self_parent": 12,
+        "hierarchy_invalid": 28,
+        "evidence_missing": 42,
+        "not_graph_eligible": 76,
+        "unresolved_object": 14,
+        "review": 25,
+        "hierarchy_cycle": 7,
+        "evidence_unverified": 34,
+        "unresolved_subject": 5
+      }
+    },
+    "after": {
+      "confirmed_edges": 7,
+      "confirmed_nodes": 33,
+      "quarantine_relations": 57,
+      "quarantine_triplets": 79,
+      "evidence_verified": 54,
+      "evidence_unverified": 58,
+      "evidence_missing": 36,
+      "evidence_failure_reasons": 175,
+      "reason_counts": {
+        "evidence_unverified": 58,
+        "not_graph_eligible": 94,
+        "claim_not_source_backed": 81,
+        "self_parent": 12,
+        "hierarchy_invalid": 28,
+        "evidence_missing": 36,
+        "unresolved_object": 14,
+        "review": 3,
+        "unresolved_subject": 5
+      }
+    },
+    "recovery_stats": {
+      "repaired": 2,
+      "oriented": 0,
+      "candidates_added": 0,
+      "skipped": 0
+    },
+    "delta": {
+      "confirmed_edges": -8,
+      "confirmed_nodes": 0,
+      "quarantine_relations": 10,
+      "quarantine_triplets": 1,
+      "evidence_verified": -18,
+      "evidence_unverified": 19,
+      "evidence_missing": -1,
+      "evidence_failure_reasons": 99
+    },
+    "confirmed_edge_samples": [
+      {
+        "subject": "22-PK-3801",
+        "predicate": "part of",
+        "object": "Pneumatic conveying package",
+        "category": "engineering_hierarchy"
+      },
+      {
+        "subject": "22-PK-3804",
+        "predicate": "part of",
+        "object": "Pneumatic conveying package",
+        "category": "engineering_hierarchy"
+      },
+      {
+        "subject": "22-PK-3901",
+        "predicate": "part of",
+        "object": "Pneumatic conveying package",
+        "category": "engineering_hierarchy"
+      },
+      {
+        "subject": "22-PK-3904",
+        "predicate": "part of",
+        "object": "Pneumatic conveying package",
+        "category": "engineering_hierarchy"
+      },
+      {
+        "subject": "66-6746",
+        "predicate": "contract no. of",
+        "object": "6746-PIP-022-EC-0001",
+        "category": "semantic"
+      },
+      {
+        "subject": "Silo Venting Blower 22-K-3904A/B",
+        "predicate": "part of",
+        "object": "22-PK-3904",
+        "category": "engineering_hierarchy"
+      },
+      {
+        "subject": "Discharge Cooler (22-E-3904)",
+        "predicate": "thermal design by",
+        "object": "22-PK-3904",
+        "category": "semantic"
+      }
+    ]
+  }
+}

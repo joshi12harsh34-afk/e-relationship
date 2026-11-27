@@ -1,0 +1,5779 @@
+{
+  "source": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+  "source_original": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+  "raw_entity_count": 53,
+  "entity_count": 35,
+  "relation_count": 27,
+  "triplet_count": 43,
+  "raw_entities": [
+    {
+      "text": "Iyondellbasell",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 44,
+      "end_char": 58,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "Iyondellbasell",
+            "role": "identity"
+          },
+          {
+            "value": "Iyondellbasell",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Iyondellbasell",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Annexure-2.1IOCL PP LINE 3-450 KTA",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 79,
+      "end_char": 113,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "Annexure-2.1IOCL PP LINE 3-450 KTA",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Annexure-2.1IOCL PP LINE 3-450 KTA",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 79,
+          "end_char": 113
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "PROJECT NO.",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 140,
+      "end_char": 151,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "PROJECT NO.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "PROJECT NO.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "1916",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 172,
+      "end_char": 176,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "1916",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "1916",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "DOCUMENT NO.",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 219,
+      "end_char": 231,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "DOCUMENT NO.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "DOCUMENT NO.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "1916-PRO-TDS-22-PK-3801",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 252,
+      "end_char": 275,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "1916-PRO-TDS-22-PK-3801",
+            "role": "identity"
+          },
+          {
+            "value": "1916-PRO-TDS-22-PK-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "1916-PRO-TDS-22-PK-3801",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-PK-3801",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 265,
+      "end_char": 275,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-PK-3801",
+            "role": "identity"
+          },
+          {
+            "value": "22-PK-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3801",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-PK-3801",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 393,
+      "end_char": 403,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-PK-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3801",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-E-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 1712,
+      "end_char": 1721,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-E-3800",
+            "role": "identity"
+          },
+          {
+            "value": "22-E-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-E-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-E-3801",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 1761,
+      "end_char": 1770,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-E-3801",
+            "role": "identity"
+          },
+          {
+            "value": "22-E-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-E-3801",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-K-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 1811,
+      "end_char": 1823,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-K-3801A/B",
+            "role": "identity"
+          },
+          {
+            "value": "22-K-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-K-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 1862,
+      "end_char": 1874,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3801A/B",
+            "role": "identity"
+          },
+          {
+            "value": "22-G-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3820A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 1912,
+      "end_char": 1924,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3820A/B",
+            "role": "identity"
+          },
+          {
+            "value": "22-G-3820A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3820A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 1912,
+          "end_char": 1924
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 1956,
+      "end_char": 1965,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          },
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          },
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-ME-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 1991,
+      "end_char": 2001,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 1991,
+          "end_char": 2001
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-ME-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 2026,
+      "end_char": 2039,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          },
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          },
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 2065,
+      "end_char": 2074,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3800",
+            "role": "identity"
+          },
+          {
+            "value": "22-G-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 2077,
+      "end_char": 2086,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3508",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 2102,
+      "end_char": 2111,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3508",
+            "role": "identity"
+          },
+          {
+            "value": "22-G-3508",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3508",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3503",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 2114,
+      "end_char": 2123,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          },
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          },
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3503",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3503",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 2139,
+      "end_char": 2148,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3503",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-ME-3803A/B 3503A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 2182,
+      "end_char": 2203,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3803A/B 3503A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3803A/B 3503A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 2182,
+          "end_char": 2203
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 3758,
+      "end_char": 3767,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 3869,
+      "end_char": 3881,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3801A/B",
+            "role": "identity"
+          },
+          {
+            "value": "22-V-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 4035,
+      "end_char": 4047,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 4232,
+      "end_char": 4241,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-ME-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 5398,
+      "end_char": 5411,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3503",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 5556,
+      "end_char": 5565,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3503",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3508",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 5869,
+      "end_char": 5878,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3508",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3508",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-ME-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 6177,
+      "end_char": 6190,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3800: Feeding Hopper",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 13228,
+      "end_char": 13253,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3800: Feeding Hopper",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 13228,
+          "end_char": 13253
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "IOCL PP LINE 3-450 KTA",
+      "label": "Project",
+      "confidence": 0.975,
+      "start_char": 13410,
+      "end_char": 13432,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "IOCL PP LINE 3-450 KTA",
+            "role": "identity"
+          },
+          {
+            "value": "IOCL PP LINE 3-450 KTA",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "IOCL PP LINE 3-450 KTA",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-ME-3800 and 22-ME-3801A/B: Rotary Feeders",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 15988,
+      "end_char": 16032,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-ME-3800",
+            "role": "identity"
+          },
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3800 and 22-ME-3801A/B: Rotary Feeders",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 15988,
+          "end_char": 16032
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-V-3503: Fines Discharge Hopper",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 17247,
+      "end_char": 17280,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3503: Fines Discharge Hopper",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 17247,
+          "end_char": 17280
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3508: 22-V-3503 Filter",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 18363,
+      "end_char": 18390,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-G-3508",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3508: 22-V-3503 Filter",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 18363,
+          "end_char": 18390
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-ME-3803A/B: Fines Rotary Feeders",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 20437,
+      "end_char": 20472,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-ME-3803A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3803A/B: Fines Rotary Feeders",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 20437,
+          "end_char": 20472
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-K-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 22170,
+      "end_char": 22182,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Blower",
+        "identifiers": [
+          {
+            "value": "22-K-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.7 22-K-3801A/B: Pneumatic Transport Blowers",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 22166,
+          "end_char": 22211
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-E-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 23781,
+      "end_char": 23790,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "HeatExchanger",
+        "identifiers": [
+          {
+            "value": "22-E-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.8 22-E-3800: 22-K-3801A/B Suction Cooler",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 23777,
+          "end_char": 23819
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-E-3801",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 24397,
+      "end_char": 24406,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "HeatExchanger",
+        "identifiers": [
+          {
+            "value": "22-E-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.9 22-E-3801: 22-K-3801A/B Delivery Cooler",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 24393,
+          "end_char": 24436
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3820A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 25006,
+      "end_char": 25018,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Filter",
+        "identifiers": [
+          {
+            "value": "22-G-3820A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.10 22-G-3820A/B: 22-V-3801 Filters",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 25001,
+          "end_char": 25037
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "22-G-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 26749,
+      "end_char": 26761,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Filter",
+        "identifiers": [
+          {
+            "value": "22-G-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.11 22-G-3801A/B: 22-K-3801A/B Guard Filters",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 26744,
+          "end_char": 26789
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Line Injectors",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 27536,
+      "end_char": 27550,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Injector",
+        "identifiers": [
+          {
+            "value": "Line Injectors",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.12 Line Injectors",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 27531,
+          "end_char": 27550
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Diverter Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 27900,
+      "end_char": 27915,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Diverter Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.13 Diverter Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 27895,
+          "end_char": 27915
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Manual Butterfly Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 29480,
+      "end_char": 29503,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Manual Butterfly Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.14 Manual Butterfly Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 29475,
+          "end_char": 29503
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Automatic Butterfly Valve",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 29827,
+      "end_char": 29852,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Automatic Butterfly Valve",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.15 Automatic Butterfly Valve",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 29822,
+          "end_char": 29852
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Automatic and Manual Slide Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 30230,
+      "end_char": 30263,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Automatic and Manual Slide Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.16 Automatic and Manual Slide Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 30225,
+          "end_char": 30263
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Automatic Ball Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "start_char": 31311,
+      "end_char": 31332,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Automatic Ball Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.17 Automatic Ball Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 31306,
+          "end_char": 31332
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "Iyondellbasell",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 34574,
+      "end_char": 34588,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "Iyondellbasell",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Iyondellbasell",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "IOCL PP LINE 3-450 KTA",
+      "label": "Project",
+      "confidence": 0.975,
+      "start_char": 34609,
+      "end_char": 34631,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "IOCL PP LINE 3-450 KTA",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "IOCL PP LINE 3-450 KTA",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "1916",
+      "label": "Project",
+      "confidence": 0.975,
+      "start_char": 34690,
+      "end_char": 34694,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "1916",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "1916",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "1916-PRO-TDS-22-PK-3801",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 34770,
+      "end_char": 34793,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "DocumentSection",
+        "identifiers": [
+          {
+            "value": "1916-PRO-TDS-22-PK-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "1916-PRO-TDS-22-PK-3801",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "IndianOil",
+      "label": "Organization",
+      "confidence": 0.975,
+      "start_char": 39877,
+      "end_char": 39886,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "IndianOil",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "IndianOil",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 39877,
+          "end_char": 39886
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    },
+    {
+      "text": "23 OF 23",
+      "label": "Document",
+      "confidence": 0.975,
+      "start_char": 40066,
+      "end_char": 40074,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "DocumentSection",
+        "identifiers": [
+          {
+            "value": "23 OF 23",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "23 OF 23",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 40066,
+          "end_char": 40074
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        }
+      }
+    }
+  ],
+  "entities": [
+    {
+      "id": "e0",
+      "text": "Iyondellbasell",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "Iyondellbasell",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Iyondellbasell",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e0",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e0",
+              "name": "Iyondellbasell",
+              "source": null
+            },
+            {
+              "id": "e47",
+              "name": "Iyondellbasell",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e0",
+          "e47"
+        ]
+      }
+    },
+    {
+      "id": "e5",
+      "text": "1916-PRO-TDS-22-PK-3801",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "1916-PRO-TDS-22-PK-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "1916-PRO-TDS-22-PK-3801",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e5",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e5",
+              "name": "1916-PRO-TDS-22-PK-3801",
+              "source": null
+            },
+            {
+              "id": "e50",
+              "name": "1916-PRO-TDS-22-PK-3801",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e5",
+          "e50"
+        ]
+      }
+    },
+    {
+      "id": "e6",
+      "text": "22-PK-3801",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-PK-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-PK-3801",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e6",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e6",
+              "name": "22-PK-3801",
+              "source": null
+            },
+            {
+              "id": "e7",
+              "name": "22-PK-3801",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e6",
+          "e7"
+        ]
+      }
+    },
+    {
+      "id": "e8",
+      "text": "22-E-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-E-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.8 22-E-3800: 22-K-3801A/B Suction Cooler",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 23777,
+          "end_char": 23819
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e8",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e8",
+              "name": "22-E-3800",
+              "source": null
+            },
+            {
+              "id": "e37",
+              "name": "22-E-3800",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e8",
+          "e37"
+        ]
+      }
+    },
+    {
+      "id": "e9",
+      "text": "22-E-3801",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-E-3801",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.9 22-E-3801: 22-K-3801A/B Delivery Cooler",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 24393,
+          "end_char": 24436
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e9",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e9",
+              "name": "22-E-3801",
+              "source": null
+            },
+            {
+              "id": "e38",
+              "name": "22-E-3801",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e9",
+          "e38"
+        ]
+      }
+    },
+    {
+      "id": "e10",
+      "text": "22-K-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-K-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.7 22-K-3801A/B: Pneumatic Transport Blowers",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 22166,
+          "end_char": 22211
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e10",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e10",
+              "name": "22-K-3801A/B",
+              "source": null
+            },
+            {
+              "id": "e36",
+              "name": "22-K-3801A/B",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e10",
+          "e36"
+        ]
+      }
+    },
+    {
+      "id": "e11",
+      "text": "22-G-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.11 22-G-3801A/B: 22-K-3801A/B Guard Filters",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 26744,
+          "end_char": 26789
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e11",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e11",
+              "name": "22-G-3801A/B",
+              "source": null
+            },
+            {
+              "id": "e40",
+              "name": "22-G-3801A/B",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e11",
+          "e40"
+        ]
+      }
+    },
+    {
+      "id": "e12",
+      "text": "22-G-3820A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3820A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.10 22-G-3820A/B: 22-V-3801 Filters",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 25001,
+          "end_char": 25037
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e12",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e12",
+              "name": "22-G-3820A/B",
+              "source": null
+            },
+            {
+              "id": "e39",
+              "name": "22-G-3820A/B",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e12",
+          "e39"
+        ]
+      }
+    },
+    {
+      "id": "e13",
+      "text": "22-V-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e13",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e13",
+              "name": "22-V-3800",
+              "source": null
+            },
+            {
+              "id": "e17",
+              "name": "22-V-3800",
+              "source": null
+            },
+            {
+              "id": "e22",
+              "name": "22-V-3800",
+              "source": null
+            }
+          ],
+          "merge_count": 3
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e13",
+          "e17",
+          "e22"
+        ]
+      }
+    },
+    {
+      "id": "e15",
+      "text": "22-ME-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e15",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e15",
+              "name": "22-ME-3801A/B",
+              "source": null
+            },
+            {
+              "id": "e26",
+              "name": "22-ME-3801A/B",
+              "source": null
+            },
+            {
+              "id": "e29",
+              "name": "22-ME-3801A/B",
+              "source": null
+            }
+          ],
+          "merge_count": 3
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e15",
+          "e26",
+          "e29"
+        ]
+      }
+    },
+    {
+      "id": "e16",
+      "text": "22-G-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e16",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e16",
+              "name": "22-G-3800",
+              "source": null
+            },
+            {
+              "id": "e25",
+              "name": "22-G-3800",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e16",
+          "e25"
+        ]
+      }
+    },
+    {
+      "id": "e18",
+      "text": "22-G-3508",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-G-3508",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3508",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e18",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e18",
+              "name": "22-G-3508",
+              "source": null
+            },
+            {
+              "id": "e28",
+              "name": "22-G-3508",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e18",
+          "e28"
+        ]
+      }
+    },
+    {
+      "id": "e19",
+      "text": "22-V-3503",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3503",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e19",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e19",
+              "name": "22-V-3503",
+              "source": null
+            },
+            {
+              "id": "e20",
+              "name": "22-V-3503",
+              "source": null
+            },
+            {
+              "id": "e27",
+              "name": "22-V-3503",
+              "source": null
+            }
+          ],
+          "merge_count": 3
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e19",
+          "e20",
+          "e27"
+        ]
+      }
+    },
+    {
+      "id": "e23",
+      "text": "22-V-3801A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-V-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3801A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e23",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e23",
+              "name": "22-V-3801A/B",
+              "source": null
+            },
+            {
+              "id": "e24",
+              "name": "22-V-3801A/B",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e23",
+          "e24"
+        ]
+      }
+    },
+    {
+      "id": "e31",
+      "text": "IOCL PP LINE 3-450 KTA",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "IOCL PP LINE 3-450 KTA",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "IOCL PP LINE 3-450 KTA",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm",
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e31",
+        "provenance": {
+          "merged_from": [
+            {
+              "id": "e31",
+              "name": "IOCL PP LINE 3-450 KTA",
+              "source": null
+            },
+            {
+              "id": "e48",
+              "name": "IOCL PP LINE 3-450 KTA",
+              "source": null
+            }
+          ],
+          "merge_count": 2
+        },
+        "aliases": [],
+        "source_references": [],
+        "merged_from_ids": [
+          "e31",
+          "e48"
+        ]
+      }
+    },
+    {
+      "id": "e1",
+      "text": "Annexure-2.1IOCL PP LINE 3-450 KTA",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "Annexure-2.1IOCL PP LINE 3-450 KTA",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "Annexure-2.1IOCL PP LINE 3-450 KTA",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 79,
+          "end_char": 113
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e1"
+      }
+    },
+    {
+      "id": "e2",
+      "text": "PROJECT NO.",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "PROJECT NO.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "PROJECT NO.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e2"
+      }
+    },
+    {
+      "id": "e3",
+      "text": "1916",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "1916",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "1916",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e3"
+      }
+    },
+    {
+      "id": "e4",
+      "text": "DOCUMENT NO.",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Document",
+        "identifiers": [
+          {
+            "value": "DOCUMENT NO.",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "DOCUMENT NO.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e4"
+      }
+    },
+    {
+      "id": "e14",
+      "text": "22-ME-3800",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3800",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 1991,
+          "end_char": 2001
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e14"
+      }
+    },
+    {
+      "id": "e21",
+      "text": "22-ME-3803A/B 3503A/B",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Equipment",
+        "identifiers": [
+          {
+            "value": "22-ME-3803A/B 3503A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3803A/B 3503A/B",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 2182,
+          "end_char": 2203
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e21"
+      }
+    },
+    {
+      "id": "e30",
+      "text": "22-V-3800: Feeding Hopper",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-V-3800",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3800: Feeding Hopper",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 13228,
+          "end_char": 13253
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e30"
+      }
+    },
+    {
+      "id": "e32",
+      "text": "22-ME-3800 and 22-ME-3801A/B: Rotary Feeders",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-ME-3800",
+            "role": "identity"
+          },
+          {
+            "value": "22-ME-3801A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3800 and 22-ME-3801A/B: Rotary Feeders",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 15988,
+          "end_char": 16032
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e32"
+      }
+    },
+    {
+      "id": "e33",
+      "text": "22-V-3503: Fines Discharge Hopper",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-V-3503",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-V-3503: Fines Discharge Hopper",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 17247,
+          "end_char": 17280
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e33"
+      }
+    },
+    {
+      "id": "e34",
+      "text": "22-G-3508: 22-V-3503 Filter",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-G-3508",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-G-3508: 22-V-3503 Filter",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 18363,
+          "end_char": 18390
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e34"
+      }
+    },
+    {
+      "id": "e35",
+      "text": "22-ME-3803A/B: Fines Rotary Feeders",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "22-ME-3803A/B",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "22-ME-3803A/B: Fines Rotary Feeders",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 20437,
+          "end_char": 20472
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e35"
+      }
+    },
+    {
+      "id": "e41",
+      "text": "Line Injectors",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Injector",
+        "identifiers": [
+          {
+            "value": "Line Injectors",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.12 Line Injectors",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 27531,
+          "end_char": 27550
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e41"
+      }
+    },
+    {
+      "id": "e42",
+      "text": "Diverter Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Diverter Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.13 Diverter Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 27895,
+          "end_char": 27915
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e42"
+      }
+    },
+    {
+      "id": "e43",
+      "text": "Manual Butterfly Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Manual Butterfly Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.14 Manual Butterfly Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 29475,
+          "end_char": 29503
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e43"
+      }
+    },
+    {
+      "id": "e44",
+      "text": "Automatic Butterfly Valve",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Automatic Butterfly Valve",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.15 Automatic Butterfly Valve",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 29822,
+          "end_char": 29852
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e44"
+      }
+    },
+    {
+      "id": "e45",
+      "text": "Automatic and Manual Slide Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Automatic and Manual Slide Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.16 Automatic and Manual Slide Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 30225,
+          "end_char": 30263
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e45"
+      }
+    },
+    {
+      "id": "e46",
+      "text": "Automatic Ball Valves",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Valve",
+        "identifiers": [
+          {
+            "value": "Automatic Ball Valves",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "6.17 Automatic Ball Valves",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 31306,
+          "end_char": 31332
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e46"
+      }
+    },
+    {
+      "id": "e49",
+      "text": "1916",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "identifiers": [
+          {
+            "value": "1916",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "1916",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e49"
+      }
+    },
+    {
+      "id": "e51",
+      "text": "IndianOil",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "Company",
+        "identifiers": [
+          {
+            "value": "IndianOil",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "IndianOil",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 39877,
+          "end_char": 39886
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e51"
+      }
+    },
+    {
+      "id": "e52",
+      "text": "23 OF 23",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "kind": "entity",
+        "subtype": "DocumentSection",
+        "identifiers": [
+          {
+            "value": "23 OF 23",
+            "role": "identity"
+          }
+        ],
+        "evidence": {
+          "source_text": "23 OF 23",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 40066,
+          "end_char": 40074
+        },
+        "merge_strategy": "union",
+        "supporting_methods": [
+          "llm"
+        ],
+        "vote_count": 1,
+        "eligible_method_count": 1,
+        "agreement": 1.0,
+        "method_scores": {
+          "llm": 0.975
+        },
+        "canonical_id": "e52"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "22-V-3800",
+      "predicate": "connected to",
+      "object": "22-ME-3801A/B",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e13",
+      "object_id": "e15",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-V-3800",
+      "predicate": "has component",
+      "object": "22-G-3800",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.2 22-G-3800: 22-V-3800 Filter",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 14241,
+          "end_char": 14272,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e13",
+      "object_id": "e16",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "has component",
+      "object": "22-G-3508",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.5 22-G-3508: 22-V-3503 Filter",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 18359,
+          "end_char": 18390,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e19",
+      "object_id": "e18",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3803A/B 3503A/B",
+      "predicate": "discharges to",
+      "object": "22-V-3503",
+      "confidence": 0.8516918838024139,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e21",
+      "object_id": "e19",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3800",
+      "predicate": "discharges to",
+      "object": "IndianOil",
+      "confidence": 0.8516918838024139,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e14",
+      "object_id": "e51",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-K-3801A/B",
+      "predicate": "connected to",
+      "object": "22-E-3800",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.8 22-E-3800: 22-K-3801A/B Suction Cooler",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 23777,
+          "end_char": 23819,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e10",
+      "object_id": "e8",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-K-3801A/B",
+      "predicate": "connected to",
+      "object": "22-E-3801",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.9 22-E-3801: 22-K-3801A/B Delivery Cooler",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 24393,
+          "end_char": 24436,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e10",
+      "object_id": "e9",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-E-3801",
+      "predicate": "connected to",
+      "object": "22-G-3820A/B",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e9",
+      "object_id": "e12",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-K-3801A/B",
+      "predicate": "connected to",
+      "object": "22-G-3801A/B",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.11 22-G-3801A/B: 22-K-3801A/B Guard Filters",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 26744,
+          "end_char": 26789,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e10",
+      "object_id": "e11",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "connected to",
+      "object": "Line Injectors",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Note: The line injector installed under the Hopper 22-V-3503 shall not cause troubles to the main flow in the pneumatic transfer pipe coming from the Rotary Feeders 22-ME-3801A/B.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 27711,
+          "end_char": 27890,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e19",
+      "object_id": "e41",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-V-3800",
+      "predicate": "connected to",
+      "object": "Automatic and Manual Slide Valves",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.16 Automatic and Manual Slide Valves\n\nQuantity : 2 Automatic type, at the outlet of 22-V-3800 feed Hopper plus 1 manual type, at the bottom discharge of 22-V-3503.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 30225,
+          "end_char": 30390,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e13",
+      "object_id": "e45",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "connected to",
+      "object": "Automatic and Manual Slide Valves",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.16 Automatic and Manual Slide Valves\n\nQuantity : 2 Automatic type, at the outlet of 22-V-3800 feed Hopper plus 1 manual type, at the bottom discharge of 22-V-3503.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 30225,
+          "end_char": 30390,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e19",
+      "object_id": "e45",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-V-3800",
+      "predicate": "connected to",
+      "object": "Automatic Ball Valves",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "6.17 Automatic Ball Valves\n\nQuantity : 2 (sample points), installed on the 22-V-3800 product discharge lines",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 31306,
+          "end_char": 31414,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e13",
+      "object_id": "e46",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "IndianOil",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e51",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "IndianOil",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e51",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "fed by",
+      "object": "22-K-3801A/B",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e10",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "fed by",
+      "object": "22-K-3801A/B",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e10",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "fed by",
+      "object": "22-K-3801A/B",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e10",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "fed by",
+      "object": "22-K-3801A/B",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e10",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "Diverter Valves",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e42",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "Diverter Valves",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e42",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "IndianOil",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e51",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "IndianOil",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e51",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "Diverter Valves",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e42",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "Diverter Valves",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e42",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "IndianOil",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e51",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    },
+    {
+      "subject": "22-ME-3801A/B",
+      "predicate": "controlled by",
+      "object": "IndianOil",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e15",
+      "object_id": "e51",
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "entity"
+    }
+  ],
+  "triplets": [
+    {
+      "subject": "22-PK-3801",
+      "predicate": "No. of Units",
+      "object": "1",
+      "confidence": 0.9017975330352783,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "1"
+        ],
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e6",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801",
+      "predicate": "Service",
+      "object": "Polymer Pneumatic Transport to Intermediate Surge Silos",
+      "confidence": 0.9005446135997772,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Polymer Pneumatic Transport to Intermediate Surge Silos"
+        ],
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e6",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801",
+      "predicate": "Product to be Handled",
+      "object": "Polypropylene Beads or Flakes (**)",
+      "confidence": 0.905027449131012,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Polypropylene Beads or Flakes (**)"
+        ],
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e6",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801",
+      "predicate": "Conveying Gas",
+      "object": "Nitrogen",
+      "confidence": 0.9125027060508728,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Nitrogen"
+        ],
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e6",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801",
+      "predicate": "Product Flow Rate",
+      "object": "Min. 33 t/hr Norm. 56.25 t/hr Max. 64 t/hr Design 71.5 t/hr (*)",
+      "confidence": 0.896404504776001,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Min. 33 t/hr Norm. 56.25 t/hr Max. 64 t/hr Design 71.5 t/hr (*)"
+        ],
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e6",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801",
+      "predicate": "Conveying Gas Flow Rate",
+      "object": "To Be Defined by Vendor",
+      "confidence": 0.8863868117332458,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e6",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PK-3801",
+      "predicate": "Conveying Mode",
+      "object": "Dilute Phase (Low Density), Closed Loop Syst",
+      "confidence": 0.9114835858345032,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": "e6",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3800",
+      "predicate": "Material",
+      "object": "304 SS Or Hardened Aluminum",
+      "confidence": 0.8508184671401977,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "304 SS Or Hardened Aluminum"
+        ],
+        "evidence": {
+          "source_text": "Material : 304 SS Or Hardened Aluminum",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e13",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3800",
+      "predicate": "Operating Pressure",
+      "object": "0.1 kg/cm²(g)",
+      "confidence": 0.8458914279937744,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "0.1 kg/cm²(g)"
+        ],
+        "evidence": {
+          "source_text": "Operating Pressure : 0.1 kg/cm²(g)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e13",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-G-3800",
+      "predicate": "Material",
+      "object": "Aluminium (for part in contact with product)",
+      "confidence": 0.8508184671401977,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Aluminium (for part in contact with product)"
+        ],
+        "evidence": {
+          "source_text": "Material : Aluminium (for part in contact with product)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e16",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3800",
+      "predicate": "Material",
+      "object": "304 SS Or Hardened Aluminium for casing and ends, 304 SS for rotor",
+      "confidence": 0.8508184671401977,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "304 SS Or Hardened Aluminium for casing and ends, 304 SS for rotor"
+        ],
+        "evidence": {
+          "source_text": "Material : 304 SS Or Hardened Aluminium for casing and ends, 304 SS for rotor",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e14",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3800",
+      "predicate": "Design Temperature",
+      "object": "120 Deg.C",
+      "confidence": 0.8477303504943847,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "120 Deg.C"
+        ],
+        "evidence": {
+          "source_text": "22-ME-3800,22-ME-3801A/B shall have DT of 120 Deg.C",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 17140,
+          "end_char": 17191,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e14",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "Design Temperature",
+      "object": "150 Deg.C",
+      "confidence": 0.8477303504943847,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "150 Deg.C"
+        ],
+        "evidence": {
+          "source_text": "For 22-V-3503,22-G-3508 DT shall be 150 Deg.C",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 17193,
+          "end_char": 17238,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e19",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "Contained Fluid",
+      "object": "PP powder (Specific Gravity 400 to $450 \\mathrm{~kg} / \\mathrm{m}^{3}$)",
+      "confidence": 0.8574074074074074,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "PP powder (Specific Gravity 400 to $450 \\mathrm{~kg} / \\mathrm{m}^{3}$)"
+        ],
+        "evidence": {
+          "source_text": "Contained Fluid : PP powder (Specific Gravity 400 to $450 \\mathrm{~kg} / \\mathrm{m}^{3}$)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 17808,
+          "end_char": 17897,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e19",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "Operating Pressure",
+      "object": "From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point",
+      "confidence": 0.8458914279937744,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point"
+        ],
+        "evidence": {
+          "source_text": "Operating Pressure : From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e19",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "Operating Temperature",
+      "object": "Max 80°C",
+      "confidence": 0.8380565464496612,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Max 80°C"
+        ],
+        "evidence": {
+          "source_text": "Operating Temperature : Max 80°C",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e19",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3503",
+      "predicate": "Design Temperature",
+      "object": "150°C (to be confirmed)",
+      "confidence": 0.8477303504943847,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "150°C (to be confirmed)"
+        ],
+        "evidence": {
+          "source_text": "Design Temperature : 150°C (to be confirmed)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e19",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-G-3508",
+      "predicate": "Material",
+      "object": "AISI 304",
+      "confidence": 0.8508184671401977,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Material : AISI 304",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 18440,
+          "end_char": 18459,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e18",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-G-3508",
+      "predicate": "Operating Temperature",
+      "object": "Max 80°C",
+      "confidence": 0.8380565464496612,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "Max 80°C"
+        ],
+        "evidence": {
+          "source_text": "Operating Temperature : Max 80°C",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e18",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-G-3508",
+      "predicate": "Operating Pressure",
+      "object": "From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point",
+      "confidence": 0.8458914279937744,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point"
+        ],
+        "evidence": {
+          "source_text": "Operating Pressure : From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e18",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-G-3508",
+      "predicate": "Design Temperature",
+      "object": "150°C (to be confirmed)",
+      "confidence": 0.8477303504943847,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "150°C (to be confirmed)"
+        ],
+        "evidence": {
+          "source_text": "Design Temperature : 150°C (to be confirmed)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": null,
+          "end_char": null,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e18",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3803A/B",
+      "predicate": "Aerated Bulk Density",
+      "object": "200 kg/m³",
+      "confidence": 0.8482705771923065,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "200 kg/m³"
+        ],
+        "evidence": {
+          "source_text": "Aerated Bulk Density : 200 kg/m³",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 20973,
+          "end_char": 21005,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e35",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3803A/B",
+      "predicate": "Design Capacity",
+      "object": "2000 kg/hr",
+      "confidence": 0.8735704541206359,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "2000 kg/hr"
+        ],
+        "evidence": {
+          "source_text": "Design Capacity : 2000 kg/hr",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 21007,
+          "end_char": 21035,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e35",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3803A/B",
+      "predicate": "Operating Temp.",
+      "object": "80°C",
+      "confidence": 0.8462645530700683,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "80°C"
+        ],
+        "evidence": {
+          "source_text": "Operating Temp. : 80°C",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 21037,
+          "end_char": 21059,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e35",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3803A",
+      "predicate": "Operating Pressure",
+      "object": "0.1 kg/cm²(g)",
+      "confidence": 0.8458914279937744,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "0.1 kg/cm²(g)"
+        ],
+        "evidence": {
+          "source_text": "Operating Pressure : 0.1 kg/cm²(g) 22-ME-3803A",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 21380,
+          "end_char": 21426,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3803B",
+      "predicate": "Operating Pressure",
+      "object": "0.8 kg/cm²(g)",
+      "confidence": 0.8458914279937744,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "predicate_quality": "specific",
+        "evidence_status": "missing",
+        "graph_eligible": false
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3803A/B",
+      "predicate": "Design Temperature",
+      "object": "150 °C",
+      "confidence": 0.8477303504943847,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Design Temperature : 150 °C",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 21454,
+          "end_char": 21481,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e35",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3803A/B",
+      "predicate": "Design Pressure",
+      "object": "2 kg/cm²(g) (to be confirmed in accordance with the pneumatic Transport max working pressure plus 50%)",
+      "confidence": 0.8568256914615631,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Design Pressure : 2 kg/cm²(g) (to be confirmed in accordance with the pneumatic Transport max working pressure plus 50%)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 21483,
+          "end_char": 21603,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e35",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-K-3801A/B",
+      "predicate": "quantity",
+      "object": "2",
+      "confidence": 0.8451335251331329,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Quantity : 2 (one running and one as spare).",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 22213,
+          "end_char": 22257,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e10",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-V-3801A/B",
+      "predicate": "oxygen concentration",
+      "object": "< 4%",
+      "confidence": 0.8400688886642456,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "the required oxygen concentration (< 4%) will be measured by the gas analyser (22-Al-38001)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 32904,
+          "end_char": 32995,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": "e23",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-G-3801A",
+      "predicate": "alignment",
+      "object": "pneumatic haulage",
+      "confidence": 0.8515805125236511,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Align 22-G-3801A (or B) to the pneumatic haulage.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33100,
+          "end_char": 33149,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-G-3820A/B",
+      "predicate": "activation",
+      "object": "start filter cleaning by nitrogen flushing",
+      "confidence": 0.8467389464378356,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Activation of the Silo Top Filters 22-G-3820A/B (start filter cleaning by nitrogen flushing).",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33153,
+          "end_char": 33246,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": "e12",
+      "object_id": null,
+      "subject_ref_kind": "entity",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-XV-38005 or 22-XV-38015",
+      "predicate": "open",
+      "object": "according to the selected blower (22-HS-38005 Or 22-HS-38015 respectively)",
+      "confidence": 0.8542100012302398,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-XV-38005 or 22-XV-38015",
+          "according to the selected blower (22-HS-38005 Or 22-HS-38015 respectively)"
+        ],
+        "evidence": {
+          "source_text": "Open 22-XV-38005 or 22-XV-38015 (22-K-3801A and 22-K-3801B by-pass) according to the selected blower (22-HS-38005 Or 22-HS-38015 respectively).",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33276,
+          "end_char": 33419,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-HV-38004",
+      "predicate": "open",
+      "object": "by means of 22-HS-38004",
+      "confidence": 0.8542100012302398,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Open 22-HV-38004 by means of 22-HS-38004.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33458,
+          "end_char": 33499,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-HV-38014",
+      "predicate": "open",
+      "object": "by means of 22-HS-38014",
+      "confidence": 0.8542100012302398,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Open 22-HV-38014 by means of 22-HS-38014.",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33535,
+          "end_char": 33576,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-K-3801A or B",
+      "predicate": "start",
+      "object": "by means of 22-HS-38002B START push button",
+      "confidence": 0.8530029773712158,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Start the selected blower (22-K-3801A or B) by means of 22-HS-38002B START push button",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33580,
+          "end_char": 33666,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-XV-38006 or 22-XV-38007",
+      "predicate": "open",
+      "object": "after a certain time set by a timer",
+      "confidence": 0.8542100012302398,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-XV-38006 or 22-XV-38007"
+        ],
+        "evidence": {
+          "source_text": "open delivery valve 22-XV-38006 (or 22-XV-38007), while by-pass valve (22-XV-38005 OR 22-XV-38015) begins to close slowly",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33708,
+          "end_char": 33829,
+          "claim_verified": false,
+          "verification_note": "quote does not support claim endpoints/direction"
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "unverified",
+        "graph_eligible": false
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-PIC-38101",
+      "predicate": "control",
+      "object": "total filling of the circuit with nitrogen",
+      "confidence": 0.8277376413345336,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Total filling of the circuit with nitrogen, introduced under control of 22-PIC-38101",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33978,
+          "end_char": 34062,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-Al-38001",
+      "predicate": "oxygen analyzers",
+      "object": "total filling of the circuit with nitrogen",
+      "confidence": 0.8529156863689422,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "Total filling of the circuit with nitrogen, introduced under control of 22-PIC-38101 and of oxygen analyzers 22-Al-38001",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 33978,
+          "end_char": 34098,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3801A or 22-ME-3801B",
+      "predicate": "start",
+      "object": "by means of 22-HS-38010",
+      "confidence": 0.8530029773712158,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-ME-3801A or 22-ME-3801B",
+          "by means of 22-HS-38010"
+        ],
+        "evidence": {
+          "source_text": "Start the rotary valves 22-ME-3801A or 22-ME-3801B by means of 22-HS-38010",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 34103,
+          "end_char": 34177,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-XV-38001A and 22-XV-38001B",
+      "predicate": "verify the correct position",
+      "object": "ESD 3804",
+      "confidence": 0.8507593393325805,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "22-XV-38001A and 22-XV-38001B"
+        ],
+        "evidence": {
+          "source_text": "verify the correct position of 22-XV-38001A and 22-XV-38001B (ESD 3804)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 34182,
+          "end_char": 34253,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-ME-3801A or B",
+      "predicate": "start",
+      "object": "by means of 22-HS-38001A push button",
+      "confidence": 0.8530029773712158,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "synthetic_endpoints": [
+          "by means of 22-HS-38001A push button"
+        ],
+        "evidence": {
+          "source_text": "start the rotary valve 22-ME-3801A or B, by means of 22-HS-38001A push button",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 34338,
+          "end_char": 34415,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    },
+    {
+      "subject": "22-LV-35301",
+      "predicate": "open",
+      "object": "condition necessary to open the valve",
+      "confidence": 0.8542100012302398,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "evidence": {
+          "source_text": "The running of the rotary feeder 22-ME-3800 is a condition necessary to open the valve 22-LV-35301 (ESD 3801)",
+          "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+          "start_char": 34417,
+          "end_char": 34526,
+          "claim_verified": true
+        },
+        "predicate_quality": "specific",
+        "evidence_status": "verified",
+        "graph_eligible": true
+      },
+      "subject_id": null,
+      "object_id": null,
+      "subject_ref_kind": "unresolved",
+      "object_ref_kind": "unresolved",
+      "object_value_kind": "unresolved"
+    }
+  ],
+  "events": [],
+  "identity_map": {
+    "e0": "e0",
+    "e1": "e1",
+    "e2": "e2",
+    "e3": "e3",
+    "e4": "e4",
+    "e5": "e5",
+    "e6": "e6",
+    "e7": "e6",
+    "e8": "e8",
+    "e9": "e9",
+    "e10": "e10",
+    "e11": "e11",
+    "e12": "e12",
+    "e13": "e13",
+    "e14": "e14",
+    "e15": "e15",
+    "e16": "e16",
+    "e17": "e13",
+    "e18": "e18",
+    "e19": "e19",
+    "e20": "e19",
+    "e21": "e21",
+    "e22": "e13",
+    "e23": "e23",
+    "e24": "e23",
+    "e25": "e16",
+    "e26": "e15",
+    "e27": "e19",
+    "e28": "e18",
+    "e29": "e15",
+    "e30": "e30",
+    "e31": "e31",
+    "e32": "e32",
+    "e33": "e33",
+    "e34": "e34",
+    "e35": "e35",
+    "e36": "e10",
+    "e37": "e8",
+    "e38": "e9",
+    "e39": "e12",
+    "e40": "e11",
+    "e41": "e41",
+    "e42": "e42",
+    "e43": "e43",
+    "e44": "e44",
+    "e45": "e45",
+    "e46": "e46",
+    "e47": "e0",
+    "e48": "e31",
+    "e49": "e49",
+    "e50": "e5",
+    "e51": "e51",
+    "e52": "e52"
+  },
+  "warnings": [
+    "unverified/ineligible relation kept for review: '22-V-3800' -[connected to]-> '22-ME-3801A/B' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3803A/B 3503A/B' -[discharges to]-> '22-V-3503' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3800' -[discharges to]-> 'IndianOil' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-E-3801' -[connected to]-> '22-G-3820A/B' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-V-3503' -[connected to]-> 'Line Injectors' (status=unverified)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'IndianOil' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'IndianOil' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[fed by]-> '22-K-3801A/B' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[fed by]-> '22-K-3801A/B' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[fed by]-> '22-K-3801A/B' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[fed by]-> '22-K-3801A/B' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'Diverter Valves' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'Diverter Valves' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'IndianOil' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'IndianOil' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'Diverter Valves' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'Diverter Valves' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'IndianOil' (status=missing)",
+    "unverified/ineligible relation kept for review: '22-ME-3801A/B' -[controlled by]-> 'IndianOil' (status=missing)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801' -[No. of Units]-> '1' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801' -[Service]-> 'Polymer Pneumatic Transport to Intermediate Surge Silos' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801' -[Product to be Handled]-> 'Polypropylene Beads or Flakes (**)' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801' -[Conveying Gas]-> 'Nitrogen' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801' -[Product Flow Rate]-> 'Min. 33 t/hr Norm. 56.25 t/hr Max. 64 t/hr Design 71.5 t/hr (*)' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801' -[Conveying Gas Flow Rate]-> 'To Be Defined by Vendor' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-PK-3801' -[Conveying Mode]-> 'Dilute Phase (Low Density), Closed Loop Syst' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-V-3800' -[Material]-> '304 SS Or Hardened Aluminum' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-V-3800' -[Operating Pressure]-> '0.1 kg/cm²(g)' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-G-3800' -[Material]-> 'Aluminium (for part in contact with product)' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-ME-3800' -[Material]-> '304 SS Or Hardened Aluminium for casing and ends, 304 SS for rotor' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-V-3503' -[Contained Fluid]-> 'PP powder (Specific Gravity 400 to $450 \\\\mathrm{~kg} / \\\\mathrm{m}^{3}$)' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-V-3503' -[Operating Pressure]-> \"From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point\" (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-V-3503' -[Operating Temperature]-> 'Max 80°C' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-V-3503' -[Design Temperature]-> '150°C (to be confirmed)' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-G-3508' -[Material]-> 'AISI 304' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-G-3508' -[Operating Temperature]-> 'Max 80°C' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-G-3508' -[Operating Pressure]-> \"From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point\" (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-G-3508' -[Design Temperature]-> '150°C (to be confirmed)' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-ME-3803A/B' -[Aerated Bulk Density]-> '200 kg/m³' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-ME-3803A/B' -[Design Capacity]-> '2000 kg/hr' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-ME-3803A/B' -[Operating Temp.]-> '80°C' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-ME-3803B' -[Operating Pressure]-> '0.8 kg/cm²(g)' (status=missing, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-ME-3803A/B' -[Design Temperature]-> '150 °C' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-ME-3803A/B' -[Design Pressure]-> '2 kg/cm²(g) (to be confirmed in accordance with the pneumatic Transport max working pressure plus 50%)' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-K-3801A/B' -[quantity]-> '2' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-V-3801A/B' -[oxygen concentration]-> '< 4%' (status=unverified, predicate_quality=specific)",
+    "unverified/ineligible triplet kept for review: '22-XV-38006 or 22-XV-38007' -[open]-> 'after a certain time set by a timer' (status=unverified, predicate_quality=specific)",
+    "invalid parent-child types for 'has component': equipment->equipment",
+    "invalid parent-child types for 'has component': equipment->equipment",
+    "missing entity node for triplet object: '1'",
+    "missing entity node for triplet object: 'Polymer Pneumatic Transport to Intermediate Surge Silos'",
+    "missing entity node for triplet object: 'Polypropylene Beads or Flakes (**)'",
+    "missing entity node for triplet object: 'Nitrogen'",
+    "missing entity node for triplet object: 'Min. 33 t/hr Norm. 56.25 t/hr Max. 64 t/hr Design 71.5 t/hr (*)'",
+    "missing entity node for triplet object: 'To Be Defined by Vendor'",
+    "missing entity node for triplet object: 'Dilute Phase (Low Density), Closed Loop Syst'",
+    "missing entity node for triplet object: '304 SS Or Hardened Aluminum'",
+    "missing entity node for triplet object: '0.1 kg/cm²(g)'",
+    "missing entity node for triplet object: 'Aluminium (for part in contact with product)'",
+    "missing entity node for triplet object: '304 SS Or Hardened Aluminium for casing and ends, 304 SS for rotor'",
+    "missing entity node for triplet object: '120 Deg.C'",
+    "missing entity node for triplet object: '150 Deg.C'",
+    "missing entity node for triplet object: 'PP powder (Specific Gravity 400 to $450 \\\\mathrm{~kg} / \\\\mathrm{m}^{3}$)'",
+    "missing entity node for triplet object: \"From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point\"",
+    "missing entity node for triplet object: 'Max 80°C'",
+    "missing entity node for triplet object: '150°C (to be confirmed)'",
+    "missing entity node for triplet object: 'AISI 304'",
+    "missing entity node for triplet object: 'Max 80°C'",
+    "missing entity node for triplet object: \"From 0.1 kg/cm²(g) to max pneumatic transport's working pressure at pick up point\"",
+    "missing entity node for triplet object: '150°C (to be confirmed)'",
+    "missing entity node for triplet object: '200 kg/m³'",
+    "missing entity node for triplet object: '2000 kg/hr'",
+    "missing entity node for triplet object: '80°C'",
+    "missing entity node for triplet subject: '22-ME-3803A'",
+    "missing entity node for triplet object: '0.1 kg/cm²(g)'",
+    "missing entity node for triplet subject: '22-ME-3803B'",
+    "missing entity node for triplet object: '0.8 kg/cm²(g)'",
+    "missing entity node for triplet object: '150 °C'",
+    "missing entity node for triplet object: '2 kg/cm²(g) (to be confirmed in accordance with the pneumatic Transport max working pressure plus 50%)'",
+    "missing entity node for triplet object: '2'",
+    "missing entity node for triplet object: '< 4%'",
+    "missing entity node for triplet subject: '22-G-3801A'",
+    "missing entity node for triplet object: 'pneumatic haulage'",
+    "missing entity node for triplet object: 'start filter cleaning by nitrogen flushing'",
+    "missing entity node for triplet subject: '22-XV-38005 or 22-XV-38015'",
+    "missing entity node for triplet object: 'according to the selected blower (22-HS-38005 Or 22-HS-38015 respectively)'",
+    "missing entity node for triplet subject: '22-HV-38004'",
+    "missing entity node for triplet object: 'by means of 22-HS-38004'",
+    "missing entity node for triplet subject: '22-HV-38014'",
+    "missing entity node for triplet object: 'by means of 22-HS-38014'",
+    "missing entity node for triplet subject: '22-K-3801A or B'",
+    "missing entity node for triplet object: 'by means of 22-HS-38002B START push button'",
+    "missing entity node for triplet subject: '22-XV-38006 or 22-XV-38007'",
+    "missing entity node for triplet object: 'after a certain time set by a timer'",
+    "missing entity node for triplet subject: '22-PIC-38101'",
+    "missing entity node for triplet object: 'total filling of the circuit with nitrogen'",
+    "missing entity node for triplet subject: '22-Al-38001'",
+    "missing entity node for triplet object: 'total filling of the circuit with nitrogen'",
+    "missing entity node for triplet subject: '22-ME-3801A or 22-ME-3801B'",
+    "missing entity node for triplet object: 'by means of 22-HS-38010'",
+    "missing entity node for triplet subject: '22-XV-38001A and 22-XV-38001B'",
+    "missing entity node for triplet object: 'ESD 3804'",
+    "missing entity node for triplet subject: '22-ME-3801A or B'",
+    "missing entity node for triplet object: 'by means of 22-HS-38001A push button'",
+    "missing entity node for triplet subject: '22-LV-35301'",
+    "missing entity node for triplet object: 'condition necessary to open the valve'",
+    "possible cross-document duplicate for 'IndianOil' also seen in ['inputs/commercial.md']"
+  ],
+  "diagnostics": [
+    {
+      "event": "extract_start",
+      "source_file": "inputs/Annexure 2.1 _ 1916-PRO-TDS-22-PK-3801 2 (3)_advanced_auto.md",
+      "doc_chars": 40361,
+      "will_chunk_entities": true,
+      "section_chunks": 4,
+      "boilerplate_omit": 17
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "EntitiesResponse",
+      "chunk_chars": 11646,
+      "prompt_chars": 17701,
+      "source_omitted_banners": 4
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "EntitiesResponse",
+      "chunk_rows": 38,
+      "store_rows": 38
+    },
+    {
+      "event": "ner_typed_vs_converted",
+      "typed_entities": 38,
+      "converted_entities": 38,
+      "dropped_count": 0
+    },
+    {
+      "event": "ground_entities",
+      "input": 38,
+      "kept": 38,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "EntitiesResponse",
+      "chunk_chars": 10518,
+      "prompt_chars": 16627,
+      "source_omitted_banners": 4
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "EntitiesResponse",
+      "chunk_rows": 7,
+      "store_rows": 7
+    },
+    {
+      "event": "ner_typed_vs_converted",
+      "typed_entities": 7,
+      "converted_entities": 7,
+      "dropped_count": 0
+    },
+    {
+      "event": "ground_entities",
+      "input": 7,
+      "kept": 7,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "EntitiesResponse",
+      "chunk_chars": 10178,
+      "prompt_chars": 15882,
+      "source_omitted_banners": 6
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "EntitiesResponse",
+      "chunk_rows": 11,
+      "store_rows": 11
+    },
+    {
+      "event": "ner_typed_vs_converted",
+      "typed_entities": 11,
+      "converted_entities": 11,
+      "dropped_count": 0
+    },
+    {
+      "event": "ground_entities",
+      "input": 11,
+      "kept": 11,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "EntitiesResponse",
+      "chunk_chars": 8016,
+      "prompt_chars": 14453,
+      "source_omitted_banners": 3
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "EntitiesResponse",
+      "chunk_rows": 6,
+      "store_rows": 6
+    },
+    {
+      "event": "ner_typed_vs_converted",
+      "typed_entities": 6,
+      "converted_entities": 6,
+      "dropped_count": 0
+    },
+    {
+      "event": "ground_entities",
+      "input": 6,
+      "kept": 6,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "after_metadata_merge",
+      "entities": 53,
+      "section_chunks": 4,
+      "chunk_methods": [
+        "recursive"
+      ]
+    },
+    {
+      "event": "after_coreference",
+      "input": 53,
+      "kept": 53,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "after_deduplication",
+      "input": 53,
+      "kept": 35,
+      "identity_map_size": 53
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "RelationsResponse",
+      "chunk_chars": 11646,
+      "prompt_chars": 42135,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "RelationsResponse",
+      "chunk_rows": 1,
+      "store_rows": 1
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "RelationsResponse",
+      "chunk_chars": 10518,
+      "prompt_chars": 41007,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "RelationsResponse",
+      "chunk_rows": 4,
+      "store_rows": 4
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "RelationsResponse",
+      "chunk_chars": 10178,
+      "prompt_chars": 40667,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "RelationsResponse",
+      "chunk_rows": 8,
+      "store_rows": 8
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "RelationsResponse",
+      "chunk_chars": 8016,
+      "prompt_chars": 38505,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "RelationsResponse",
+      "chunk_rows": 14,
+      "store_rows": 14
+    },
+    {
+      "event": "after_relations_llm",
+      "relations": 27,
+      "known_entities": 35,
+      "section_chunks": 4
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "TripletsResponse",
+      "chunk_chars": 11646,
+      "prompt_chars": 42422,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "TripletsResponse",
+      "chunk_rows": 7,
+      "store_rows": 7
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "TripletsResponse",
+      "chunk_chars": 10518,
+      "prompt_chars": 41294,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "TripletsResponse",
+      "chunk_rows": 21,
+      "store_rows": 21
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "TripletsResponse",
+      "chunk_chars": 10178,
+      "prompt_chars": 40954,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "TripletsResponse",
+      "chunk_rows": 1,
+      "store_rows": 1
+    },
+    {
+      "event": "llm_chunk_prompt",
+      "schema": "TripletsResponse",
+      "chunk_chars": 8016,
+      "prompt_chars": 38792,
+      "source_omitted_banners": 0
+    },
+    {
+      "event": "llm_typed_result",
+      "schema": "TripletsResponse",
+      "chunk_rows": 14,
+      "store_rows": 14
+    },
+    {
+      "event": "after_triplets_llm",
+      "triplets": 43,
+      "section_chunks": 4
+    },
+    {
+      "event": "after_entity_serialize",
+      "input": 35,
+      "kept": 35,
+      "dropped_count": 0,
+      "dropped": []
+    },
+    {
+      "event": "after_relation_serialize",
+      "input": 27,
+      "kept": 27,
+      "evidence_verified": 8,
+      "evidence_unverified": 1,
+      "evidence_missing": 18
+    },
+    {
+      "event": "after_triplet_serialize",
+      "input": 43,
+      "kept": 43,
+      "evidence_verified": 15,
+      "evidence_unverified": 20,
+      "evidence_missing": 8
+    },
+    {
+      "event": "extract_complete",
+      "raw_entities": 53,
+      "entities": 35,
+      "relations": 27,
+      "triplets": 43,
+      "warnings": 107
+    }
+  ]
+}

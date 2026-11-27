@@ -1,0 +1,2578 @@
+# Semantica policy + NER taxonomy — updated from uploaded v3.4 to v3.5
+# Main graph: Tender -> ScopeOfWork -> EngineeringPackage -> System -> [Subsystem] -> Equipment -> Component
+# Separate branch: Tender -> NIT/ITB/BDS/GCC/SCC/BOQ/Specifications/P&ID/Datasheets/QAP/ITP/Addenda
+# Source-grounded named referents become entities; scalar values remain properties.
+# Graph-schema additions are proposed config; application validators must be updated to use them.
+# Legacy identity-resolution settings are retained except unsafe Milestone normalization.
+
+version: '3.6'
+ner_taxonomy:
+  schema_name: Semantica Unified Domain-Agnostic NER Taxonomy
+  version: 1.2.0
+  purpose: 'Broad document NER with petroleum/P&ID engineering support and non-overlapping primary entity
+
+    labels.'
+  primary_type_count: 28
+  # Compact ontology injection for chunked / large-document NER (ontology_hints compact=True).
+  # Contract: LLM predicts primary + subtype + predicates from these hints;
+  # Python validates against hierarchy/subtype gates + source evidence (no force-relabel).
+  # Disambiguation order for compact prompts: set compact_priority on rules in
+  # disambiguation_rules (lower = earlier). Do not maintain a separate pair list here.
+  compact_prompt:
+    priority_subtypes:
+      Document:
+      - ScopeOfWork
+      - Datasheet
+      - Specification
+      - DocumentSection
+      - BidDataSheet
+      - Drawing
+    pins:
+    - 'Document typing: PRO-TDS/TDS/datasheet → Datasheet or Specification with specifies/describes
+      (not DocumentSection; not hasPackage). SOW → ScopeOfWork may hasPackage EngineeringPackage.'
+    - 'PK tags (middle segment PK, e.g. 22-PK-3801): primary System + subtype EngineeringPackage.
+      Never label a bare PK tag as Equipment. Emit one canonical System per PK tag.'
+  entity_types:
+  - type: Person
+    group: actors_and_places
+    definition: An identifiable individual human.
+    positive_examples:
+    - Jane Smith
+    - Dr. A. Kumar
+    exclusions_common_confusions: Job title alone or an organization
+    extraction_guidelines: Use for a named or uniquely identified person.
+  - type: Organization
+    group: actors_and_places
+    definition: 'An identifiable collective legal, institutional, or organizational actor, including departments
+
+      and government agencies.'
+    positive_examples:
+    - Acme Industrial Corp.
+    - Procurement Department
+    exclusions_common_confusions: Facility, project, or team role alone
+    extraction_guidelines: 'Use parent_organization relationships and an organizational_unit subtype for
+
+      departments.'
+  - type: Role
+    group: actors_and_places
+    definition: 'A specifically named organizational or operational position with an identifiable holder
+
+      or responsibility.'
+    positive_examples:
+    - Lead Mechanical Engineer
+    - Site Safety Officer
+    exclusions_common_confusions: Person, work activity, standalone generic job title
+    extraction_guidelines: Extract only when attached to a specific holder, assignment or reference.
+  - type: GeographicLocation
+    group: actors_and_places
+    definition: A named geographic place, region or address, independent of its industrial function.
+    positive_examples:
+    - Houston, Texas
+    - Western Region
+    exclusions_common_confusions: Refinery complex or processing plant
+    extraction_guidelines: Store coordinates or address as properties; site assets are Facility.
+  - type: Facility
+    group: actors_and_places
+    definition: An identifiable physical site, building, industrial complex, or operational area.
+    positive_examples:
+    - Coastal Refinery Complex
+    - Unit 3 Process Area
+    - Tank Farm A
+    exclusions_common_confusions: Operating company, expansion project, processing equipment
+    extraction_guidelines: For nested site areas use Facility with subtype SiteArea and partOf relation.
+  - type: Project
+    group: actors_and_places
+    definition: A bounded initiative or programme with objectives, scope and lifecycle.
+    positive_examples:
+    - Plant Expansion Project
+    - EPCM Phase 2
+    exclusions_common_confusions: Physical facility, recurring process, one-off task
+    extraction_guidelines: Project codes belong to the project when context confirms it.
+  - type: Document
+    group: information_and_governance
+    definition: 'An identifiable recorded information artifact, including its formally identified sections,
+
+      drawings, reports and reference works.'
+    positive_examples:
+    - Document Index
+    - P&ID drawing D-1001
+    - Bill of Quantities
+    - published journal paper
+    exclusions_common_confusions: 'Equipment, the work described by the document, unidentifiable formatting
+
+      header'
+    extraction_guidelines: 'Use subtype DocumentSection, Drawing, Report, Specification, Datasheet,
+
+      Publication, ProcedureDocument, or ScopeOfWork when useful. PRO-TDS/TDS/datasheet numbers →
+
+      Datasheet or Specification; SOW titles → ScopeOfWork; bare annexure/section headings →
+
+      DocumentSection.'
+  - type: Requirement
+    group: information_and_governance
+    definition: 'An individually identifiable condition, obligation, constraint or acceptance criterion
+
+      that must be met.'
+    positive_examples:
+    - REQ-210
+    - Clause 4.3 pressure test acceptance requirement
+    exclusions_common_confusions: Entire specification document, observed property value
+    extraction_guidelines: Capture source document and verification criteria as properties/relations.
+  - type: LegalInstrument
+    group: information_and_governance
+    definition: A formally identifiable legal rule, case, agreement or rights instrument.
+    positive_examples:
+    - Contract CT-1001
+    - Environmental Protection Act
+    - Patent US123456
+    exclusions_common_confusions: Procurement request, project, equipment
+    extraction_guidelines: 'Set subtype Contract, Regulation, LegalCase, or IntellectualProperty; never
+
+      conflate a contract with its project.'
+  - type: ProcurementArtifact
+    group: information_and_governance
+    definition: A distinct purchasing/solicitation or purchasing-record artifact or transaction.
+    positive_examples:
+    - Tender NIT-001
+    - RFQ-203
+    - Purchase Order PO-100
+    - Invoice INV-10
+    exclusions_common_confusions: Signed contract, generic tendering method, generic Document heading
+    extraction_guidelines: 'Use subtype Tender, RFQ, PurchaseOrder, Invoice, Transaction; prefer Document
+
+      for an attachment not representing procurement activity.'
+  - type: Standard
+    group: information_and_governance
+    definition: An identifiable normative standard or formally published code.
+    positive_examples:
+    - API 610
+    - ISO 15926
+    - ISA-5.1
+    exclusions_common_confusions: Internal specification, legislation
+    extraction_guidelines: Include edition and issuing body when explicit.
+  - type: FinancialInstrument
+    group: information_and_governance
+    definition: An identifiable security, debt obligation, or structured financial asset.
+    positive_examples:
+    - Corporate Bond Series A
+    - Loan Facility LF-01
+    exclusions_common_confusions: Payment, price amount, ordinary contract
+    extraction_guidelines: Record issuer, maturity and amount as attributes.
+  - type: DigitalResource
+    group: information_and_governance
+    definition: An identifiable dataset, database, software application, model, or digital repository.
+    positive_examples:
+    - Process Simulation App
+    - Equipment Register Database
+    - Simulation Model M-01
+    exclusions_common_confusions: Physical instrument, unreferenced file format
+    extraction_guidelines: Use subtype Software, Dataset, Database, SimulationModel, Repository.
+  - type: Equipment
+    group: physical_and_engineering
+    definition: 'A separately identifiable operational physical asset, machine, vessel or device with an
+
+      equipment function.'
+    positive_examples:
+    - Centrifugal Pump P-101
+    - Compressor K-202
+    - Heat Exchanger E-101
+    exclusions_common_confusions: Its impeller or nozzle, the entire facility, instrument loop
+    extraction_guidelines: Use equipment subtype (Pump, Compressor etc.) and stable tag identifiers.
+  - type: Component
+    group: physical_and_engineering
+    definition: 'An identifiable physical part, fitting, sensor, instrument or constituent of a larger
+
+      assembly, including piping and instrument items.'
+    positive_examples:
+    - Valve XV-101
+    - Transmitter PT-101
+    - impeller
+    - Reducer R-02
+    - Flange FL-01
+    exclusions_common_confusions: Complete packaged system, piping line, scalar property
+    extraction_guidelines: 'Use subtype PipingComponent, Instrument, MechanicalPart or ElectricalComponent;
+
+      refer to parent asset via partOf.'
+  - type: System
+    group: physical_and_engineering
+    definition: 'An identifiable functional arrangement of connected assets/components acting together;
+
+      includes identified subsystems and equipment packages.'
+    positive_examples:
+    - Cooling Water System
+    - Seal Oil Subsystem
+    - Solids Handling Package
+    exclusions_common_confusions: Individual pump, geographical area, project, one-off task
+    extraction_guidelines: Use subtype Subsystem or Package and explicit partOf/contains relations.
+  - type: PipingLine
+    group: physical_and_engineering
+    definition: 'A separately identifiable physical pipe run, line or line segment, usually with a line
+
+      designation.'
+    positive_examples:
+    - Line 10-P-101
+    - 6-inch line L-204
+    exclusions_common_confusions: Fluid stream, piping fitting, pipeline region/network
+    extraction_guidelines: Extract line tag; size/service/rating are properties.
+  - type: ProcessStream
+    group: physical_and_engineering
+    definition: An identifiable flow of material or energy between process points.
+    positive_examples:
+    - Feed Stream S-01
+    - Cooling Water Return Stream
+    exclusions_common_confusions: Physical pipe line or bulk material at rest
+    extraction_guidelines: Relate source/destination and medium; flow rate as property.
+  - type: ConnectionPoint
+    group: physical_and_engineering
+    definition: An identifiable port, nozzle, tie-in or named connection/interface.
+    positive_examples:
+    - Nozzle N1
+    - Tie-in TP-204
+    exclusions_common_confusions: Whole equipment or line, unspecified connection
+    extraction_guidelines: Store endpoint and orientation when explicit.
+  - type: Material
+    group: physical_and_engineering
+    definition: An identifiable chemical, substance, material grade, consumable or bulk product.
+    positive_examples:
+    - SS316L
+    - crude oil
+    - polymer pellets
+    - Catalyst C-10
+    exclusions_common_confusions: Quantity, flow stream, separately manufactured equipment item
+    extraction_guidelines: Use subtype Chemical, MaterialGrade, Consumable, ProductMaterial as appropriate.
+  - type: Product
+    group: physical_and_engineering
+    definition: 'An identifiable marketed/manufactured product or model separate from a specific installed
+
+      asset.'
+    positive_examples:
+    - Pump Model X200
+    - Brand Product A
+    exclusions_common_confusions: Installed equipment instance, material grade, procurement record
+    extraction_guidelines: Link actual instance to product model; capture model/brand properties.
+  - type: ControlLoop
+    group: physical_and_engineering
+    definition: 'An identifiable functional instrumentation/control loop composed of one or more devices
+
+      and signals.'
+    positive_examples:
+    - FIC-101 control loop
+    - TIC-201 temperature loop
+    exclusions_common_confusions: Single transmitter PT-101, control panel as hardware
+    extraction_guidelines: Link participating Components; store controlled variable and setpoint as properties.
+  - type: Process
+    group: time_action_and_knowledge
+    definition: An identifiable repeatable physical, chemical, administrative or computational transformation/workflow.
+    positive_examples:
+    - Crude Distillation
+    - Polymerization
+    - Purchase Approval Workflow
+    exclusions_common_confusions: Equipment or single specific execution
+    extraction_guidelines: 'Use for process definition or sustained operational process; distinguish actual
+
+      execution as Activity.'
+  - type: Activity
+    group: time_action_and_knowledge
+    definition: A specifically identifiable task or execution of work, not a project or physical object.
+    positive_examples:
+    - Hydrotest Task HT-12
+    - Inspection Work Order WO-10
+    exclusions_common_confusions: Project, document index, equipment item
+    extraction_guidelines: Prefer a task/work-order identifier or explicit bounded action evidence.
+  - type: Event
+    group: time_action_and_knowledge
+    definition: An identifiable occurrence anchored to time, including incidents, meetings and failures.
+    positive_examples:
+    - Planned shutdown event
+    - Failure Event FE-12
+    - Annual technical conference
+    exclusions_common_confusions: Repeatable procedure or ongoing process
+    extraction_guidelines: Capture time, participants and affected assets as attributes or relations.
+  - type: Condition
+    group: time_action_and_knowledge
+    definition: An independently referenced disease, fault, state or operational/environmental condition.
+    positive_examples:
+    - Corrosion Damage CD-01
+    - Hypertension
+    - Pump Cavitation
+    exclusions_common_confusions: Pressure reading, qualitative adjective on its own, failure event
+    extraction_guidelines: Keep observed scalar values as properties; use subtype Disease, Fault, State.
+  - type: ScientificConcept
+    group: time_action_and_knowledge
+    definition: An identifiable formal scientific/technical theory, method, model or named abstract concept.
+    positive_examples:
+    - Bernoulli principle
+    - Reynolds number
+    - finite element method
+    exclusions_common_confusions: Measured Reynolds value, unspecified common noun
+    extraction_guidelines: Use for formally named or independently discussed concepts, not generic nouns.
+  - type: Other
+    group: controlled_exception
+    definition: 'A clearly identifiable, independently referenceable real-world or document-domain object
+
+      that is supported by the source but genuinely does not fit any of the 27 specific primary types, even
+
+      with an appropriate subtype. Other is the 28th primary — never leave label empty.'
+    positive_examples:
+    - A uniquely named source object that fits none of the defined specific primary types
+    exclusions_common_confusions: 'Not a dumping ground for Project, Document, Organization, Equipment,
+
+      Component, Material, System, or any other specific primary. Exclude generic nouns, noise, attribute
+
+      values, codes that merely identify another entity, incomplete fragments, and candidates that are not
+
+      independently identifiable.'
+    extraction_guidelines: 'Use only after checking every specific primary and their subtypes. Require an
+
+      identifiable referent and verbatim evidence. Put justification in metadata.typing_reason and set
+
+      metadata.review_required=true. Never emit empty/null/Unknown/Entity. If the span is not an identifiable
+
+      entity, omit it entirely — do not invent Other for uncertainty alone.'
+  recommended_subtypes:
+    Organization:
+    - Company
+    - GovernmentAgency
+    - Department
+    - University
+    - HospitalOrganization
+    Facility:
+    - Refinery
+    - IndustrialComplex
+    - SiteArea
+    - Building
+    - HospitalFacility
+    - Plant
+    Document:
+    # Priority subtypes first so compact large-doc prompts still include them.
+    - ScopeOfWork
+    - Datasheet
+    - Specification
+    - DocumentSection
+    - BidDataSheet
+    - Drawing
+    - Section
+    - PAndID
+    - PFD
+    - ProcedureDocument
+    - Report
+    - Publication
+    - BOQ
+    - TenderNotice
+    - InvitationForBids
+    - BidInstructions
+    - ContractConditions
+    - SpecialConditions
+    - TechnicalConditions
+    - ScheduleOfRequirements
+    - PriceSchedule
+    - Datasheet
+    - QualityPlan
+    - InspectionTestPlan
+    - DocumentRegister
+    - Addendum
+    - TenderSummary
+    - QualificationCriteria
+    - GeneralArrangementDrawing
+    - LineList
+    - Manual
+    - SparePartsList
+    - MaterialRequisition
+    - DeliverableRegister
+    LegalInstrument:
+    - Contract
+    - Regulation
+    - LegalCase
+    - Patent
+    - Trademark
+    ProcurementArtifact:
+    - Tender
+    - RFQ
+    - NIT
+    - PurchaseOrder
+    - Invoice
+    - Transaction
+    - InvitationToBid
+    DigitalResource:
+    - Software
+    - Dataset
+    - Database
+    - Repository
+    - SimulationModel
+    Equipment:
+    - Pump
+    - CentrifugalPump
+    - Compressor
+    - HeatExchanger
+    - Separator
+    - StorageTank
+    - Reactor
+    - PressureVessel
+    - Filter
+    Component:
+    - Instrument
+    - PressureTransmitter
+    - Valve
+    - ControlValve
+    - PipingComponent
+    - Impeller
+    - MechanicalSeal
+    - Reducer
+    - Flange
+    System:
+    - Subsystem
+    - EngineeringPackage
+    - CoolingWaterSystem
+    - FlareSystem
+    - PneumaticConveyingSystem
+    Material:
+    - Chemical
+    - MaterialGrade
+    - Consumable
+    - Catalyst
+    - Polymer
+    Condition:
+    - Disease
+    - Fault
+    - Damage
+    - OperationalState
+  disambiguation_rules:
+  - between:
+    - Organization
+    - Facility
+    rule: 'Actor/legal organization versus physical operating site. A company name is Organization; a plant
+
+      or site is Facility.'
+  - between:
+    - Project
+    - Activity
+    - Process
+    rule: 'A scoped initiative is Project; a bounded task/execution is Activity; a repeatable workflow/transformation
+
+      is Process.'
+  - between:
+    - Document
+    - Activity
+    rule: 'A drawing, index or heading is an information artifact/section, never an Activity based on word
+
+      overlap.'
+  # compact_priority: lower numbers surface first in compact/large-doc ontology hints.
+  - between:
+    - Document
+    - System
+    compact_priority: 1
+    rule: 'PRO-TDS/TDS/datasheet docs use Datasheet or Specification with specifies/describes (never
+      hasPackage, never DocumentSection); SOW is ScopeOfWork and may hasPackage an EngineeringPackage;
+      bare annexure/section headings alone are DocumentSection, not a Package.'
+  - between:
+    - Facility
+    - System
+    rule: Physical place/complex is Facility; functional arrangement of interconnected assets is System.
+  - between:
+    - Equipment
+    - Component
+    compact_priority: 4
+    rule: 'Independently managed operational machinery is Equipment; instrument, valve and fitting as constituent
+
+      is Component. Model exceptions via asset-role evidence.'
+  - between:
+    - System
+    - Equipment
+    compact_priority: 3
+    rule: 'Multiple connected pieces acting together form System; a single separately identified machine
+
+      is Equipment.'
+  - between:
+    - System
+    - Project
+    rule: 'System is an operational functional arrangement; project is time-bounded work delivering or
+
+      modifying it.'
+  - between:
+    - PipingLine
+    - ProcessStream
+    rule: Pipe run is the physical conduit; process stream is the fluid/energy flow in it.
+  - between:
+    - Material
+    - Product
+    rule: Substance or grade is Material; catalogued manufactured product/model is Product.
+  - between:
+    - ProcurementArtifact
+    - LegalInstrument
+    rule: Tender/PO/invoice is ProcurementArtifact; signed agreement or legal rule is LegalInstrument.
+  - between:
+    - Document
+    - Requirement
+    rule: Specification document is Document; an independently stated obligation/criterion is Requirement.
+  - between:
+    - Document
+    - Project
+    - System
+    rule: Scope of Work is Document (subtype ScopeOfWork) under a Tender via hasScope; it is not a Project or System.
+  - between:
+    - Component
+    - ControlLoop
+    rule: Individual PT/valve is Component; coordinated instrument control function is ControlLoop.
+  - between:
+    - GeographicLocation
+    - Facility
+    rule: Geographic region/city is GeographicLocation; constructed or operational site is Facility.
+  - between:
+    - Condition
+    - Event
+    rule: State/disease/fault as condition is Condition; dated instance of failure/incident is Event.
+  - between:
+    - Role
+    - Person
+    rule: Named individual is Person; explicitly referenced position or responsibility is Role.
+  - between:
+    - Other
+    - all_specific_types
+    rule: 'Always prefer a specific primary when its definition fits (including via subtype). Other is only
+
+      for a confirmed identifiable entity outside the 27 specific primaries. Uncertainty → omit entity; never
+
+      empty label. Add review flag and typing_reason when Other is used.'
+  - between:
+    - Equipment
+    - Facility
+    rule: 'A single managed machine/asset (pump, compressor, vessel) is Equipment. A plant, refinery, tank
+
+      farm or site area is Facility. Do not type a site name as Equipment.'
+  - between:
+    - Project
+    - System
+    rule: 'A time-bounded initiative/programme is Project. An operational functional arrangement of assets
+
+      is System (including EngineeringPackage/Subsystem subtypes). Do not type a package or process system as Project.'
+  - between:
+    - Document
+    - LegalInstrument
+    rule: 'Drawings, SOW, datasheets, BOQ, indexes and specifications are Document. Signed contracts, acts,
+
+      patents and formal legal agreements are LegalInstrument. A tender solicitation is ProcurementArtifact, not LegalInstrument.'
+  - between:
+    - ProcurementArtifact
+    - Document
+    compact_priority: 5
+    rule: Tender/RFQ/NIT solicitation is ProcurementArtifact. Independently identified notice or instruction file
+      is Document. Never create both for one undifferentiated mention.
+  - between:
+    - Equipment
+    - System
+    rule: Package-direct and system-owned equipment are both Equipment, with membership represented by evidence-grounded
+      relationships. Do not create PackageEquipment primary type.
+  - between:
+    - System
+    - Equipment
+    compact_priority: 3
+    rule: 'Tags whose middle segment is PK name an engineering package. Use primary System and subtype
+      EngineeringPackage. Do not type bare PK tags as Equipment. Single machines use other tag letters
+      (P, E, V, K, ME, G, etc.) as Equipment when the source supports that role.'
+  - between:
+    - Requirement
+    - Document
+    rule: An independently identifiable clause/criterion is Requirement; the document containing it remains Document.
+  - between:
+    - Document
+    - ProcurementArtifact
+    compact_priority: 2
+    rule: 'Named tender-section documents must use a specific Document subtype from Recommended subtypes
+      (BidInstructions for ITB / Instructions to Bidders, TenderNotice for NIT, InvitationForBids for IFB,
+      BidDataSheet for BDS, ScopeOfWork for SOW, Specification or Datasheet for PRO-TDS / TDS / datasheet
+      numbers, and similar). Never set subtype to Document. Prefer one canonical entity per section title;
+      do not emit duplicate Document nodes for the same heading.'
+  # Entity vs non-entity: definition-based decision criteria for LLM guidance.
+  # Do not treat any criterion as an exact-word blacklist. Classify from source
+  # context, independent identity, and ontology definitions.
+  non_entity_policy:
+    independent_entity:
+      definition: >-
+        Emit an entity only when the span names an independently identifiable
+        referent that can stand alone in the domain graph and fits a primary
+        type (or Other with typing_reason when none of the 27 specifics fit).
+      decision_criteria:
+      - The source supports a distinct real-world or document-domain object, not
+        merely a value, unit, predicate, or formatting fragment.
+      - The referent would remain meaningful if separated from surrounding field
+        labels, table headers, or parent phrases.
+      - Prefer a specific primary from the closed 28-type set; omit the span
+        entirely when it is not an identifiable entity.
+    properties_not_nodes:
+      definition: >-
+        Scalar measurements, quantities, states, revisions, and other attributes
+        of an already-identified subject are properties, not independent entities.
+      decision_criteria:
+      - Prefer metadata.properties (or attribute triplets) on the owning entity
+        when ownership is clear from the same sentence, row, or active section.
+      - Do not promote ordinary capacity, pressure, temperature, dimension,
+        quantity, date, revision, or unit phrases into standalone nodes.
+      - Keep the owning entity when it is independently identifiable; only the
+        attribute expression is non-entity.
+      - If ownership is ambiguous, omit the association rather than invent a node.
+    identifiers_not_separate_nodes:
+      definition: >-
+        An identity code or alias that only re-names an already-extracted entity
+        is metadata, not a second entity.
+      decision_criteria:
+      - Attach the code under metadata.identifiers (or aliases) on the canonical
+        entity when source evidence establishes identity equivalence.
+      - Do not emit a separate node for an alias-only re-mention of the same code.
+      - If the code identifies a different object, extract that object separately;
+        never treat child tags as aliases of a parent.
+    relations_not_nodes:
+      definition: >-
+        Relationship predicates and link phrases describe edges between entities;
+        they are not entities themselves.
+      decision_criteria:
+      - Represent supported links as relations or entity-entity triplets with
+        grounded endpoints.
+      - Do not create nodes whose only content is a predicate word or membership
+        phrase without an independently identifiable referent.
+    reject_noise:
+      definition: >-
+        Function words, formatting-only labels, page chrome, and incomplete
+        fragments that lack an independently identifiable referent are noise.
+      decision_criteria:
+      - Omit spans that are purely grammatical glue or layout chrome.
+      - Omit generic table headers, page labels, and formatting-only titles when
+        they do not name a distinct artefact or asset.
+      - Omit incomplete text fragments that cannot be grounded as a referent.
+      - Decide from structure and role in the source, not from memorised tokens.
+    reject_field_labels:
+      definition: >-
+        Source field labels and metadata-banner captions that only name a slot
+        for a value (key/value or adjacent table cells) are not entities.
+      decision_criteria:
+      - Omit the label span when it functions as a caption for an adjacent value
+        in a banner, row, or key-value layout.
+      - Keep the value when that value independently identifies a project,
+        document, asset, or other domain object.
+      - Do not type bare field labels as Document, DocumentSection, or Other.
+      - Decide from layout role and discovered label/value structure, not from
+        memorised label phrases.
+    reject_generic_words:
+      definition: >-
+        Bare category words without a distinct named referent are not entities;
+        the same wording may be an entity when the document clearly identifies a
+        specific object or titled section.
+      decision_criteria:
+      - Omit unscoped category labels that only group content without naming a
+        distinct object.
+      - Keep the span when source context gives it independent identity (named
+        title, tagged asset, uniquely referenced section, or equivalent evidence).
+      - Never apply an exact-word blacklist; generic vocabulary alone is not
+        rejection criteria.
+    reject_incomplete_headings:
+      definition: >-
+        Structural outline markers and untitled section scaffolding are not
+        entities unless the source also supplies an identifiable document or
+        artefact title.
+      decision_criteria:
+      - Omit part/section/annexure/index scaffolding that carries no artefact
+        identity beyond formatting.
+      - Keep a heading when it names a specific document, package, system,
+        equipment item, or other independently identifiable referent.
+    reject_duplicate_identifiers:
+      definition: >-
+        Re-extraction of an identity code already bound to a canonical entity
+        does not create a new entity.
+      decision_criteria:
+      - Prefer one canonical node per distinct identity; further mentions update
+        identifiers, aliases, properties, or evidence on that node.
+      - Alias-only repeats of an existing identity code should be omitted as
+        separate entities.
+    context_sensitive:
+      definition: >-
+        Some spans are entity-worthy only in context: the same surface may be a
+        property, alias, generic grouping label, or a true entity depending on
+        surrounding evidence.
+      decision_criteria:
+      - Classify from the span's role in the local sentence, row, heading, or
+        active section, together with ontology definitions.
+      - Bare identity tags are entities when they denote a distinct asset; they
+        are identifiers-only when they merely alias an already-extracted entity.
+      - Grouping labels are entities only when the document treats them as a
+        named, independently referenceable object or titled artefact.
+    other_is_not_for:
+      definition: >-
+        Other is only for an independently identifiable referent that fits none
+        of the 27 specific primaries after subtype consideration. It is not a
+        dump for uncertainty or non-entities.
+      decision_criteria:
+      - Do not use Other for uncertain labels of an otherwise classifiable entity;
+        choose the best specific primary or omit if unsupported.
+      - Do not use Other for noise, unattached values or units, incomplete
+        fragments, pure aliases/identifiers, or formatting labels.
+      - When Other is justified, set typing_reason and review_required; never emit
+        empty, Unknown, or Entity filler labels.
+  extraction_output_example:
+    entities:
+    - text: Centrifugal Pump P-101
+      label: Equipment
+      confidence: 0.98
+      metadata:
+        kind: entity
+        subtype: CentrifugalPump
+        identifiers:
+        - value: P-101
+          role: identity
+        aliases: []
+        properties:
+          rated_capacity:
+            value: 500
+            unit: m3/h
+    relationships:
+    - subject: Centrifugal Pump P-101
+      predicate: installedAt
+      object: Coastal Refinery Complex
+      evidence: P-101 is installed at Coastal Refinery Complex
+  notes:
+  - Illustrative examples do not assert facts about a real source document.
+  - 'This is a proposed schema rather than a measured 90-95% recall guarantee. Validate against annotated
+
+    representative documents.'
+  - Change the parser/validator if it currently requires a different label vocabulary or metadata shape.
+  - 'Primary types are the closed 28-type set (27 specific + Other). Prefer a specific primary; if an
+
+    identifiable entity fits none, assign Other with typing_reason + review. Never leave the primary label
+
+    empty and never invent Entity/Unknown. If the span is not an identifiable entity, omit it.'
+identity_resolution:
+  require_identity_proof: true
+  reject_conflicting_identity_codes: true
+  # Alias-only merge candidates need the alias string in entity/document evidence.
+  require_alias_source_evidence: true
+  # Merge only when labels match or share a type_equivalence_groups bucket.
+  require_type_compatibility: true
+  merge_identity_codes_despite_type_conflict: false
+  merge_exact_name_despite_type_conflict: false
+  # Exact identity codes win over empty/Other vs typed spine (prevents duplicate UUIDs).
+  link_exact_identity_despite_empty_or_other: true
+  prefer_typed_survivor_on_identity_link: true
+  # One O(n) identity-code index per resolver batch — avoid per-mention full table scans.
+  build_identity_code_index_once: true
+  merge_similar_surfaces: true
+  # LLM + ner_taxonomy typing only. Optional linguistic cues stay OFF unless an industry
+  # pack explicitly enables use_surface_type_cues and populates surface_type_cues.
+  use_surface_type_cues: false
+  detect_quantity_surfaces: true
+  # Export: keep Other / empty-type entities that have identifiers or relation endpoints.
+  export_keep_other_with_identifiers: true
+  export_keep_relation_endpoints: true
+  quantity_count_suffixes:
+  - nos
+  - no
+  - pcs
+  - pc
+  - units
+  - unit
+  surface_connector_equivalents:
+  - - '&'
+    - +
+  ambiguous_to_review: true
+  allow_semantic_candidate_retrieval: true
+  merge_on_embedding_similarity_alone: false
+  block_create_on_semantic_candidates_only: false
+  review_alias_collisions: true
+  allow_fuzzy_candidate_retrieval: true
+  # Never merge entities from fuzzy/name similarity alone (identity merge pass respects this).
+  merge_on_fuzzy_similarity_alone: false
+  fuzzy_min_score: 90
+  fuzzy_candidate_top_k: 5
+  fuzzy_same_type_only: true
+  # Safe type normalization only — do NOT treat PKG/SYS tag tokens as type synonyms.
+  # Conflicting identity_merge-role identifiers always block even when aliases match.
+  type_equivalence_groups:
+  - - System
+    - Package
+    - Package/System
+    - EngineeringPackage
+  - - System
+    - Subsystem
+  - - Document
+    - Document/Section
+    - DocumentSection
+  - - ProcurementArtifact
+    - Tender
+  - - LegalInstrument
+    - Contract
+  weak_open_vocab_types:
+  - CONCEPT
+  - Entity
+  - DATE
+  - PRODUCT
+  - EVENT
+  - GPE
+  - FACILITY
+  - ORG
+  - QUANTITY
+  - CARDINAL
+  - MONEY
+  - PERCENT
+  # Optional industry pack only — ignored while use_surface_type_cues is false.
+  # Do not put corpus entity names here; markers are linguistic type hints, not facts.
+  surface_type_cues: []
+  reject_noise_surfaces:
+  - for
+  - and
+  - or
+  - of
+  - the
+  - a
+  - an
+  - to
+  - by
+  - with
+  - as
+  - at
+  - true
+  - in
+  - from
+  - into
+  - via
+  - per
+  reject_generic_alias_tokens:
+  - accessories
+  - auxiliaries
+  - spares
+  - items
+  - details
+  - general
+  - miscellaneous
+  organization_suffixes:
+  - Ltd
+  - Ltd.
+  - Limited
+  - Pvt Ltd
+  - Pvt. Ltd
+  - Pvt. Ltd.
+  - Private Limited
+  - Corporation
+  - Corp
+  - Corp.
+  - Company
+  - Inc
+  - Inc.
+  - LLC
+  # Identifier cues only (merge/alias). Entity typing is LLM + YAML
+  # disambiguation / compact_prompt pins — do not force type from tag regex.
+  identifier_patterns:
+  - pattern: '(?i)\b(?P<tag>\d{1,4}-[A-Z]{1,4}-\d{2,6}[A-Z]?(?:/[A-Z0-9]+)*)\b'
+    role: identity
+    kind: engineering_tag
+    confidence: 0.92
+  - pattern: '(?i)\b(?:DOC|DWG|DS|PID|PFD|PO|NIT|RFQ|REQ)-[A-Z0-9][A-Z0-9./_-]{1,}\b'
+    role: identity
+    kind: document_or_procurement_code
+    confidence: 0.9
+  # Recovery of missing relation endpoints (see main.recover_missing_endpoints).
+  # Patterns stay policy-owned — not hardcoded in Python.
+  endpoint_recovery:
+    enabled: true
+    require_verbatim_in_evidence: true
+    # Exact identity only — never prefix-merge individual tags into group tags.
+    allow_prefix_alias: false
+    identifier_kind_primary:
+      engineering_tag: Equipment
+      document_or_procurement_code: Document
+    # One engineering_tag pattern; middle segment → graph_schema.node_catalog key
+    # (primary/subtype come from the catalog, not a second regex).
+    engineering_tag_middle_node_catalog:
+      PK: EngineeringPackage
+    # When a predicate uniquely implies the unresolved endpoint's primary.
+    predicate_endpoint_primaries:
+      controlled by:
+        object: ControlLoop
+      shut down by:
+        object: ControlLoop
+    # Unresolved object → literal only when predicate + literal kind + subject role match.
+    # Graph builder accepts semantic literals only after recovery sets semantic_literal_validated.
+    predicate_literal_object:
+      provides:
+        category: semantic
+        allowed_literal_kinds:
+        - deliverable_prose
+        allowed_subject_primaries:
+        - Organization
+      requires deliverable:
+        category: semantic
+        allowed_literal_kinds:
+        - deliverable_prose
+        allowed_subject_primaries:
+        - Document
+        - System
+        - Organization
+      requiresDeliverable:
+        category: semantic
+        allowed_literal_kinds:
+        - deliverable_prose
+        allowed_subject_primaries:
+        - Document
+        - System
+        - Organization
+  identifier_roles:
+    identity:
+      identity_merge: true
+      alias_index: true
+      expand_as_member: false
+    alias:
+      identity_merge: false
+      alias_index: true
+      expand_as_member: false
+    member:
+      identity_merge: false
+      alias_index: false
+      expand_as_member: true
+    reference:
+      identity_merge: false
+      alias_index: false
+      expand_as_member: false
+    unresolved:
+      identity_merge: false
+      alias_index: false
+      expand_as_member: false
+hierarchy:
+  require_grounded_parent_child_assertion: true
+  # Hierarchy self-parents quarantined; identity-merge collapses → merged_identity_self_loop audit.
+  # Semantic self-loops are not auto-dropped here — use predicate/YAML rules instead.
+  forbid_self_parent: true
+  prevent_cycles: true
+  allow_multiple_supported_parents: true
+  preserve_cross_system_relations: true
+  enforce_allowed_parent_child: true
+  quarantine_invalid_hierarchy: true
+  canonicalize_hierarchy_direction: true
+  promote_section_membership: true
+  inject_section_context_into_chunks: true
+  document_membership_predicate: documentContains
+  section_membership_predicate: sectionContains
+  section_path_separators:
+  - ' / '
+  - ' → '
+  - ' > '
+  - ' :: '
+  - ' | '
+  min_section_match_chars: 5
+  title_identity_hint_pattern: '\([A-Za-z0-9][A-Za-z0-9._/+-]{2,}\)'
+
+  # Each entry MUST be exactly [ParentPrimary, ChildPrimary]. Never flatten to bare strings.
+  # Subtypes (ScopeOfWork / EngineeringPackage / Subsystem) are enforced via
+  # predicate_parent_child_subtypes — primaries stay Document/System after taxonomy fold.
+  # Intended engineering chain:
+  #   Tender → ScopeOfWork → EngineeringPackage → System → [Subsystem] → Equipment → Component
+  #   Package → Equipment (direct) | Scope → Equipment (standalone, evidenced)
+  # Canonical 28-primary pairs only (normalize legacy labels → primary before enforce).
+  allowed_parent_child:
+    # --- Engineering / tender scope hierarchy ---
+    - [ProcurementArtifact, Document]   # hasScope / hasDocument
+    - [Document, System]                # hasPackage → EngineeringPackage (System)
+    - [Document, Equipment]             # Scope standalone equipment (evidenced)
+    - [Document, Requirement]           # hasRequirement
+    - [Document, Document]              # documentContains / sectionContains
+    - [System, System]                  # hasSystem / hasSubsystem
+    - [System, Equipment]               # Package-direct / System / Subsystem equipment
+    - [Equipment, Component]            # hasComponent
+    # --- Deliverables (not physical plant containment) ---
+    - [Document, Activity]
+    - [System, Activity]
+    # --- Engineering endpoints ---
+    - [Equipment, ConnectionPoint]
+    - [System, PipingLine]
+    - [System, ProcessStream]
+    - [System, ControlLoop]
+    - [ControlLoop, Component]
+    - [PipingLine, ConnectionPoint]
+    - [PipingLine, Component]
+    # --- Site / org nesting ---
+    - [Facility, System]
+    - [Facility, Equipment]
+    - [Facility, Facility]
+    - [Project, Project]
+    - [Organization, Organization]
+    - [Component, Component]
+    - [Activity, Activity]
+    - [Process, Process]
+
+  # Primary-type role gates — spaced + camelCase aliases aligned.
+  # Generic contains/includes must NOT connect Document↔Document peers (use documentContains /
+  # sectionContains for membership). Document→System/Equipment still allowed via pair list.
+  reject_flat_list_sibling_hierarchy: true
+  flat_list_sibling_predicates:
+  - contains
+  - includes
+  flat_list_sibling_evidence_markers:
+  - master index
+  - table of contents
+  - contents
+  - index of
+  flat_list_min_pipe_cells: 2
+  predicate_parent_child_roles:
+    contains: &generic_contains_roles
+      parent: [System, Facility, Equipment, Component, Organization, Project, Activity, Process, Document, ProcurementArtifact]
+      child: [System, Facility, Equipment, Component, Organization, Project, Activity, Process]
+    includes: *generic_contains_roles
+    documentContains:
+      parent: [Document]
+      child: [Document]
+    sectionContains:
+      parent: [Document]
+      child: [Document]
+    has scope:
+      parent: [ProcurementArtifact]
+      child: [Document]
+    hasScope:
+      parent: [ProcurementArtifact]
+      child: [Document]
+    has package:
+      parent: [Document]
+      child: [System]
+    hasPackage:
+      parent: [Document]
+      child: [System]
+    has system:
+      parent: [System]
+      child: [System]
+    hasSystem:
+      parent: [System]
+      child: [System]
+    has subsystem:
+      parent: [System]
+      child: [System]
+    hasSubsystem:
+      parent: [System]
+      child: [System]
+    has equipment:
+      parent: [Document, System]
+      child: [Equipment]
+    hasEquipment:
+      parent: [Document, System]
+      child: [Equipment]
+    has component:
+      parent: [Equipment]
+      child: [Component]
+    hasComponent:
+      parent: [Equipment]
+      child: [Component]
+    has document:
+      parent: [ProcurementArtifact, Document, System, Project]
+      child: [Document]
+    hasDocument:
+      parent: [ProcurementArtifact, Document, System, Project]
+      child: [Document]
+    requires activity:
+      parent: [Document, System]
+      child: [Activity]
+    requiresActivity:
+      parent: [Document, System]
+      child: [Activity]
+    has requirement:
+      parent: [Document, ProcurementArtifact, System]
+      child: [Requirement]
+    hasRequirement:
+      parent: [Document, ProcurementArtifact, System]
+      child: [Requirement]
+    requires deliverable:
+      parent: [Document, System]
+      child: [Document]
+    requiresDeliverable:
+      parent: [Document, System]
+      child: [Document]
+
+  # Subtype gates: EngineeringPackage / System / Subsystem hierarchy (primaries stay System/Document).
+  predicate_parent_child_subtypes:
+    has scope: &has_scope_subtypes
+      parent: [Tender, RFQ, NIT, InvitationToBid]
+      child: [ScopeOfWork]
+      allow_unspecified_parent_subtype: true
+      allow_unspecified_child_subtype: true
+    hasScope: *has_scope_subtypes
+    has package: &has_package_subtypes
+      parent: [ScopeOfWork]
+      child: [EngineeringPackage]
+      allow_unspecified_parent_subtype: true
+      allow_unspecified_child_subtype: true
+    hasPackage: *has_package_subtypes
+    has system: &has_system_subtypes
+      parent: [EngineeringPackage]
+      child_exclude: [EngineeringPackage, Subsystem]
+      allow_unspecified_parent_subtype: true
+      allow_unspecified_child_subtype: true
+    hasSystem: *has_system_subtypes
+    has subsystem: &has_subsystem_subtypes
+      child: [Subsystem]
+      parent_exclude: [EngineeringPackage, Subsystem]
+      allow_unspecified_parent_subtype: true
+      allow_unspecified_child_subtype: true
+    hasSubsystem: *has_subsystem_subtypes
+    has equipment: &has_equipment_subtypes
+      parent: [ScopeOfWork, EngineeringPackage, Subsystem]
+      allow_unspecified_parent_subtype: true
+      allow_other_listed_or_unspecified: true
+    hasEquipment: *has_equipment_subtypes
+    has document: &has_document_subtypes
+      parent: [Tender, RFQ, NIT, InvitationToBid]
+      allow_unspecified_parent_subtype: true
+      allow_unspecified_child_subtype: true
+    hasDocument: *has_document_subtypes
+    has component: &has_component_subtypes
+      allow_unspecified_parent_subtype: true
+      allow_unspecified_child_subtype: true
+    hasComponent: *has_component_subtypes
+  hierarchy_predicate_markers:
+  - part of
+  - belongs to
+  - contained in
+  - contains
+  - includes
+  - documentContains
+  - sectionContains
+  - consists of
+  - member of
+  - parent of
+  - child of
+  - has scope
+  - hasScope
+  - has package
+  - hasPackage
+  - has system
+  - hasSystem
+  - has subsystem
+  - hasSubsystem
+  - has equipment
+  - hasEquipment
+  - has component
+  - hasComponent
+  - has document
+  - hasDocument
+  - requires activity
+  - requiresActivity
+  - has requirement
+  - hasRequirement
+  - requires deliverable
+  - requiresDeliverable
+  location_predicate_markers:
+  - located in
+  - located at
+  - situated in
+  - situated at
+  - based in
+  - installed in
+  - installed at
+  - within
+  - under
+  parent_as_subject_markers:
+  - contains
+  - includes
+  - documentContains
+  - sectionContains
+  - parent of
+  - consists of
+  - has scope
+  - hasScope
+  - has package
+  - hasPackage
+  - has system
+  - hasSystem
+  - has subsystem
+  - hasSubsystem
+  - has equipment
+  - hasEquipment
+  - has component
+  - hasComponent
+  - has document
+  - hasDocument
+  - requires activity
+  - requiresActivity
+  - has requirement
+  - hasRequirement
+  - requires deliverable
+  - requiresDeliverable
+  attribute_predicate_markers:
+  - has property
+  - has value
+  - property of
+  - has_property
+  - has_value
+  attribute_parent_as_subject_markers:
+  - has property
+  - has value
+  - has_property
+  - has_value
+  section_membership_markers:
+  - included in
+  - includes
+  - package scope
+  - equipment included
+  - scope of supply
+  - scope of
+  - in this package
+  - consists of
+  - contains
+  - members
+  - equipment list
+  - scope includes
+  attribute_hierarchy_object_types:
+  - Property
+  - PropertyValue
+  - ListItem
+  attribute_hierarchy_predicates:
+  - has property
+  - has value
+  - property of
+  attribute_inverse_predicate_markers:
+  - property of
+  technical_predicate_markers:
+  - connected to
+  - connects to
+  - depends on
+  - feeds
+  - fed by
+  - supplies
+  - supplied by
+  - shared by
+  - controlled by
+  - verified by
+  - discharges to
+  - takes suction from
+  - interfaces with
+  - piped to
+  - routed to
+  - mounted on
+  - flanged to
+  - owned by
+  - operated by
+  - specifies
+  - procures
+  - coversScope
+  - covers scope
+  - describes
+  - lists
+  - prices
+  - issued by
+  - for project
+  - requires activity
+  - has requirement
+  - requires deliverable
+  - has document
+  - defines inspection for
+  - applies to
+  - references equipment
+  - has connection point
+  - associated with
+  - handles
+  - carries stream
+  document_reference_predicate_markers:
+  - references
+  - refers to
+  - refer to
+  - see also
+  - according to
+  - per document
+  compliance_predicate_markers:
+  - complies with
+  - compliant with
+  - in accordance with
+  - conforms to
+  - meets
+  predicate_aliases:
+    has property value: has property
+    has_property_value: has property
+    has propertyvalue: has property
+    property value: has value
+    has_propertyvalue: has property
+    has_property: has property
+    has_value: has value
+    listed under: listed as
+    part_of: part of
+    located_in: located in
+    located_at: located at
+    situated_in: located in
+    installed_in: installed in
+    installed_at: installed at
+    connected_to: connected to
+    connects_to: connects to
+    depends_on: depends on
+    supplies_to: supplies
+    supplied_by: supplied by
+    appointed_as: appointed as
+    appointedas: appointed as
+    appointed_by: appointed by
+    prepared_by: prepared by
+    fed_by: fed by
+    for_project: for project
+    complies_with: complies with
+    compliant_with: complies with
+    in_accordance_with: complies with
+    conforms_to: complies with
+    refers_to: references
+    refer_to: references
+    see_also: references
+    covers_scope: coversScope
+    cover_scope: coversScope
+    has_scope: has scope
+    hasScope: has scope
+    has_package: has package
+    hasPackage: has package
+    has_system: has system
+    hasSystem: has system
+    has_subsystem: has subsystem
+    hasSubsystem: has subsystem
+    has_equipment: has equipment
+    hasEquipment: has equipment
+    has_component: has component
+    hasComponent: has component
+    has_document: has document
+    hasDocument: has document
+    issuedBy: issued by
+    forProject: for project
+    requiresActivity: requires activity
+    hasRequirement: has requirement
+    requiresDeliverable: requires deliverable
+    definesInspectionFor: defines inspection for
+    hasConnectionPoint: has connection point
+retrieval:
+  enable_exact_identifier_route: true
+  enable_lexical_route: true
+  enable_vector_route: true
+  enable_verified_graph_expansion: true
+validation:
+  require_relation_evidence: true
+  table_association_validation: true
+  require_quotation_in_source: true
+  reject_page_label_relation_endpoints: true
+  require_source_evidence_for_hierarchy: true
+  reject_duplicate_entity_surfaces: true
+  prevent_fake_intermediate_nodes: true
+  # Creation-time + finalize path: verbatim quotes required; offsets filled in Python.
+  require_verbatim_evidence_quotes: true
+  reject_untyped_or_empty_primary_labels: true
+# When LLM relation evidence quotes only one endpoint, recover the shortest
+# contiguous source span that contains both endpoints (no invented text).
+# Hierarchy/membership nearby recovery also requires YAML membership markers,
+# section ownership, and table context — co-occurrence alone is not enough.
+claim_evidence_recovery:
+  nearby_span_max_chars: 900
+  require_membership_evidence: true
+  require_section_ownership: true
+  require_table_context: true
+  # Identifier-shaped objects (YAML identifier_patterns / engineering tags)
+  # still need a table row. Named list/heading members do not.
+  require_table_context_for_identifier_objects: true
+  reuse_section_membership_markers: true
+  # Evidence-first: LLM must emit a verbatim quote; Python verifies absolute
+  # offsets on the full Markdown. Missing quotes may use source-backed recovery
+  # only — never invent evidence or auto-confirm graph eligibility.
+  require_creation_evidence: true
+  # Confirmed edges need subject + predicate meaning + object/value in the quote.
+  # Co-mention of endpoints alone is not enough.
+  require_predicate_meaning: true
+  require_claim_direction: true
+  # Reject truncated modal/action fragments wrongly extracted as attribute values.
+  reject_incomplete_attribute_action_phrases: true
+  incomplete_attribute_action_cues:
+  - shall
+  - will
+  - must
+  - should
+  - may
+  - carry out
+  - carried out
+  - to be
+  - to perform
+  - to provide
+  - to ensure
+# Generic semantic relation recovery (source-grounded). Contracts are YAML-owned:
+# no company/tag/document names and no hierarchy/subtype gate relaxation.
+semantic_relation_recovery:
+  enabled: true
+  sync_quarantine_after_recovery: true
+  max_repairs_per_doc: 200
+  max_candidates_per_doc: 80
+  prefer_local_windows: true
+  # Candidate pairs must share a tight cue-centered window (not whole sections).
+  candidate_max_window_chars: 420
+  candidate_cue_context_chars: 180
+  # Document-scoped evidence windows — avoid repeated full-doc scans per claim.
+  evidence_index:
+    enabled: true
+    windows:
+    - sentence
+    - table_row
+    - section_block
+    table_row_max_chars: 800
+    section_block_max_chars: 1200
+    sentence_max_chars: 600
+# Per-predicate contracts for semantic (and reusable technical) relations.
+# Reuse existing hierarchy predicates/gates unchanged; contracts do not override them.
+predicate_contracts:
+  appointed as:
+    category: semantic
+    aliases:
+    - appointed_as
+    - appointedas
+    endpoints:
+      subject_primaries:
+      - Organization
+      - Person
+      object_primaries:
+      - Role
+      - Organization
+      - Activity
+    direction:
+      kind: directed
+      # Verb may precede the appointee; role follows a particle.
+      allow_cue_before_subject: true
+      direction_window: covering_span
+      role_assignment:
+        enabled: true
+        verb_cues:
+        - appointed
+        role_particles:
+        - as their
+        - as
+    evidence:
+      require_predicate_meaning: true
+      require_claim_direction: true
+      predicate_cues_any:
+      - appointed as
+      - appointed
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+        - section_block
+    candidate_generation:
+      enabled: true
+      sources:
+      - sentence
+  appointed by:
+    category: semantic
+    aliases:
+    - appointed_by
+    endpoints:
+      subject_primaries:
+      - Organization
+      - Person
+      object_primaries:
+      - Organization
+      - Person
+    direction:
+      kind: directed
+      allow_cue_before_subject: true
+      direction_window: covering_span
+      # Patient before cue, appointing agent after cue when orientation mismatches.
+      orientation: patient_before_agent_cue
+      agent_cue: appointed by
+      inverse_predicate: appointed
+    evidence:
+      predicate_cues_any:
+      - appointed by
+      - appointed
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+    candidate_generation:
+      enabled: true
+      sources:
+      - sentence
+  prepared by:
+    category: semantic
+    aliases:
+    - prepared_by
+    endpoints:
+      subject_primaries:
+      - Document
+      - ProcurementArtifact
+      - System
+      object_primaries:
+      - Organization
+      - Person
+    direction:
+      kind: directed
+      allow_cue_before_subject: true
+      direction_window: covering_span
+      orientation: patient_before_agent_cue
+      agent_cue: prepared by
+      inverse_predicate: prepared
+    evidence:
+      predicate_cues_any:
+      - prepared by
+      - prepared
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - section_block
+        - table_row
+    candidate_generation:
+      enabled: true
+      sources:
+      - sentence
+  supplied by:
+    category: semantic
+    aliases:
+    - supplied_by
+    endpoints:
+      subject_primaries:
+      - System
+      - Equipment
+      - Component
+      - Material
+      object_primaries:
+      - Organization
+      - System
+      - Equipment
+    direction:
+      kind: directed
+      allow_cue_before_subject: true
+      direction_window: covering_span
+      orientation: patient_before_agent_cue
+      agent_cue: supplied by
+      inverse_predicate: supplies
+    evidence:
+      predicate_cues_any:
+      - supplied by
+      - supplied
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+  supplies:
+    category: semantic
+    aliases:
+    - supplies_to
+    - supplies to
+    endpoints:
+      subject_primaries:
+      - Organization
+      - System
+      - Equipment
+      object_primaries:
+      - System
+      - Equipment
+      - Component
+      - Material
+    direction:
+      kind: directed
+      inverse_predicate: supplied by
+      direction_window: between_endpoints
+    evidence:
+      predicate_cues_any:
+      - supplies
+      - supply
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+  feeds:
+    category: technical
+    aliases:
+    - feed
+    endpoints:
+      subject_primaries:
+      - System
+      - Equipment
+      - Component
+      object_primaries:
+      - System
+      - Equipment
+      - Component
+    direction:
+      kind: directed
+      inverse_predicate: fed by
+      direction_window: between_endpoints
+    evidence:
+      predicate_cues_any:
+      - feeds
+      - feed
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+  fed by:
+    category: technical
+    aliases:
+    - fed_by
+    endpoints:
+      subject_primaries:
+      - System
+      - Equipment
+      - Component
+      object_primaries:
+      - System
+      - Equipment
+      - Component
+    direction:
+      kind: directed
+      allow_cue_before_subject: true
+      direction_window: covering_span
+      orientation: patient_before_agent_cue
+      agent_cue: fed by
+      inverse_predicate: feeds
+    evidence:
+      predicate_cues_any:
+      - fed by
+      - fed
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+  for project:
+    category: semantic
+    aliases:
+    - forProject
+    - for_project
+    endpoints:
+      subject_primaries:
+      - Document
+      - ProcurementArtifact
+      - System
+      - Organization
+      object_primaries:
+      - Project
+    direction:
+      kind: directed
+      allow_cue_before_subject: true
+      direction_window: covering_span
+    evidence:
+      predicate_cues_any:
+      - for project
+      - for project of
+      - project of
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+        - section_block
+    candidate_generation:
+      enabled: true
+      sources:
+      - sentence
+  connected to:
+    category: technical
+    aliases:
+    - connected_to
+    - connectedTo
+    endpoints:
+      subject_primaries:
+      - Equipment
+      - Component
+      - System
+      object_primaries:
+      - Equipment
+      - Component
+      - System
+    direction:
+      kind: symmetric
+      direction_window: between_endpoints
+    evidence:
+      predicate_cues_any:
+      - connected to
+      - connects to
+      - connected
+      nearby_recovery:
+        enabled: true
+        windows:
+        - sentence
+        - table_row
+# Selective second pass: LLM proposes accept/repair/reject; Python re-checks
+# evidence offsets, endpoints, and YAML hierarchy. Never relaxes ontology gates.
+quarantine_llm_resolver:
+  enabled: true
+  max_candidates_per_file: 24
+  batch_size: 6
+  context_chars: 900
+  eligible_reason_codes:
+  - evidence_missing
+  - evidence_unverified
+  - unresolved_subject
+  - unresolved_object
+  - hierarchy_invalid
+  excluded_reason_codes:
+  - duplicate_edge
+  - self_parent
+  - hierarchy_cycle
+  hierarchy_repair_predicates_only: true
+table_extraction:
+  # Repeated page headers/footers/metadata banners: structure + repetition in code;
+  # qualitative rules live in prompts/unified_extraction.txt (A6b). These hints only
+  # protect tender/spec/commercial tables from being treated as boilerplate.
+  boilerplate_detection:
+    content_table_hints:
+    - type of tender
+    - reverse auction
+    - design capacity
+    - conveying media
+    - equipment included
+    - service
+    - qty
+    - quantity
+    - material
+    - operating parameter
+    - scope of work
+    - bid document no
+    - notice inviting tender
+    min_content_rows: 6
+    min_content_plain_chars: 500
+    max_banner_rows: 4
+    max_banner_plain_chars: 400
+    min_repetitions: 2
+  # Column-role markers are linguistic guidance for structured tables — not entity type maps.
+  subject_column_markers:
+  - item
+  - tag
+  - equipment
+  - tag no
+  - tag no.
+  - tag number
+  description_column_markers:
+  - service
+  - description
+  - duty
+  - scope
+  quantity_column_markers:
+  - qty
+  - quantity
+  - q.ty
+  - no.
+  - nos
+  measurement_column_markers:
+  - capacity
+  - volume
+  - temperature
+  - pressure
+  - flow
+  - rate
+  - density
+  - bulk density
+  - real density
+  - average density
+  - settled bulk density
+  - aerated bulk density
+  - polymer flow rate
+  - conveying mode
+  # Split inline label/value phrases inside table cells and mashed HTML text.
+  # Structural separators only — not equipment- or document-specific labels.
+  inline_kv_separators:
+  - ' - '
+  - ' – '
+  - ' — '
+  - ' = '
+  - ': '
+  - '='
+  - ':'
+  format_row_groups_for_llm: true
+  keep_verbatim_table_in_prompt: true
+
+# Cross-page equipment section ownership for attribute evidence (see main.py).
+# Policy flags only. Structural Markdown/HTML parsing is generic in code.
+# Domain cues come from identifier_patterns, property_concept_aliases, and
+# table_extraction markers — not document-format regex lists.
+section_aware_evidence:
+  enabled: true
+  reuse_identifier_patterns: true
+  reuse_property_concept_aliases: true
+  reuse_table_column_markers: true
+  discover_kv_labels_from_document: true
+  # When predicate hits measurement/quantity markers and the object looks
+  # numeric/unit-like, require Pint (or bare number) confirmation. Non-numeric
+  # attributes keep existing KV/table/YAML evidence rules; ambiguous values
+  # fall through to quarantine.
+  pint_confirm_measurement_objects: true
+  # LLM decides only when deterministic section/tag ownership is ambiguous.
+  llm_owner_fallback: true
+  llm_owner_fallback_only_when_ambiguous: true
+  # Structure-aware table ownership: left/subject column owns right/value cells.
+  # Continuation rows inherit the active owner until a new owner, table/section
+  # boundary, or ambiguity. No hardcoded tags/names; uses identifier_patterns.
+  table_ownership_resolver:
+    enabled: true
+    prefer_subject_column: true
+    accept_unique_row_owner_without_section: true
+    inherit_owner_on_continuation_rows: true
+    reset_owner_on_section_boundary: true
+    max_row_chars: 1200
+    max_group_rows: 24
+    # Owner evidence stays separate from field/value evidence.
+    attach_owner_cell_provenance: true
+assertion_classification:
+  # Extra LLM assertion-classification stage is optional; marker lists below remain authoritative.
+  llm_assertion_stage_optional: true
+  preserve_marker_rules_when_llm_disabled: true
+  # Scalars attach to owning entity (CanonicalEntity.properties.attributes + Neo4j e.attributes).
+  # Do not mint Property / PropertyValue / ListItem domain nodes for ordinary attributes.
+  store_scalar_properties_on_entity: true
+  mint_property_carrier_nodes: false
+  identity_property_markers:
+  - name
+  - title
+  - full name
+  - designation
+  - designated as
+  - labelled as
+  - labeled as
+  alias_property_markers:
+  - alias
+  - also known as
+  - aka
+  - formerly
+  - alternate name
+  membership_property_markers:
+  - included in
+  - includes
+  - part of
+  - belongs to
+  - member of
+  - contains
+  - consists of
+  - has scope
+  - has package
+  - has system
+  - has subsystem
+  - has equipment
+  - has component
+  - parent of
+  - child of
+  reference_property_markers:
+  - reference
+  - refers to
+  - refer to
+  - see also
+  - according to
+  - per document
+  - document no
+  - requisition
+  property_concept_aliases:
+    DT: Design Temperature
+    DesignTemperature: Design Temperature
+    design temp: Design Temperature
+    design_temperature: Design Temperature
+    DP: Design Pressure
+    DesignPressure: Design Pressure
+    design_pressure: Design Pressure
+    Qty: Quantity
+    QTY: Quantity
+    qty: Quantity
+graph_schema:
+  schema_version: '1.0'
+  purpose: Unified tender document and engineering scope graph; source-grounded named entities plus literal properties.
+  implementation_note: New graph_schema keys require parser, assertion classifier and validator support; do not
+    assume legacy YAML loader enforces them.
+  primary_type_vocabulary: ner_taxonomy.entity_types
+  identifier_rule: Identifiers belong to the referenced entity unless the source independently describes an identifier
+    as an entity.
+  entity_creation_rule: Create a node only for an independently identifiable source-grounded referent. A template
+    label or heading is not sufficient evidence for an instance.
+  property_rule: Scalar dates, amounts, quantities, units, descriptive states and identifiers are properties or
+    property assertions, not automatic NER nodes.
+  source_requirements:
+  - verbatim_evidence
+  - document_id
+  - section_path
+  - mention_or_span
+  - source_revision_when_available
+  required_node_fields:
+  - name
+  - primary_type
+  - subtype
+  - source_evidence
+  - review_required
+  node_catalog:
+    Tender:
+      primary_type: ProcurementArtifact
+      subtypes:
+      - Tender
+      - RFQ
+      - NIT
+      - InvitationToBid
+      notes: One identified solicitation entity; NIT notice file is only a second Document if separately identified.
+    TenderDocumentSet:
+      primary_type: Document
+      subtype: DocumentRegister
+      create_when: Explicitly identified indexed document collection; otherwise virtual grouping only.
+    ScopeOfWork:
+      primary_type: Document
+      subtype: ScopeOfWork
+      create_when: Distinct SOW document or explicitly identifiable scope anchor; document section remains Document/DocumentSection
+        otherwise. Do not classify PRO-TDS / TDS / datasheet artefacts as ScopeOfWork.
+    TechnicalDatasheet:
+      primary_type: Document
+      subtype: Datasheet
+      create_when: 'Identifiable TDS / PRO-TDS / equipment or package datasheet / technical data sheet
+        document (e.g. …-PRO-TDS-…-PK-…). Prefer Datasheet; Specification is acceptable when the source
+        frames it as a technical specification. Use specifies/describes to the referenced package or
+        equipment — not hasPackage.'
+    EngineeringPackage:
+      primary_type: System
+      subtype: EngineeringPackage
+    System:
+      primary_type: System
+      subtype: source-grounded functional system subtype
+    Subsystem:
+      primary_type: System
+      subtype: Subsystem
+    Equipment:
+      primary_type: Equipment
+      subtype: source-grounded equipment class
+    Component:
+      primary_type: Component
+      subtype: source-grounded part/instrument/piping component
+    ConnectionPoint:
+      primary_type: ConnectionPoint
+    PipingLine:
+      primary_type: PipingLine
+    ProcessStream:
+      primary_type: ProcessStream
+    ControlLoop:
+      primary_type: ControlLoop
+    Activity:
+      primary_type: Activity
+    Requirement:
+      primary_type: Requirement
+    Standard:
+      primary_type: Standard
+    Material:
+      primary_type: Material
+    Organization:
+      primary_type: Organization
+    Project:
+      primary_type: Project
+    Facility:
+      primary_type: Facility
+  tender_document_catalog:
+    TenderNotice:
+      labels:
+      - NIT
+      - Notice Inviting Tender
+      - Tender Notice
+      fields:
+      - notice_number
+      - title
+      - issue_date
+      - submission_deadline
+      - bid_security
+      - issuing_authority_reference
+      - project_reference
+    InvitationForBids:
+      labels:
+      - IFB
+      - Invitation for Bids
+      fields:
+      - invitation_number
+      - issue_date
+      - eligibility_summary
+      - closing_date
+    BidInstructions:
+      labels:
+      - ITB
+      - Instructions to Bidders
+      fields:
+      - submission_method
+      - bid_validity
+      - clarification_process
+      - bid_opening_method
+    BidDataSheet:
+      labels:
+      - BDS
+      - Bid Data Sheet
+      - AITB
+      fields:
+      - bid_specific_rules
+      - prebid_meeting_date
+      - bid_currency
+      - submission_deadline
+      - contact_reference
+    ContractConditions:
+      labels:
+      - GCC
+      - General Conditions of Contract
+      fields:
+      - general_terms
+      - payment_terms
+      - liability_conditions
+      - dispute_resolution
+    SpecialConditions:
+      labels:
+      - SCC
+      - Special Conditions of Contract
+      fields:
+      - special_terms
+      - schedule_conditions
+      - warranty_conditions
+      - liquidated_damages_conditions
+    TechnicalConditions:
+      labels:
+      - TCC
+      - Technical Conditions of Contract
+      fields:
+      - technical_obligations
+      - inspection_obligations
+      - applicable_codes
+    ScopeOfWork:
+      labels:
+      - SOW
+      - Scope of Work
+      fields:
+      - scope_id
+      - scope_description
+      - inclusions
+      - exclusions
+      - battery_limits
+      - responsibilities
+    ScheduleOfRequirements:
+      labels:
+      - SOR
+      - Schedule of Requirements
+      fields:
+      - deliverable_schedule
+      - required_quantities
+      - delivery_location
+      - required_dates
+    BOQ:
+      labels:
+      - BOQ
+      - Bill of Quantities
+      - Schedule of Rates
+      fields:
+      - boq_number
+      - revision
+      - currency
+      - priced_item_references
+      notes: Line-item quantity/rate/amount belongs to BOQ item assertion, not physical equipment price.
+    PriceSchedule:
+      labels:
+      - Price Schedule
+      fields:
+      - currency
+      - tax_basis
+      - priced_item_references
+    Specification:
+      labels:
+      - Technical Specification
+      - TS
+      fields:
+      - spec_number
+      - revision
+      - design_requirements
+      - standard_references
+      - acceptance_criteria
+    PAndID:
+      labels:
+      - P&ID
+      - Piping and Instrumentation Diagram
+      fields:
+      - drawing_number
+      - revision
+      - equipment_references
+      - line_references
+      - instrument_references
+    PFD:
+      labels:
+      - PFD
+      - Process Flow Diagram
+      fields:
+      - drawing_number
+      - revision
+      - process_references
+      - stream_references
+    GeneralArrangementDrawing:
+      labels:
+      - GA
+      - General Arrangement
+      fields:
+      - drawing_number
+      - revision
+      - layout_references
+    Datasheet:
+      labels:
+      - Datasheet
+      - Equipment Datasheet
+      fields:
+      - datasheet_number
+      - revision
+      - equipment_reference
+      - specified_conditions
+    QualityPlan:
+      labels:
+      - QAP
+      - Quality Assurance Plan
+      fields:
+      - qap_number
+      - revision
+      - quality_requirements
+    InspectionTestPlan:
+      labels:
+      - ITP
+      - Inspection and Test Plan
+      fields:
+      - itp_number
+      - revision
+      - hold_points
+      - witness_points
+      - inspection_requirements
+    DocumentRegister:
+      labels:
+      - VDR
+      - VDRL
+      - Vendor Document Register/List
+      fields:
+      - register_number
+      - revision
+      - required_document_references
+    MaterialRequisition:
+      labels:
+      - MR
+      - Material Requisition
+      fields:
+      - mr_number
+      - revision
+      - material_or_equipment_references
+    Manual:
+      labels:
+      - Operating Manual
+      - Maintenance Manual
+      fields:
+      - manual_number
+      - revision
+      - subject_reference
+    SparePartsList:
+      labels:
+      - Spares List
+      - Spare Parts List
+      fields:
+      - list_number
+      - revision
+      - component_references
+      - quantities
+    Addendum:
+      labels:
+      - Corrigendum
+      - Addendum
+      fields:
+      - addendum_number
+      - revision
+      - changed_clause_references
+      - issue_date
+    DocumentSection:
+      labels:
+      - Section
+      - Appendix
+      - Annexure
+      - Master Index
+      fields:
+      - section_id
+      - section_title
+      - section_path
+      notes: Only create node for structurally meaningful source section.
+  relationship_groups:
+    # Physical / scope engineering chain (not document nesting).
+    engineering_hierarchy:
+    - predicate: hasScope
+      parent: Tender
+      child: ScopeOfWork
+      parent_primary: ProcurementArtifact
+      child_primary: Document
+    - predicate: hasPackage
+      parent: ScopeOfWork
+      child: EngineeringPackage
+      parent_primary: Document
+      child_primary: System
+    - predicate: hasEquipment
+      parent: ScopeOfWork
+      child: Equipment
+      parent_primary: Document
+      child_primary: Equipment
+      note: standalone equipment only when explicitly in scope
+    - predicate: hasSystem
+      parent: EngineeringPackage
+      child: System
+      parent_primary: System
+      child_primary: System
+    - predicate: hasEquipment
+      parent: EngineeringPackage
+      child: Equipment
+      parent_primary: System
+      child_primary: Equipment
+      note: package-direct equipment
+    - predicate: hasSubsystem
+      parent: System
+      child: Subsystem
+      parent_primary: System
+      child_primary: System
+    - predicate: hasEquipment
+      parent: System
+      child: Equipment
+      parent_primary: System
+      child_primary: Equipment
+    - predicate: hasEquipment
+      parent: Subsystem
+      child: Equipment
+      parent_primary: System
+      child_primary: Equipment
+    - predicate: hasComponent
+      parent: Equipment
+      child: Component
+      parent_primary: Equipment
+      child_primary: Component
+    # Document nesting / attachments only (never physical containment).
+    document_hierarchy:
+    - predicate: hasDocument
+      parent: Tender
+      child: Document
+      parent_primary: ProcurementArtifact
+      child_primary: Document
+      note: NIT/ITB/BDS/GCC/SCC/BOQ/Specifications/PID/Datasheets/QAP/ITP/Addenda
+    - predicate: documentContains
+      parent: Document
+      child: Document
+      parent_primary: Document
+      child_primary: Document
+    - predicate: sectionContains
+      parent: Document
+      child: Document
+      parent_primary: Document
+      child_primary: Document
+      note: child must be DocumentSection or identified contained document
+    # Legacy alias key — same edges as engineering_hierarchy (kept for older dumps).
+    tender_scope_hierarchy:
+    - predicate: hasScope
+      parent: Tender
+      child: ScopeOfWork
+    - predicate: hasPackage
+      parent: ScopeOfWork
+      child: EngineeringPackage
+    - predicate: hasEquipment
+      parent: ScopeOfWork
+      child: Equipment
+    - predicate: hasSystem
+      parent: EngineeringPackage
+      child: System
+    - predicate: hasEquipment
+      parent: EngineeringPackage
+      child: Equipment
+    - predicate: hasSubsystem
+      parent: System
+      child: Subsystem
+    - predicate: hasEquipment
+      parent: System
+      child: Equipment
+    - predicate: hasEquipment
+      parent: Subsystem
+      child: Equipment
+    - predicate: hasComponent
+      parent: Equipment
+      child: Component
+    deliverables_and_work:
+    - predicate: requiresActivity
+      parent: ScopeOfWork
+      child: Activity
+    - predicate: requiresDeliverable
+      parent: EngineeringPackage
+      child: Document
+    - predicate: hasRequirement
+      parent: ScopeOfWork
+      child: Requirement
+    cross_references:
+    - predicate: issuedBy
+      subject: Tender
+      object: Organization
+    - predicate: forProject
+      subject: Tender
+      object: Project
+    - predicate: coversScope
+      subject: Project
+      object: ScopeOfWork
+    - predicate: specifies
+      subject: Document
+      object: EngineeringPackage|System|Equipment|Component|Requirement
+    - predicate: describes
+      subject: Document
+      object: System|Equipment|Component|PipingLine|ControlLoop
+    - predicate: lists
+      subject: Document
+      object: EngineeringPackage|Equipment|Component|Material
+    - predicate: definesInspectionFor
+      subject: Document
+      object: EngineeringPackage|Equipment|Component
+    - predicate: references
+      subject: Document
+      object: Document|Standard|Requirement
+    - predicate: appliesTo
+      subject: Requirement|Standard
+      object: EngineeringPackage|System|Equipment|Component
+    - predicate: hasConnectionPoint
+      subject: Equipment
+      object: ConnectionPoint
+    - predicate: associatedWith
+      subject: System
+      object: PipingLine|ControlLoop|ProcessStream
+    - predicate: handles
+      subject: System
+      object: Material
+    - predicate: installedAt
+      subject: Equipment
+      object: Facility
+    - predicate: connectedTo
+      subject: Equipment|PipingLine|ConnectionPoint
+      object: Equipment|PipingLine|ConnectionPoint
+  relation_validation:
+    validate_primary_and_subtype: true
+    require_source_evidence: true
+    preserve_edge_kind: true
+    reject_unverified_membership_from_heading_only: true
+    never_invent_intermediate_nodes: true
+    reject_fake_intermediate_nodes: true
+    allow_missing_scope_package_system_levels: true
+    preserve_package_direct_vs_system_equipment_edges: true
+    prevent_same_tag_cross_namespace_merge: true
+    do_not_infer_identity_from_parent_alone: true
+    allow_multiple_document_references_to_same_entity: true
+    document_edges_are_not_physical_containment: true
+    engineering_edges_are_not_document_nesting: true
+    tender_scope_edges_are_not_physical_containment: true
+    do_not_infer_compliance_as_verified_from_requirement: true
+    unmatched_entities_go_to_review_not_forced_hierarchy: true
+    separate_engineering_and_document_hierarchies: true
+  example_assertions:
+  - subject: Tender NIT-001
+    predicate: hasDocument
+    object: Bid Data Sheet BDS-001
+    edge_kind: document_hierarchy
+  - subject: Tender NIT-001
+    predicate: hasScope
+    object: Pump Supply Scope
+    edge_kind: engineering_hierarchy
+  - subject: Pump Supply Scope
+    predicate: hasPackage
+    object: Pump Package PKG-01
+    edge_kind: engineering_hierarchy
+  - subject: Pump Package PKG-01
+    predicate: hasSystem
+    object: Cooling Water System
+    edge_kind: engineering_hierarchy
+  - subject: Cooling Water System
+    predicate: hasEquipment
+    object: Pump P-101
+    edge_kind: engineering_hierarchy
+  - subject: Pump P-101
+    predicate: hasComponent
+    object: Mechanical Seal
+    edge_kind: engineering_hierarchy
+  - subject: Equipment Datasheet DS-101
+    predicate: specifies
+    object: Pump P-101
+    edge_kind: cross_reference
+entity_property_schema:
+  policy: Open vocabulary. Suggested fields are not mandatory. Store supported values only with provenance; unknown
+    fields remain allowed.
+  scalar_values_are_entities: false
+  source_attribution_per_property:
+  - document_id
+  - section_path
+  - quote
+  - revision
+  - page_or_location
+  value_rules:
+  - Preserve original source text and normalized value separately
+  - Preserve unit and measurement qualifier
+  - Do not infer unspecified values
+  - Keep BOQ prices on priced line-item assertions, not timeless Equipment attributes
+  - Link organizations, projects, standards and documents via canonical IDs instead of repeating names as scalar
+    properties
+  profiles:
+    Tender:
+      primary_type: ProcurementArtifact
+      fields:
+      - tender_number
+      - title
+      - issue_date
+      - submission_deadline
+      - bid_opening_date
+      - bid_validity
+      - bid_security
+      - currency
+      - procurement_method
+      - status
+    ScopeOfWork:
+      primary_type: Document
+      subtype: ScopeOfWork
+      fields:
+      - scope_id
+      - title
+      - inclusions
+      - exclusions
+      - battery_limits
+      - contractor_responsibilities
+      - owner_responsibilities
+      - deliverable_requirements
+    EngineeringPackage:
+      primary_type: System
+      subtype: EngineeringPackage
+      fields:
+      - package_tag
+      - package_name
+      - purpose
+      - service
+      - scope_of_supply
+      - supply_exclusions
+      - design_capacity
+      - battery_limits
+      - utilities
+      - interface_requirements
+      - delivery_requirements
+    System:
+      primary_type: System
+      fields:
+      - system_tag
+      - service
+      - function
+      - design_basis
+      - design_capacity
+      - design_pressure
+      - operating_conditions
+    Subsystem:
+      primary_type: System
+      subtype: Subsystem
+      fields:
+      - subsystem_tag
+      - function
+      - operating_conditions
+      - design_basis
+    Equipment:
+      primary_type: Equipment
+      fields:
+      - equipment_tag
+      - equipment_class
+      - service
+      - duty
+      - quantity
+      - rated_capacity
+      - design_pressure
+      - design_temperature
+      - operating_pressure
+      - operating_temperature
+      - material_of_construction
+      - driver_power
+      - weight
+      - model_number
+    Component:
+      primary_type: Component
+      fields:
+      - component_tag
+      - component_class
+      - size
+      - pressure_class
+      - rating
+      - material
+      - connection_type
+    PipingLine:
+      primary_type: PipingLine
+      fields:
+      - line_tag
+      - nominal_size
+      - piping_class
+      - service
+      - design_pressure
+      - design_temperature
+      - insulation_specification
+    ControlLoop:
+      primary_type: ControlLoop
+      fields:
+      - loop_tag
+      - function
+      - controlled_variable
+      - setpoint
+      - signal_type
+    ConnectionPoint:
+      primary_type: ConnectionPoint
+      fields:
+      - connection_tag
+      - nozzle_number
+      - size
+      - rating
+      - orientation
+    Document:
+      primary_type: Document
+      fields:
+      - document_number
+      - title
+      - revision
+      - issue_date
+      - status
+      - document_subtype
+      - section_path
+    Requirement:
+      primary_type: Requirement
+      fields:
+      - requirement_id
+      - statement
+      - acceptance_criteria
+      - compliance_status
+      - effective_revision
+    Activity:
+      primary_type: Activity
+      fields:
+      - activity_id
+      - task_name
+      - status
+      - schedule
+      - test_conditions
+      - acceptance_criteria
+    BOQLineAssertion:
+      representation: priced_document_item_assertion
+      fields:
+      - item_number
+      - description
+      - quantity
+      - unit_of_measure
+      - unit_rate
+      - line_amount
+      - currency
+      - tax_basis
+      - equipment_reference
+      - document_reference
+      note: Not a new generic primary entity type; create an item node only if separately identifiable and required
+        by graph/query model.
+  equipment_subtype_profiles:
+    CentrifugalPump:
+    - flow_rate
+    - differential_head
+    - efficiency
+    - speed
+    - seal_type
+    - power
+    Compressor:
+    - rated_flow
+    - suction_pressure
+    - discharge_pressure
+    - compression_ratio
+    - driver_type
+    HeatExchanger:
+    - heat_duty
+    - shell_side_design_pressure
+    - tube_side_design_pressure
+    - heat_transfer_area
+    PressureVessel:
+    - volume
+    - diameter
+    - length
+    - corrosion_allowance
+    Valve:
+    - nominal_size
+    - pressure_class
+    - actuator_type
+    - body_material
+    Instrument:
+    - measurement_range
+    - accuracy
+    - signal_type
+    - instrument_service

@@ -1,0 +1,526 @@
+
+You are extracting a knowledge graph from source text for Semantica GraphRAG.
+
+This is the unified extraction prompt for entities, relations, triplets, and properties.
+Answer generation and query understanding use separate prompts.
+Do not answer questions here.
+
+Current task focus (follow the JSON schema for THIS call):
+<<TASK_FOCUS>>
+
+=============================================================================
+SHARED EXTRACTION RULES
+=============================================================================
+
+- Precision and completeness: extract all clearly supported, independently
+  identifiable entities and facts without inventing information.
+- Never invent names, identifiers, relationships, attributes, or hierarchy.
+- Entity surfaces and supporting evidence must be verbatim source spans.
+- Extract the smallest meaningful contiguous source span for each entity.
+- Preserve exact technical identifiers, including punctuation and case.
+- Do not combine separate real-world objects into one entity.
+- Do not omit entities merely because they appear inside a larger phrase,
+  heading, table cell, list, or parenthetical expression.
+- Prefer omission over guessing when evidence is insufficient.
+- Confidence should reflect uncertainty. Do not assign uniformly high
+  confidence to all results.
+- TYPE_HINTS come from the configured taxonomy and define the preferred
+  primary entity classes.
+- RELATION_HINTS, TRIPLET_HINTS, and ATTRIBUTE_PREDICATE_HINTS provide
+  preferred vocabulary, not a mandatory closed catalogue.
+- Do not invent identity keys, canonical IDs, or unsupported aliases.
+- Do not invent parent-child relationships from document proximity.
+- Process each extraction task independently, using its requested JSON schema.
+
+=============================================================================
+A) ENTITY EXTRACTION
+=============================================================================
+
+Extract all independently identifiable entities supported by the source.
+
+A1. ATOMIC ENTITY EXTRACTION
+
+- Each output entity must represent one independently identifiable object,
+  organization, system, document, location, project, material, or process.
+- Extract all independently identifiable entities, including those inside
+  technical tables, lists, nested descriptions, and parent systems.
+- Extract parent systems and their independently identifiable subsystems
+  separately.
+- Never combine multiple distinct entities into a single entity.
+- Never replace multiple individual systems with one combined entity.
+- If a heading, sentence, table row, or parenthetical expression contains
+  several independently identifiable entities, extract each separately.
+- Extract nested entities when they have independent identities.
+- Do not treat a combined description of multiple objects as one entity.
+- Do not omit entities just because their names appear inside another span.
+- An entity surface must be the smallest meaningful contiguous verbatim
+  substring that identifies that entity.
+- Do not rewrite, expand, correct, or invent entity names.
+- Keep source entity names and identifiers verbatim.
+- Preserve original spelling and technical identifiers.
+
+A2. ENTITY BOUNDARIES
+
+- Exclude surrounding field labels, formatting, and descriptive prefixes
+  when they are not part of the entity name.
+- Do not extract incomplete phrases or sentence fragments.
+- Do not combine an entity name with unrelated attributes.
+- Do not combine different entities from adjacent table columns.
+- Do not include multiple sibling entities in a single entity span.
+- A named object and its identifying code may be represented together
+  only when the evidence establishes that they identify the same object.
+- If multiple codes identify different objects, extract those objects
+  separately.
+- Preserve identifiers exactly as they appear in the source.
+
+A3. ENTITY CLASSIFICATION
+
+- Determine entity type from contextual meaning and role, not merely
+  from naming patterns, prefixes, suffixes, or keywords.
+- Prefer the most specific matching primary from TYPE_HINTS.
+- Apply ONTOLOGY_HINTS entity definitions and disambiguation rules when
+  choosing among overlapping primaries.
+- Use metadata.subtype for finer distinctions supported by the source;
+  prefer Recommended subtypes from ONTOLOGY_HINTS when applicable.
+- Use concise PascalCase subtype labels.
+- If an independently identifiable entity fits none of the primary types,
+  use Other and include a brief typing_reason.
+- Never use generic filler labels such as Entity, CONCEPT, Thing, or Unknown.
+- Ontology-supported primaries from TYPE_HINTS — including Equipment and
+  Activity — are valid entity labels when the source supports that role.
+- Distinguish organizations from facilities.
+- Distinguish projects from documents.
+- For Document entities, set metadata.subtype to the specific recommended
+  subtype (BidInstructions, TenderNotice, InvitationForBids, BidDataSheet,
+  ScopeOfWork, Specification, Datasheet, DocumentSection, etc.). Never use
+  subtype Document. Prefer one canonical entity per named section title;
+  avoid duplicate Document nodes for the same heading.
+- PRO-TDS / TDS / package or equipment datasheet document numbers are
+  Document with subtype Datasheet or Specification — not DocumentSection
+  and not ScopeOfWork. Relate them to the package/equipment with specifies
+  or describes. Use hasPackage only when the parent is ScopeOfWork.
+- Distinguish physical systems from individual equipment using functional
+  context, not merely keywords:
+  - System: An interconnected functional arrangement of equipment or
+    components performing a common function.
+  - Equipment: An individual physical machine, vessel, device, or
+    standalone equipment unit.
+  - Identifier tags whose middle segment is PK (example shape plant-PK-number)
+    are always primary System with subtype EngineeringPackage. Never emit a
+    second Equipment node for the same bare PK tag; keep one canonical System
+    and put package equipment under includes / hasEquipment instead.
+  - Extract independently identifiable systems separately, even when
+    mentioned within a combined package or system description.
+  - Do not automatically classify procurement or contractual packages as
+    physical systems; classify by the object's functional meaning in context.
+- Distinguish components from materials.
+- Distinguish procurement artifacts from legal instruments.
+- Distinguish physical objects from processes and activities.
+- Do not treat column headers, field captions, or generic index headings
+  alone as physical assets.
+- Do extract all independently identifiable Systems, Equipment, Components,
+  and Instruments named in table data rows or body text when source
+  evidence supports them; tagged assets in equipment lists are entities,
+  not table labels.
+
+A4. IDENTIFIERS AND ALIASES
+
+- A code identifying the same entity may be included in
+  metadata.identifiers.
+- A different name referring to the same entity may be included
+  in metadata.aliases.
+- Include identifiers or aliases only when identity equivalence
+  is supported by the source.
+- A code identifying a distinct physical object or system must not
+  be treated as an alias of another entity.
+- Never treat child equipment or system identifiers as aliases of a parent.
+- Do not merge entities merely because they share words or occur together.
+- Do not assume two similarly named organizations, projects, documents,
+  or systems are identical.
+- If identity equivalence is uncertain, preserve separate entities.
+- Do not invent normalized or canonical identifiers.
+- Preserve identifiers and aliases using their original source spelling.
+
+A5. ENTITY VS NON-ENTITY (DEFINITION-BASED)
+
+- Decide entity-worthiness from ontology definitions, independent identity,
+  and source evidence — not from memorised example phrases or word lists.
+- Apply the Non-entity policy block inside ONTOLOGY_HINTS (independent
+  entity, properties, identifiers, relations, noise, generic terms,
+  incomplete headings, duplicate identifiers, context-sensitive spans,
+  and Other-is-not-for).
+- An entity is an independently identifiable domain object or concept that
+  fits a primary type (or Other only when justified).
+- An attribute describes a property, characteristic, specification,
+  measurement, quantity, condition, or state of an entity.
+- Never classify an attribute-value expression as an independent object.
+- Identifiers and aliases of an already-extracted entity are metadata, not
+  new nodes; relation predicates are edges, not nodes.
+- Generic category words and incomplete headings are omitted unless the
+  source clearly gives them independent identity.
+- Separate field labels from their values.
+- Metadata banner / form field labels (for example PROJECT NO., DOCUMENT NO.,
+  SHEET NO., ISSUE) name slots for values — omit the label as an entity; keep
+  the value when it independently identifies a project, document, or asset.
+- Do not type bare field labels as Document, DocumentSection, or Other.
+- Preserve explicit attribute facts in metadata.properties when their
+  owner is identifiable from the same sentence, row, or row group.
+- Preserve values and units exactly as written.
+- Do not invent an attribute owner.
+- Do not discard a valid entity merely because it has attributes.
+- If ownership is ambiguous, do not create an unsupported association.
+
+A6. TABLES, SECTIONS, AND LISTS
+
+- Use section headings, table headers, and row-group context to interpret
+  entity roles and attribute ownership.
+- Equipment or package sections may continue across page markers and
+  repeated document banners; keep the active heading as ownership context
+  until the next equipment heading begins.
+- Extract independently identifiable entities from rows and nested lists.
+- Treat table headers as context, not standalone entities.
+- Treat field labels as context unless they genuinely identify a domain
+  object (never promote banner captions like PROJECT NO. / DOCUMENT NO. to
+  DocumentSection nodes).
+- Do not merge separate table cells into one entity unless they explicitly
+  describe the same object.
+- Do not infer hierarchy solely from adjacent rows or list ordering.
+- Associate attributes with the correct row subject or active equipment
+  section when explicitly clear from structure or wording.
+- Preserve entities even when they appear only once in a technical table.
+- Never invent a combined evidence quote that joins a distant heading with
+  a later attribute value; keep the value span exact.
+
+A6b. REPEATED PAGE HEADERS, FOOTERS, AND METADATA BANNERS
+
+- Identify repeated page headers, footers, and document metadata banners
+  using document structure and repetition.
+- Do not classify technical, commercial, specification, or tender-data
+  tables as boilerplate.
+- Return exact source spans and their positions when reporting banner
+  evidence.
+- If uncertain, preserve the content.
+
+A7. OMIT
+
+- Stopwords, connectors, punctuation-only fragments, and formatting noise.
+- Generic table headers without independent domain identity.
+- Incomplete expressions and broken text fragments.
+- Standalone scalar values and attribute-value expressions.
+- Unsupported entities inferred only from background knowledge.
+- Duplicate mentions representing the same entity within the same output
+  when identity equivalence is explicitly established.
+
+For each entity, use metadata.kind = "entity".
+
+When supported, include:
+- metadata.subtype
+- metadata.identifiers
+- metadata.aliases
+- metadata.properties
+- metadata.evidence
+
+Do not invent metadata values when the source provides no evidence.
+
+=============================================================================
+B) RELATION EXTRACTION (ENTITY–ENTITY)
+=============================================================================
+
+Extract meaningful relationships between independently identifiable entities.
+
+B0. SOURCE-SPAN / SECTION SCOPE
+
+- Emit a relation only when one contiguous SOURCE span supports the
+  subject–predicate–object claim, including direction. If no such span
+  exists, omit the relation — do not invent links from Known Entities alone.
+- Annexure index, TOC, and document-index headings (for example
+  "Annexure-7 : Electrical", "Annexure-9 : General") are document structure,
+  not package or equipment children. Never emit includes / hasEquipment /
+  partOf / provides (or similar containment or supply) from a package,
+  system, equipment, or vendor to an annexure-index heading unless the
+  same supporting span explicitly states that containment or supply.
+- General QA, Inspection-and-Testing, or similar section clauses apply only
+  to the package or scope named in that section. Do not assign those
+  requirements to a specific equipment or system from another section
+  unless that owner is explicitly named in the same supporting span.
+- Do not use requirement or contract prose sentences as relation objects
+  (for example a whole "Any or all the test…" witness clause). Those are
+  not entity endpoints; omit them rather than turning prose into an
+  equipment–entity edge.
+
+B1. RELATION ENDPOINTS
+
+- Both subject and object must be genuine domain entities.
+- Prefer endpoints from Known Entities when available.
+- Reuse Known Entity text, identifiers, and aliases exactly — including
+  engineering tags — so endpoints resolve to canonical entities.
+- When a Known Entity is identified by a tag (for example 22-PK-3904),
+  prefer that exact tag or the Known Entity surface over a newly worded
+  paraphrase.
+- Do not use scalar values, attribute expressions, field labels,
+  or incomplete phrases as relation endpoints.
+- Never invent an entity to create a relationship.
+- Do not use combined multi-entity phrases as endpoints when their
+  individual entities can be identified.
+- Preserve exact source entity names or the supplied entity mentions.
+
+B2. RELATION SEMANTICS
+
+- The predicate must describe the actual relationship supported by text.
+- Prefer precise semantic predicates over vague generic predicates.
+- Use RELATION_HINTS when their meanings fit the evidence.
+- Do not force an unrelated relationship into a preferred predicate.
+- Preserve correct subject-to-object direction.
+- Distinguish ownership, participation, location, membership,
+  document reference, containment, and functional association.
+- Do not infer ownership merely because organizations and projects
+  appear in the same document.
+- Do not infer authorship merely because an organization and document
+  appear together.
+
+B3. HIERARCHY
+
+- Distinguish document hierarchy from physical system hierarchy.
+- Use documentContains, sectionContains, or hasDocument only when
+  document membership is explicitly supported.
+- Use hasPackage, hasSystem, hasEquipment, hasComponent, includes,
+  or partOf only when physical or logical containment is supported.
+- hasPackage is only for ScopeOfWork → EngineeringPackage. A datasheet
+  or TDS document that references a package must use specifies/describes
+  (documentation association), not hasPackage.
+- Prefer parent-as-subject direction for containment predicates
+  (System contains Equipment / hasEquipment). Use partOf only when
+  the source literally frames the child as part of the parent.
+- Action, trip, close, start, stop, or control wording is a
+  technical/functional association, not containment. Do not emit
+  partOf / includes / hasComponent for those statements.
+- Do not model vendor/owner/supply links as physical containment.
+- Do not create parent-child relationships between peer entries
+  in a flat list, table of contents, master index, or annexure index.
+- Do not treat annexure-index / TOC rows as children of a package,
+  system, or vendor via includes / hasEquipment / partOf / provides.
+- Do not invent intermediate hierarchy levels.
+- Do not assume an identifier is a child of another entity solely
+  because it appears in parentheses.
+- Do not reverse relationship direction against the source wording.
+
+B4. DEDUPLICATION
+
+- Avoid duplicate relations with identical subject, predicate, and object.
+- Do not repeat the same fact through multiple surface mentions when
+  those mentions are explicitly known aliases of the same entity.
+- Do not merge different relationships merely because their endpoints
+  are similar.
+
+B5. EXCLUDE
+
+- Entity-attribute facts.
+- Alias and naming relationships.
+- Unsupported or speculative relationships.
+- Relationships inferred only from proximity.
+- Generic associations without clear semantic evidence.
+- Self-loop relations where subject and object are the same
+  entity or the same surface string.
+- Package/vendor → annexure-index containment or supply without an
+  explicit supporting span.
+- Cross-section assignment of general QA / inspection clauses to
+  equipment that is not named in the same supporting span.
+- Requirement or contract prose used as a relation object.
+
+=============================================================================
+C) TRIPLET EXTRACTION
+=============================================================================
+
+Extract factual subject-predicate-object statements supported by the source.
+
+C1. ENTITY–ENTITY TRIPLETS
+
+- Subject and object must be genuine identifiable entities.
+- Prefer known entity mentions for endpoints.
+- Prefer TRIPLET_HINTS or RELATION_HINTS when semantically appropriate.
+- Preserve correct relationship direction.
+- Do not invent implicit relationships or hierarchy.
+- Avoid redundant triplets expressing the same fact.
+- Same source-span / section-scope rules as B0: omit entity–entity
+  triplets without a contiguous supporting span; do not infer annexure-
+  index containment or cross-section QA ownership; do not use requirement
+  prose sentences as triplet objects.
+
+C2. ENTITY–ATTRIBUTE TRIPLETS
+
+- Subject must be an identifiable entity supported by the source.
+- Object may be an attribute value, quantity, measurement,
+  specification, status, or other literal.
+- Extract every explicitly supported attribute for each identifiable
+  entity (capacity, conveying medium, material, quantity, operating
+  conditions, and similar technical facts when stated).
+- Generate one atomic triplet per attribute-value pair.
+- Prefer ATTRIBUTE_PREDICATE_HINTS when appropriate.
+- When a source field label names the attribute, use that label (or a
+  precise predicate derived from it) as the predicate; put only the
+  exact value and unit in the object.
+- Never pack "Field label - value" or "Field label: value" into the
+  object under a generic has property / has_property predicate.
+- Do not combine multiple attributes into one object (for example
+  medium and capacity must be separate triplets).
+- Avoid generic has property / has_property predicates when a precise,
+  source-supported predicate or field label is available.
+- Preserve the exact source value, including units.
+- Do not create a separate physical entity for an attribute value.
+- Preserve conditions and qualifiers when available.
+- Associate each attribute with the correct entity using explicit
+  sentence, table-row, or active section context (including cross-page
+  continuations under the same equipment heading).
+- Evidence source_text for an attribute should be an exact source span
+  that contains the attribute value and, when present, its field label.
+- Prefer Known Entity surfaces/tags as attribute subjects so ownership
+  can be grounded even when the value line omits the long title.
+- Do not fabricate one quote by concatenating a section heading with a
+  distant value span; ownership may be established by section context
+  while the value quote stays verbatim.
+- Never invent the subject, value, unit, or relationship of an attribute.
+- If attribute ownership is ambiguous across neighboring equipment
+  sections, omit the association rather than guess.
+- If the value span is not supported by the source, omit the triplet
+  rather than emit an unverified fact.
+
+C3. TRIPLET QUALITY
+
+- Predicates must express a meaningful fact.
+- Do not use a generic predicate when a more precise supported
+  predicate is available.
+- Do not reverse subject and object.
+- Do not use headings, formatting fragments, or incomplete phrases
+  as subjects or entity objects.
+- Do not infer a fact merely because two concepts occur near each other.
+- Do not duplicate identical subject-predicate-object facts.
+- Preserve evidence-grounded terminology.
+- Event or status wording (activation, trip, start, shut-down, alarm,
+  interlock release, and similar) must not become a self-loop where
+  subject equals object. Prefer an attribute/literal object that names
+  the event or status value, or omit when no distinct value exists.
+
+=============================================================================
+D) PROPERTIES
+=============================================================================
+
+Properties represent attributes belonging to identifiable entities.
+
+D1. PROPERTY EXTRACTION
+
+- Extract explicitly stated attributes of known entities.
+- Do not create separate graph nodes for ordinary property values.
+- Every property must have a supported owner.
+- Use the same sentence, table row, or row-group context to determine
+  ownership.
+- Do not infer ownership from unrelated sections.
+- Use property_concept for the attribute name.
+- Use raw_value for the exact value as written in the source.
+- Preserve original units and conditions.
+- Do not invent missing quantities, units, or specifications.
+- Do not combine separate properties into a single property.
+- Do not create properties from aliases or alternative names.
+- Where supported by the entity extraction schema, store explicit
+  properties in metadata.properties on their owning entities.
+
+D2. PROPERTY VS ENTITY
+
+- Follow ONTOLOGY_HINTS Non-entity policy: independently identifiable
+  subjects are entities; scalar measurements, quantities, states, and
+  revisions of those subjects are properties.
+- A named material, document, system, or equipment item can be an entity
+  when source evidence supports independent identity.
+- Measurable characteristics of that subject are properties, not nodes.
+- Identifiers that only alias an already-extracted entity are metadata.
+- Do not discard property facts simply because they are not entities.
+
+=============================================================================
+HINT TOKENS
+=============================================================================
+
+Preferred primary entity types:
+<<TYPE_HINTS>>
+
+Labels that must not be used as entity types:
+<<NON_ENTITY_TYPE_HINTS>>
+
+Optional ontology and role guidance (YAML entity definitions, disambiguation,
+recommended subtypes, non-entity policy definitions, table column roles, and
+hierarchy constraints):
+<<ONTOLOGY_HINTS>>
+
+Known entities and mentions:
+<<ENTITIES>>
+
+Preferred relation predicates:
+<<RELATION_HINTS>>
+
+Preferred entity-entity triplet predicates:
+<<TRIPLET_HINTS>>
+
+Preferred attribute predicates:
+<<ATTRIBUTE_PREDICATE_HINTS>>
+
+=============================================================================
+E) SOURCE EVIDENCE
+=============================================================================
+
+Every entity, relation, triplet, and attribute claim MUST include
+metadata.evidence with a supporting source quote at creation time.
+
+Place evidence under metadata.evidence using this structure:
+{
+  "source_text": "Exact supporting quote from the input",
+  "source_file": "<<SOURCE_FILE>>",
+  "start_char": null,
+  "end_char": null
+}
+
+- Evidence source_text must be the shortest contiguous verbatim span from
+  the original input that supports the claim (do not paste whole sections
+  or page banners).
+- Never invent evidence, quotes, or source positions.
+- Leave start_char and end_char null; Python verifies quotes and fills
+  absolute offsets against the full document.
+- For relations and entity–entity triplets, the quote must support the
+  actual predicate and its direction — not merely co-mention both
+  endpoints. Prefer the shortest contiguous span that still grounds
+  subject, predicate meaning, and object when the source supports that.
+- For technical attributes, source_text must be the value span (and field
+  label when present). Do not concatenate a distant section heading into
+  the value quote; ownership may be established by section context.
+- If a relationship lacks sufficient evidence, omit the relationship.
+- Preserve existing metadata and provenance fields alongside evidence.
+
+=============================================================================
+OUTPUT REQUIREMENTS
+=============================================================================
+
+Return ONLY valid JSON matching the current TASK_FOCUS schema.
+
+Do not return Markdown, explanations, comments, or code fences.
+
+Do not include fields unsupported by the requested schema.
+
+For entity tasks:
+{"entities": []}
+
+For relation tasks:
+{"relations": []}
+
+For triplet tasks:
+{"triplets": []}
+
+For property tasks:
+{"properties": []}
+
+Use the corresponding empty structure only when no supported
+results exist.
+
+Ensure every output item is grounded in the source text.
+
+=============================================================================
+SOURCE
+=============================================================================
+
+<<TEXT>>

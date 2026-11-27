@@ -1,0 +1,150 @@
+{
+  "commercial": {
+    "before": {
+      "attribute_triplets": 17,
+      "attr_verified_eligible": 0,
+      "attr_unverified": 17,
+      "attr_missing": 0,
+      "quarantine_triplets_total": 19,
+      "quarantine_attributeish": 17,
+      "confirmed_attribute_edges": 0,
+      "fp_eligible_without_owner_or_context": 0,
+      "confirmed_edge_samples": []
+    },
+    "after": {
+      "attribute_triplets": 17,
+      "attr_verified_eligible": 17,
+      "attr_unverified": 0,
+      "attr_missing": 0,
+      "quarantine_triplets_total": 6,
+      "quarantine_attributeish": 4,
+      "confirmed_attribute_edges": 13,
+      "fp_eligible_without_owner_or_context": 0,
+      "confirmed_edge_samples": [
+        {
+          "subject": "22-PK-3801: Polymer Pneumatic",
+          "predicate": "Type of System",
+          "object": "Dilute phase conveying (Closed loop)",
+          "resolver": "table_row_owner"
+        },
+        {
+          "subject": "22-PK-3801: Polymer Pneumatic",
+          "predicate": "Transport to",
+          "object": "Intermediate Surge Silos.",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3801: Polymer Pneumatic",
+          "predicate": "Conveying media",
+          "object": "Nitrogen",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3801: Polymer Pneumatic",
+          "predicate": "Design Capacity",
+          "object": "71.5 TPH",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3801: Polymer Pneumatic",
+          "predicate": "Conveyed Material",
+          "object": "Polypropylene Beads or Flakes",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3804: PP pellets pneumatic",
+          "predicate": "Type of System",
+          "object": "Dilute phase conveying (Open loop)",
+          "resolver": "table_row_owner"
+        },
+        {
+          "subject": "22-PK-3804: PP pellets pneumatic",
+          "predicate": "Conveying media",
+          "object": "Air",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3804: PP pellets pneumatic",
+          "predicate": "Design Capacity",
+          "object": "86 TPH",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3804: PP pellets pneumatic",
+          "predicate": "Conveyed Material",
+          "object": "Polypropylene Pellets",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3901: Homogenization of PP",
+          "predicate": "Type of System",
+          "object": "Dilute phase conveying (Open loop)",
+          "resolver": "table_row_owner"
+        },
+        {
+          "subject": "22-PK-3901: Homogenization of PP",
+          "predicate": "Conveying media",
+          "object": "Air",
+          "resolver": "table_row_group"
+        },
+        {
+          "subject": "22-PK-3901: Homogenization of PP",
+          "predicate": "Design Capacity",
+          "object": "93 TPH",
+          "resolver": "table_row_group"
+        }
+      ]
+    },
+    "delta": {
+      "attribute_triplets": 0,
+      "attr_verified_eligible": 17,
+      "attr_unverified": -17,
+      "attr_missing": 0,
+      "quarantine_triplets_total": -13,
+      "quarantine_attributeish": -13,
+      "confirmed_attribute_edges": 13,
+      "fp_eligible_without_owner_or_context": 0
+    }
+  },
+  "6746": {
+    "before": {
+      "attribute_triplets": 12,
+      "attr_verified_eligible": 1,
+      "attr_unverified": 10,
+      "attr_missing": 1,
+      "quarantine_triplets_total": 78,
+      "quarantine_attributeish": 11,
+      "confirmed_attribute_edges": 1,
+      "fp_eligible_without_owner_or_context": 0,
+      "confirmed_edge_samples": [
+        {
+          "subject": "Discharge Cooler (22-E-3904)",
+          "predicate": "thermal design",
+          "object": "Vendor shall carry out",
+          "resolver": "deterministic_section_row"
+        }
+      ]
+    },
+    "after": {
+      "attribute_triplets": 12,
+      "attr_verified_eligible": 0,
+      "attr_unverified": 11,
+      "attr_missing": 1,
+      "quarantine_triplets_total": 79,
+      "quarantine_attributeish": 12,
+      "confirmed_attribute_edges": 0,
+      "fp_eligible_without_owner_or_context": 0,
+      "confirmed_edge_samples": []
+    },
+    "delta": {
+      "attribute_triplets": 0,
+      "attr_verified_eligible": -1,
+      "attr_unverified": 1,
+      "attr_missing": 0,
+      "quarantine_triplets_total": 1,
+      "quarantine_attributeish": 1,
+      "confirmed_attribute_edges": -1,
+      "fp_eligible_without_owner_or_context": 0
+    }
+  }
+}

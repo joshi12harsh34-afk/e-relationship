@@ -1,0 +1,546 @@
+{
+  "source": "inputs\\commercial.md",
+  "entity_count": 27,
+  "relation_count": 20,
+  "triplet_count": 14,
+  "entities": [
+    {
+      "text": "PANIPAT REFINERY EXPANSION PROJECT",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "P-25 (EPCM 3)",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "IndianOil",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "INDIAN OIL CORPORATION LTD.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "6746-PPM-022-CA-0052",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "thyssenkrupp Industrial Solutions (India) Private Limited",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "NOTICE INVITING TENDER (NIT)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "REQUEST FOR QUOTATION (RFQ)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "INSTRUCTION TO BIDDERS (ITB)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BID DOCUMENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "SPECIAL PURCHASE CONDITIONS (SPC)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "GENERAL PURCHASE CONDITIONS (GPC)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BID DATA SHEET (BDS)",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BOQ",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "PlantPPU & CDW",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "ClientIOCL, PANIPATREFINERY",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Contract CodeRHQ, EPCM-3 (P-25)",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Contract No.66-6746",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Tender Ref: 6746-PIP-022-EC-0001",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Date: 12-07-2022",
+      "label": "Event",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Panipat Refinery",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Haryana, India",
+      "label": "GeographicLocation",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "EPCM Consultant",
+      "label": "Role",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-pro-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "Entity(text='PANIPAT REFINERY EXPANSION PROJECT', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has system",
+      "object": "Entity(text='PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='P-25 (EPCM 3)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has system",
+      "object": "Entity(text='PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='IndianOil', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has project",
+      "object": "Entity(text='PANIPAT REFINERY EXPANSION PROJECT', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "Entity(text='IndianOil', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has project",
+      "object": "Entity(text='P-25 (EPCM 3)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "Entity(text='INDIAN OIL CORPORATION LTD.', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has project",
+      "object": "Entity(text='PANIPAT REFINERY EXPANSION PROJECT', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "Entity(text='INDIAN OIL CORPORATION LTD.', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has project",
+      "object": "Entity(text='P-25 (EPCM 3)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has role",
+      "object": "Entity(text='EPCM Consultant', label='Role', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.8836926579475403
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='6746-PPM-022-CA-0052', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='NOTICE INVITING TENDER (NIT)', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='REQUEST FOR QUOTATION (RFQ)', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='INSTRUCTION TO BIDDERS (ITB)', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='BID DOCUMENTS', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='SPECIAL PURCHASE CONDITIONS (SPC)', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='GENERAL PURCHASE CONDITIONS (GPC)', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='BID DATA SHEET (BDS)', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has document",
+      "object": "Entity(text='BOQ', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has project",
+      "object": "Entity(text='PANIPAT REFINERY EXPANSION PROJECT', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "has project",
+      "object": "Entity(text='P-25 (EPCM 3)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-pro-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.8684075534343719
+    }
+  ],
+  "triplets": [
+    {
+      "subject": "PANIPAT REFINERY EXPANSION PROJECT",
+      "predicate": "has system",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.975
+    },
+    {
+      "subject": "P-25 (EPCM 3)",
+      "predicate": "has system",
+      "object": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "confidence": 0.975
+    },
+    {
+      "subject": "IndianOil",
+      "predicate": "has project",
+      "object": "PANIPAT REFINERY EXPANSION PROJECT",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "IndianOil",
+      "predicate": "has project",
+      "object": "P-25 (EPCM 3)",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "INDIAN OIL CORPORATION LTD.",
+      "predicate": "has project",
+      "object": "PANIPAT REFINERY EXPANSION PROJECT",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "INDIAN OIL CORPORATION LTD.",
+      "predicate": "has project",
+      "object": "P-25 (EPCM 3)",
+      "confidence": 0.8684075534343719
+    },
+    {
+      "subject": "thyssenkrupp Industrial Solutions (India) Private Limited",
+      "predicate": "prepared by",
+      "object": "6746-PPM-022-CA-0052",
+      "confidence": 0.8598279118537903
+    },
+    {
+      "subject": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "predicate": "role",
+      "object": "EPCM Consultant",
+      "confidence": 0.8761069536209106
+    },
+    {
+      "subject": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "predicate": "appointed by",
+      "object": "IndianOil",
+      "confidence": 0.8731387615203857
+    },
+    {
+      "subject": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "predicate": "appointed by",
+      "object": "INDIAN OIL CORPORATION LTD.",
+      "confidence": 0.8731387615203857
+    },
+    {
+      "subject": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "predicate": "for project",
+      "object": "PANIPAT REFINERY EXPANSION PROJECT",
+      "confidence": 0.8690288126468658
+    },
+    {
+      "subject": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "predicate": "for project",
+      "object": "P-25 (EPCM 3)",
+      "confidence": 0.8690288126468658
+    },
+    {
+      "subject": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "predicate": "has document",
+      "object": "6746-PPM-022-CA-0052",
+      "confidence": 0.975
+    },
+    {
+      "subject": "PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)",
+      "predicate": "has document",
+      "object": "MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001",
+      "confidence": 0.975
+    }
+  ],
+  "events": [
+    {
+      "text": "BOUGHT",
+      "event_type": "acquisition",
+      "start_char": 837,
+      "end_char": 843,
+      "participants": [
+        "VENDOR",
+        "LIST",
+        "FOR"
+      ],
+      "location": null,
+      "time": null,
+      "confidence": 0.7,
+      "metadata": {
+        "context": "-PIP-022-EC-0001 |\n| 9 | VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS |\n| III | PART-III - PRICED PART |"
+      }
+    },
+    {
+      "text": "bought",
+      "event_type": "acquisition",
+      "start_char": 2046,
+      "end_char": 2052,
+      "participants": [],
+      "location": null,
+      "time": null,
+      "confidence": 0.7,
+      "metadata": {
+        "context": "sign, engineering, procurement of raw materials & bought out components, fabrication, manufacturing, assem"
+      }
+    }
+  ],
+  "warnings": []
+}

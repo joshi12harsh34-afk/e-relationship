@@ -1,0 +1,172 @@
+TASK = ENTITIES only (NER).
+Return Semantica EntitiesResponse JSON only:
+{"entities": [{"text": "", "label": "", "confidence": 0.0, "metadata": {"kind": "entity", "subtype": "", "identifiers": [{"value": "", "role": "identity"}], "aliases": [], "properties": {}, "evidence": {"source_text": "", "source_file": "", "start_char": null, "end_char": null}}}]}
+
+Rules:
+- Extract EVERY independently identifiable entity supported by the SOURCE text below — not from this schema example, filenames, or instructions.
+- Use TYPE_HINTS primaries: Person, Organization, Role, GeographicLocation, Facility, Project, Document, Requirement, LegalInstrument, ProcurementArtifact, Standard, FinancialInstrument, DigitalResource, Equipment, Component, System, PipingLine, ProcessStream, ConnectionPoint, Material, Product, ControlLoop, Process, Activity, Event, Condition, ScientificConcept, Other
+- Do not use NON_ENTITY labels: Property, PropertyValue, ListItem
+- Classify each entity from source context and the YAML definitions / disambiguation / non-entity policy below; never invent a type from name shape alone or from memorised example phrases.
+- Emit a node only for independently identifiable referents; treat scalar properties, alias-only identifiers, relation predicates, noise, field labels, and incomplete headings per the Non-entity policy in YAML guidance.
+- Primary label: predict from TYPE_HINTS + YAML entity definitions (source role).
+- Subtype: predict from YAML Recommended subtypes / disambiguation when source supports it; never use bare subtype Document; never invent subtypes.
+- Omit field-label captions per Non-entity policy (keep identifiable values only).
+- Prefer one canonical entity per named section title.
+- Verbatim source spans only; never invent names or identifiers.
+- Extract tagged assets in table data rows and body text; column headers alone are not entities.
+- Ignore repeated page headers/footers/metadata banners when they recur by structure; never skip technical, commercial, specification, or tender-data tables — if unsure whether a block is boilerplate, treat it as content.
+- Prefer completeness for clearly named technical assets; omit only when evidence is insufficient.
+- One entity per distinct real-world object; keep identifiers exact.
+- PK middle-segment tags → System + EngineeringPackage (never Equipment); one canonical entity per PK tag.
+- REQUIRED: set metadata.evidence.source_text to the shortest verbatim supporting span from SOURCE for each entity; leave source_file empty and start_char/end_char null (filled downstream).
+- Never emit placeholder tokens, schema field names, or generic demo names (e.g. sample persons/orgs) that are not verbatim in SOURCE.
+
+YAML typing guidance:
+Taxonomy: Semantica Unified Domain-Agnostic NER Taxonomy v1.2.0
+Broad document NER with petroleum/P&ID engineering support and non-overlapping primary entity labels.
+Entity definitions (classify from source role, not name shape):
+- Person: An identifiable individual human.
+- Organization: An identifiable collective legal, institutional, or organizational actor, including departments and…
+- Role: A specifically named organizational or operational position with an identifiable holder or responsi…
+- GeographicLocation: A named geographic place, region or address, independent of its industrial function.
+- Facility: An identifiable physical site, building, industrial complex, or operational area.
+- Project: A bounded initiative or programme with objectives, scope and lifecycle.
+- Document: An identifiable recorded information artifact, including its formally identified sections, drawings…
+- Requirement: An individually identifiable condition, obligation, constraint or acceptance criterion that must be…
+- LegalInstrument: A formally identifiable legal rule, case, agreement or rights instrument.
+- ProcurementArtifact: A distinct purchasing/solicitation or purchasing-record artifact or transaction.
+- Standard: An identifiable normative standard or formally published code.
+- FinancialInstrument: An identifiable security, debt obligation, or structured financial asset.
+- DigitalResource: An identifiable dataset, database, software application, model, or digital repository.
+- Equipment: A separately identifiable operational physical asset, machine, vessel or device with an equipment f…
+- Component: An identifiable physical part, fitting, sensor, instrument or constituent of a larger assembly, inc…
+- System: An identifiable functional arrangement of connected assets/components acting together
+Disambiguation:
+- Document vs System: PRO-TDS/TDS/datasheet docs use Datasheet or Specification with specifies/describes (never hasPackage, never DocumentSection)
+- Document vs ProcurementArtifact: Named tender-section documents must use a specific Document subtype from Recommended subtypes (BidInstructions for ITB / Instructions to Bidders, TenderNotice…
+- System vs Equipment: Multiple connected pieces acting together form System
+- System vs Equipment: Tags whose middle segment is PK name an engineering package
+- Equipment vs Component: Independently managed operational machinery is Equipment; instrument, valve and fitting as constituent is Component
+- ProcurementArtifact vs Document: Tender/RFQ/NIT solicitation is ProcurementArtifact
+- Organization vs Facility: Actor/legal organization versus physical operating site
+- Project vs Activity vs Process: A scoped initiative is Project
+- Document vs Activity: A drawing, index or heading is an information artifact/section, never an Activity based on word overlap.
+- Facility vs System: Physical place/complex is Facility
+- System vs Project: System is an operational functional arrangement
+- PipingLine vs ProcessStream: Pipe run is the physical conduit
+Recommended subtypes (use when source supports):
+- Organization: Company, GovernmentAgency, Department, University, HospitalOrganization
+- Facility: Refinery, IndustrialComplex, SiteArea, Building, HospitalFacility, Plant
+- Document: ScopeOfWork, Datasheet, Specification, DocumentSection, BidDataSheet, Drawing
+- LegalInstrument: Contract, Regulation, LegalCase, Patent, Trademark
+- ProcurementArtifact: Tender, RFQ, NIT, PurchaseOrder, Invoice, Transaction
+- DigitalResource: Software, Dataset, Database, Repository, SimulationModel
+- Equipment: Pump, CentrifugalPump, Compressor, HeatExchanger, Separator, StorageTank
+- Component: Instrument, PressureTransmitter, Valve, ControlValve, PipingComponent, Impeller
+- System: Subsystem, EngineeringPackage, CoolingWaterSystem, FlareSystem, PneumaticConveyingSystem
+- Material: Chemical, MaterialGrade, Consumable, Catalyst, Polymer
+- Condition: Disease, Fault, Damage, OperationalState
+Document typing: PRO-TDS/TDS/datasheet → Datasheet or Specification with specifies/describes (not DocumentSection; not hasPackage). SOW → ScopeOfWork may hasPackage EngineeringPackage.
+PK tags (middle segment PK, e.g. 22-PK-3801): primary System + subtype EngineeringPackage. Never label a bare PK tag as Equipment. Emit one canonical System per PK tag.
+Non-entity policy (classify from definition, independent identity, and source evidence — never from memorised example phrases or blacklist words):
+- Independent entity: Emit an entity only when the span names an independently identifiable referent that can stand alone in the do…
+  - The source supports a distinct real-world or document-domain object, not merely a value, unit, predicate, or formatting…
+- Properties are not entities: Scalar measurements, quantities, states, revisions, and other attributes of an already-identified subject are…
+  - Prefer metadata.properties (or attribute triplets) on the owning entity when ownership is clear from the same sentence,…
+- Identifiers are not separate entities: An identity code or alias that only re-names an already-extracted entity is metadata, not a second entity.
+  - Attach the code under metadata.identifiers (or aliases) on the canonical entity when source evidence establishes identi…
+- Relations are not entities: Relationship predicates and link phrases describe edges between entities
+  - Represent supported links as relations or entity-entity triplets with grounded endpoints.
+- Noise and formatting artifacts: Function words, formatting-only labels, page chrome, and incomplete fragments that lack an independently iden…
+  - Omit spans that are purely grammatical glue or layout chrome.
+- Field labels are not entities: Source field labels and metadata-banner captions that only name a slot for a value (key/value or adjacent tab…
+  - Omit the label span when it functions as a caption for an adjacent value in a banner, row, or key-value layout.
+- Generic terms (context-sensitive): Bare category words without a distinct named referent are not entities
+  - Omit unscoped category labels that only group content without naming a distinct object.
+- Incomplete headings: Structural outline markers and untitled section scaffolding are not entities unless the source also supplies…
+  - Omit part/section/annexure/index scaffolding that carries no artefact identity beyond formatting.
+- Duplicate identifiers: Re-extraction of an identity code already bound to a canonical entity does not create a new entity.
+  - Prefer one canonical node per distinct identity
+- Context-sensitive spans: Some spans are entity-worthy only in context: the same surface may be a property, alias, generic grouping lab…
+  - Classify from the span's role in the local sentence, row, heading, or active section, together with ontology definition…
+- Other is not for: Other is only for an independently identifiable referent that fits none of the 27 specific primaries after su…
+  - Do not use Other for uncertain labels of an otherwise classifiable entity
+Table extraction rules:
+- Subject/tag columns: item, tag, equipment, tag no, tag no., tag number
+- Description columns: service, description, duty, scope
+- Quantity columns: qty, quantity, q.ty, no., nos
+- Measurement columns: capacity, volume, temperature, pressure, flow, rate, density, bulk density, real density, average density, settled bulk density, aerated bulk density
+- Keep verbatim table cells; headers are context, not entities.
+- Interpret row groups using section/table headers as parent context.
+Allowed parent->child: ProcurementArtifact->Document, Document->System, Document->Equipment, Document->Requirement, Document->Document, System->System, System->Equipment, Equipment->Component, Document->Activity, System->Activity, Equipment->ConnectionPoint, System->PipingLine, System->ProcessStream, System->ControlLoop, ControlLoop->Component, PipingLine->ConnectionPoint, PipingLine->Component, Facility->System, Facility->Equipment, Facility->Facility, Project->Project, Organization->Organization, Component->Component, Activity->Activity, Process->Process
+Hierarchy rules: forbid_self_parent=True; prevent_cycles=True; enforce_allowed_parent_child=True; require_grounded_parent_child_assertion=True; allow_multiple_supported_parents=True
+
+SOURCE
+**PANIPAT REFINERY EXPANSION PROJECT**
+
+**P-25 (EPCM 3)**
+
+
+IndianOil
+
+**INDIAN OIL CORPORATION LTD.**
+
+BIDDING DOCUMENT FOR **PNEUMATIC CONVEYING PACKAGE (22-PK-3801, 22-PK-3804, 22-PK-3901) & BLENDERS BLOWING SYSTEM (22-PK-3904)**
+
+**(BIDDING DOCUMENT NO.: 6746-PPM-022-CA-0052)**
+
+**PREPARED BY thyssenkrupp Industrial Solutions (India) Private Limited**
+
+
+thyssenkrupp
+
+## MASTER INDEX
+
+| SR. NO. | DESCRIPTION |
+| --- | --- |
+| I | PART - I - TECHNO COMMERCIAL PART |
+| 1 | NOTICE INVITING TENDER (NIT) |
+| 2 | REQUEST FOR QUOTATION (RFQ) |
+| 3 | INSTRUCTION TO BIDDERS (ITB) |
+| 4 | BID DOCUMENTS |
+| 5 | SPECIAL PURCHASE CONDITIONS (SPC) |
+| 6 | GENERAL PURCHASE CONDITIONS (GPC) |
+| 7 | BID DATA SHEET (BDS) |
+| II | PART-II - TECHNICAL PART |
+| 8 | MATERIAL REQUISITION NO. 6746-PIP-022-EC-0001 |
+| 9 | VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS |
+| III | PART-III - PRICED PART |
+| 10 | BOQ |
+
+<table><tr><td>PlantPPU &amp; CDW</td><td>ClientIOCL, PANIPATREFINERY</td><td>Contract CodeRHQ, EPCM-3 (P-25)</td><td></td><td colspan="5">Contract No.66-6746</td><td></td></tr><tr><td rowspan="2">thyssenkrupp</td><td rowspan="2" colspan="3">NOTICE INVITING TENDER (NIT)(Bidding Document No. 6746-PPM-022-CA-0052 for Pneumatic Conveying Package)</td><td colspan="5"></td><td></td></tr><tr><td>Rev</td><td>00</td><td>Page</td><td>1</td><td>of</td><td>14</td></tr></table>
+
+Tender Ref: 6746-PIP-022-EC-0001
+
+Date: 12-07-2022
+
+## Dear Sir
+
+Subject: Supply of **Pneumatic Conveying Package** as per Technical Requisition No. **6746-PIP-022-EC-0001** for Project of EPCM3 (P25) at Panipat Refinery of M/s. Indian Oil Corporation Limited (IOCL).
+
+1.0 M/s. Indian Oil Corporation Limited (IOCL), hereinafter also referred to as the “IOCL” proposes to implement Project of EPCM3 (P25) at Panipat Refinery, in the State of Haryana, India. For execution of this Project, M/s. IOCL have appointed thyssenkrupp Industrial Solutions India Pvt. Ltd. as their EPCM Consultant.
+
+## 2.0 Scope of Work:
+
+Design, engineering, procurement of raw materials & bought out components, fabrication, manufacturing, assembly, inspection, testing, painting, supply, supervision of installation and commissioning, hook-up, pre-commissioning, commissioning, trial run and PGTR of **Pneumatic Conveying package (22-PK-3801, 22-PK-3804, 22-PK-3901) with Blenders Blowing system (22-PK-3904)** along with accessories, auxiliaries, control panel(s), all instrumentation and controls, mandatory spares, commissioning spares and special tools & tackles, etc. having the following major operating parameters for IOCL Panipat EPCM3 project at Panipat Naptha Cracker complex (PNC Complex) Panipat, India. and item lists as mentioned in Material Requisition of tender document. For complete scope of work, refer tender document.
+
+| 22-PK-3801: Polymer Pneumatic | Type of System - Dilute phase conveying (Closed loop) |
+| --- | --- |
+| Transport to Intermediate Surge Silos. | Conveying media - Nitrogen Design Capacity - 71.5 TPH Conveyed Material - Polypropylene Beads or Flakes |
+| 22-PK-3804: PP pellets pneumatic | Type of System - Dilute phase conveying (Open loop) |
+| transport from Extruder to | Conveying media - Air |
+| Homogenizing Silos. | Design Capacity - 86 TPH Conveyed Material - Polypropylene Pellets |
+| 22-PK-3901: Homogenization of PP | Type of System - Dilute phase conveying (Open loop) |
+| Pellets in the pellets blender silos 22- | Conveying media - Air |
+| V-3901A-H and transport of pellets to | Design Capacity - 93 TPH |
+| the bagging unit. | Conveyed Material - Polypropylene Pellets |
+| 22-PK-3904: Blenders Blowing | Medium - Air, Silo Capacity - 1000 m3 |
+| system | No of Silos - 8 nos No of silos in operation for blenders blowing system - 5 nos. |
+
+## 3.0 Details of BID Document:
+
+<table><tbody><tr><td rowspan="2" colspan="3">3.1 Bid Document No. 6746-PPM-022-CA-0052</td></tr><tr></tr><tr><td>3.2</td><td>Type of tender</td><td>Domestic Open Competitive Bidding (Two Bid System)</td></tr><tr><td>3.3</td><td>Reverse Auction</td><td>Not Applicable</td></tr></tbody></table>

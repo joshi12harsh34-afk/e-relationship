@@ -1,0 +1,1259 @@
+{
+  "source": "inputs\\commercial.md",
+  "entity_count": 58,
+  "relation_count": 75,
+  "triplet_count": 21,
+  "entities": [
+    {
+      "text": "PANIPAT REFINERY EXPANION PROJECT",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "P-25 (EPCM 3)",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "IndianOil",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "INDIAN OIL CORPORATION LTD.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "PNEUMATIC CONVEYING PACKAGE",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "22-PK-3801",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "22-PK-3804",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "22-PK-3901",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BLENDERS BLOWING SYSTEM",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "22-PK-3904",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BIDDING DOCUMENT",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "6746-PPM-022-CA-0052",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "thyssenkrupp Industrial Solutions (India) Private Limited",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "NOTICE INVITING TENDER",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "NIT",
+      "label": "Document",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "REQUEST FOR QUOTATION",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "RFQ",
+      "label": "Document",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "INSTRUCTION TO BIDDERS",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "ITB",
+      "label": "Document",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BID DOCUMENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "SPECIAL PURCHASE CONDITIONS",
+      "label": "LegalInstrument",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "SPC",
+      "label": "LegalInstrument",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "GENERAL PURCHASE CONDITIONS",
+      "label": "LegalInstrument",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "GPC",
+      "label": "LegalInstrument",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BID DATA SHEET",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BDS",
+      "label": "Document",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "MATERIAL REQUISITION",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "6746-PIP-022-EC-0001",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+      "label": "Document",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "BOQ",
+      "label": "Document",
+      "confidence": 0.95,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "PlantPPU & CDW",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "IOCL",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "PANIPATREFINERY",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Contract CodeRHQ",
+      "label": "ProcurementArtifact",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "EPCM-3 (P-25)",
+      "label": "Project",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Contract No.66-6746",
+      "label": "ProcurementArtifact",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Pneumatic Conveying Package",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Panipat Refinery",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "State of Haryana",
+      "label": "GeographicLocation",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "thyssenkrupp Industrial Solutions India Pvt. Ltd.",
+      "label": "Organization",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "EPCM Consultant",
+      "label": "Role",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Polymer Pneumatic",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Transport to Intermediate Surge Silos",
+      "label": "Process",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Conveyed Material - Polypropylene Beads or Flakes",
+      "label": "Material",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "PP pellets pneumatic",
+      "label": "System",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "transport from Extruder to",
+      "label": "Process",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Homogenizing Silos",
+      "label": "Facility",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Conveying media - Air",
+      "label": "Material",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Conveyed Material - Polypropylene Pellets",
+      "label": "Material",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Homogenization of PP",
+      "label": "Process",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Pellets in the pellets blender silos",
+      "label": "Process",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "V-3901A-H",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "transport of pellets to",
+      "label": "Process",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Medium - Air",
+      "label": "Material",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Silo Capacity - 1000 m3",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "No of Silos - 8 nos",
+      "label": "Equipment",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Domestic Open Competitive Bidding",
+      "label": "ProcurementArtifact",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    },
+    {
+      "text": "Two Bid System",
+      "label": "ProcurementArtifact",
+      "confidence": 0.975,
+      "metadata": {
+        "provider": "bedrock",
+        "model": "us.amazon.nova-2-lite-v1:0",
+        "extraction_method": "llm_typed",
+        "batch_index": 0
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='22-PK-3801', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='22-PK-3804', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='22-PK-3901', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='BLENDERS BLOWING SYSTEM', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='22-PK-3904', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='BIDDING DOCUMENT', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='6746-PPM-022-CA-0052', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='MATERIAL REQUISITION', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='6746-PIP-022-EC-0001', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Panipat Refinery', label='Facility', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='State of Haryana', label='GeographicLocation', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='PANIPAT REFINERY EXPANION PROJECT', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='P-25 (EPCM 3)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='EPCM-3 (P-25)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='IOCL', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='INDIAN OIL CORPORATION LTD.', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='thyssenkrupp Industrial Solutions India Pvt. Ltd.', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='PlantPPU & CDW', label='Facility', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='PANIPATREFINERY', label='Facility', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Contract CodeRHQ', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='EPCM-3 (P-25)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Contract No.66-6746', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Domestic Open Competitive Bidding', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Two Bid System', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3801', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='Polymer Pneumatic', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3801', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='Transport to Intermediate Surge Silos', label='Process', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3801', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasComponent",
+      "object": "Entity(text='Conveyed Material - Polypropylene Beads or Flakes', label='Material', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3804', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='PP pellets pneumatic', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3804', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='transport from Extruder to', label='Process', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3804', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='Homogenizing Silos', label='Facility', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3804', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasComponent",
+      "object": "Entity(text='Conveyed Material - Polypropylene Pellets', label='Material', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3901', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='Homogenization of PP', label='Process', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3901', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='Pellets in the pellets blender silos', label='Process', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3901', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='V-3901A-H', label='Equipment', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3901', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='transport of pellets to', label='Process', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3901', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasComponent",
+      "object": "Entity(text='Conveyed Material - Polypropylene Pellets', label='Material', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3904', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasSystem",
+      "object": "Entity(text='BLENDERS BLOWING SYSTEM', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3904', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasComponent",
+      "object": "Entity(text='Medium - Air', label='Material', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3904', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasComponent",
+      "object": "Entity(text='Silo Capacity - 1000 m3', label='Equipment', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='22-PK-3904', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasComponent",
+      "object": "Entity(text='No of Silos - 8 nos', label='Equipment', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='NOTICE INVITING TENDER', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='NIT', label='Document', start_char=0, end_char=0, confidence=0.95, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='REQUEST FOR QUOTATION', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='RFQ', label='Document', start_char=0, end_char=0, confidence=0.95, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='INSTRUCTION TO BIDDERS', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='ITB', label='Document', start_char=0, end_char=0, confidence=0.95, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='BID DOCUMENTS', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='SPECIAL PURCHASE CONDITIONS', label='LegalInstrument', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='SPC', label='LegalInstrument', start_char=0, end_char=0, confidence=0.95, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='GENERAL PURCHASE CONDITIONS', label='LegalInstrument', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='GPC', label='LegalInstrument', start_char=0, end_char=0, confidence=0.95, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='BID DATA SHEET', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='BDS', label='Document', start_char=0, end_char=0, confidence=0.95, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='MATERIAL REQUISITION', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS', label='Document', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasDocument",
+      "object": "Entity(text='BOQ', label='Document', start_char=0, end_char=0, confidence=0.95, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='PlantPPU & CDW', label='Facility', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='IOCL', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='PANIPATREFINERY', label='Facility', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Contract CodeRHQ', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='EPCM-3 (P-25)', label='Project', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Contract No.66-6746', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='thyssenkrupp Industrial Solutions India Pvt. Ltd.', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='EPCM Consultant', label='Role', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='State of Haryana', label='GeographicLocation', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Panipat Refinery', label='Facility', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='INDIAN OIL CORPORATION LTD.', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='INDIAN OIL CORPORATION LTD.', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='thyssenkrupp Industrial Solutions (India) Private Limited', label='Organization', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Domestic Open Competitive Bidding', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    },
+    {
+      "subject": "Entity(text='PNEUMATIC CONVEYING PACKAGE', label='System', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "predicate": "hasScope",
+      "object": "Entity(text='Two Bid System', label='ProcurementArtifact', start_char=0, end_char=0, confidence=0.975, metadata={'provider': 'bedrock', 'model': 'us.amazon.nova-2-lite-v1:0', 'extraction_method': 'llm_typed', 'batch_index': 0})",
+      "confidence": 0.975
+    }
+  ],
+  "triplets": [
+    {
+      "subject": "PANIPAT REFINERY EXPANSION PROJECT",
+      "predicate": "hasPackage",
+      "object": "PNEUMATIC CONVEYING PACKAGE",
+      "confidence": 0.975
+    },
+    {
+      "subject": "PANIPAT REFINERY EXPANSION PROJECT",
+      "predicate": "hasPackage",
+      "object": "BLENDERS BLOWING SYSTEM",
+      "confidence": 0.975
+    },
+    {
+      "subject": "PNEUMATIC CONVEYING PACKAGE",
+      "predicate": "hasSystem",
+      "object": "22-PK-3801",
+      "confidence": 0.975
+    },
+    {
+      "subject": "PNEUMATIC CONVEYING PACKAGE",
+      "predicate": "hasSystem",
+      "object": "22-PK-3804",
+      "confidence": 0.975
+    },
+    {
+      "subject": "PNEUMATIC CONVEYING PACKAGE",
+      "predicate": "hasSystem",
+      "object": "22-PK-3901",
+      "confidence": 0.975
+    },
+    {
+      "subject": "PNEUMATIC CONVEYING PACKAGE",
+      "predicate": "hasSystem",
+      "object": "22-PK-3904",
+      "confidence": 0.975
+    },
+    {
+      "subject": "PNEUMATIC CONVEYING PACKAGE",
+      "predicate": "hasDocument",
+      "object": "BIDDING DOCUMENT",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "NOTICE INVITING TENDER",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "REQUEST FOR QUOTATION",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "INSTRUCTION TO BIDDERS",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "BID DOCUMENTS",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "SPECIAL PURCHASE CONDITIONS",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "GENERAL PURCHASE CONDITIONS",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "BID DATA SHEET",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "MATERIAL REQUISITION",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS",
+      "confidence": 0.975
+    },
+    {
+      "subject": "BIDDING DOCUMENT",
+      "predicate": "hasDocument",
+      "object": "BOQ",
+      "confidence": 0.975
+    },
+    {
+      "subject": "22-PK-3801",
+      "predicate": "hasScope",
+      "object": "Transport to Intermediate Surge Silos",
+      "confidence": 0.975
+    },
+    {
+      "subject": "22-PK-3804",
+      "predicate": "hasScope",
+      "object": "transport from Extruder to Homogenizing Silos",
+      "confidence": 0.975
+    },
+    {
+      "subject": "22-PK-3901",
+      "predicate": "hasScope",
+      "object": "Homogenization of PP Pellets in the pellets blender silos V-3901A-H and transport of pellets to the bagging unit",
+      "confidence": 0.975
+    },
+    {
+      "subject": "22-PK-3904",
+      "predicate": "hasScope",
+      "object": "Blenders Blowing system",
+      "confidence": 0.975
+    }
+  ],
+  "events": [
+    {
+      "text": "BOUGHT",
+      "event_type": "acquisition",
+      "start_char": 837,
+      "end_char": 843,
+      "participants": [
+        "VENDOR",
+        "LIST",
+        "FOR"
+      ],
+      "location": null,
+      "time": null,
+      "confidence": 0.7,
+      "metadata": {
+        "context": "-PIP-022-EC-0001 |\n| 9 | VENDOR LIST FOR CRITICAL BOUGHT-OUT COMPONENTS |\n| III | PART-III - PRICED PART |"
+      }
+    },
+    {
+      "text": "bought",
+      "event_type": "acquisition",
+      "start_char": 2046,
+      "end_char": 2052,
+      "participants": [],
+      "location": null,
+      "time": null,
+      "confidence": 0.7,
+      "metadata": {
+        "context": "sign, engineering, procurement of raw materials & bought out components, fabrication, manufacturing, assem"
+      }
+    }
+  ],
+  "warnings": []
+}
